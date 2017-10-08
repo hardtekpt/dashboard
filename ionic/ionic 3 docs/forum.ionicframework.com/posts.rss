@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Ionic - Latest posts</title>
+    <link>https://forum.ionicframework.com</link>
+    <description>Latest posts</description>
+      <item>
+        <title>Returning a value from a function</title>
+        <dc:creator><![CDATA[@SigmundFroyd Briar Bowser]]></dc:creator>
+        <description><![CDATA[ <pre><code class="lang-auto">getMonth(month) {
+    this.calendarProvider.getMonths().then(data =&gt; {
+      let months = data[0].months_of_year;
+      return month &lt; months.length ? months[month] : '';
+    });
+  }
+</code></pre>
+<pre><code class="lang-auto">let now = new Date();
+this.getMonth(now.getMonth()).then(month =&gt; {
+  console.log('yay, a month!', month);
+});
+</code></pre> ]]></description>
+        <link>https://forum.ionicframework.com/t/returning-a-value-from-a-function/108036/2</link>
+        <pubDate>Sat, 07 Oct 2017 17:20:46 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290377</guid>
+      </item>
+      <item>
+        <title>&quot;operation not permitted&quot; while executing command &quot;ionic cordova run android&quot;</title>
+        <dc:creator><![CDATA[@alanalisson Alanalisson]]></dc:creator>
+        <description><![CDATA[ <p>for anyone that still with this problem the solution is to rename the folder called “roboto” to another name.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/operation-not-permitted-while-executing-command-ionic-cordova-run-android/107134/9</link>
+        <pubDate>Sat, 07 Oct 2017 16:41:06 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290375</guid>
+      </item>
+      <item>
+        <title>Adding a controller for bringing in the weather</title>
+        <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+        <description><![CDATA[ <p>Thats great, thanks for the information Tom.</p>
+<p>Best Regards,</p>
+<p>Louis.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/adding-a-controller-for-bringing-in-the-weather/107272/6</link>
+        <pubDate>Sat, 07 Oct 2017 16:37:37 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290373</guid>
+      </item>
+      <item>
+        <title>Returning a value from a function</title>
+        <dc:creator><![CDATA[@Dubicki Dubicki]]></dc:creator>
+        <description><![CDATA[ <p>Hello All,</p>
+<p>I have the following function:</p>
+<pre><code class="lang-auto">  getMonth(month) {
+    this.calendarProvider.getMonths().then(data =&gt; {
+      let months = data[0].months_of_year;
+      for (let i = 0; i &lt; months.length; i++) {
+        if (i === month) {
+          console.log(months[i]);
+        }
+      }
+    });
+  }
+</code></pre>
+<p>This function is called like so:</p>
+<pre><code class="lang-auto">let now = new Date();
+let month = this.getMonth(now.getMonth());
+</code></pre>
+<p>It is using a json file that is laid out like so:</p>
+<pre><code class="lang-auto">[{
+  "months_of_year": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ]
+}]
+</code></pre>
+<p>Can some please tell me how to edit my function so that ii will return a string.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/returning-a-value-from-a-function/108036/1</link>
+        <pubDate>Sat, 07 Oct 2017 16:29:45 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290372</guid>
+      </item>
+      <item>
+        <title>Data Model / Architecture with database</title>
+        <dc:creator><![CDATA[@asamarcos Asamarcos]]></dc:creator>
+        <description><![CDATA[ <p>You just blew my mind!</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/data-model-architecture-with-database/91832/11</link>
+        <pubDate>Sat, 07 Oct 2017 16:11:33 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290371</guid>
+      </item>
+      <item>
+        <title>Livereload problem</title>
+        <dc:creator><![CDATA[@gantonelli Gantonelli]]></dc:creator>
+        <description><![CDATA[ <p>I think, i forget to add this:</p>
+<p>cli packages: (C:\Users\giacomo\AppData\Roaming\npm\node_modules)</p>
+<pre><code>@ionic/cli-utils  : 1.12.0
+ionic (Ionic CLI) : 3.12.0
+</code></pre>
+<p>global packages:</p>
+<pre><code>cordova (Cordova CLI) : not installed
+</code></pre>
+<p>local packages:</p>
+<pre><code>@ionic/app-scripts : 3.0.0
+Cordova Platforms  : android 6.2.3
+Ionic Framework    : ionic-angular 3.7.1
+</code></pre>
+<p>System:</p>
+<pre><code>Android SDK Tools : 25.3.1
+Node              : v6.11.3
+npm               : 5.4.2
+OS                : Windows 10
+</code></pre>
+<p>Misc:</p>
+<pre><code>backend : pro</code></pre> ]]></description>
+        <link>https://forum.ionicframework.com/t/livereload-problem/108035/2</link>
+        <pubDate>Sat, 07 Oct 2017 16:10:25 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290370</guid>
+      </item>
+      <item>
+        <title>iOS app img src field</title>
+        <dc:creator><![CDATA[@ankarthik Ankarthik]]></dc:creator>
+        <description><![CDATA[ <p>I want to load the image as</p>
+<p>The image is already in my iphone album folder.</p>
+<p>And I got image name from API.</p>
+<p>I want the full image path so I can render it in my app like below:</p>
+<p><code>&lt;img src="/path/to/album/image.jpg" /&gt;</code></p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ios-app-img-src-field/107998/3</link>
+        <pubDate>Sat, 07 Oct 2017 16:05:56 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290369</guid>
+      </item>
+      <item>
+        <title>Adding a controller for bringing in the weather</title>
+        <dc:creator><![CDATA[@Tommertom Tommertom]]></dc:creator>
+        <description><![CDATA[ <p>Hi</p>
+<p>you need to do http.get in the ts file for the template.</p>
+<p>http.get(‘<a href="http://openweathermap.org/current" rel="nofollow noopener">http://openweathermap.org/current</a>’)</p>
+<p>etc…</p>
+<p>See <a href="https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032">Ionic 2 openweathermap api call</a> and study the tutorials recommended.</p>
+<p>Regards</p>
+<p>Tom</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/adding-a-controller-for-bringing-in-the-weather/107272/5</link>
+        <pubDate>Sat, 07 Oct 2017 15:56:46 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290368</guid>
+      </item>
+      <item>
+        <title>Livereload problem</title>
+        <dc:creator><![CDATA[@gantonelli Gantonelli]]></dc:creator>
+        <description><![CDATA[ <p>Hi,<br>
+I’m new with Ionic, I have a problem with the lab livereload, it doesn’t work and in chrome console this error is showed:</p>
+<p>VM54:164 WebSocket connection to ‘ws://localhost:35729/livereload’ failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED…</p>
+<p>Does anyone have a solution?</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/livereload-problem/108035/1</link>
+        <pubDate>Sat, 07 Oct 2017 15:45:46 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290366</guid>
+      </item>
+      <item>
+        <title>Ionic unable to write data in device bluetooth serial connection</title>
+        <dc:creator><![CDATA[@Ravirapolu Ravirapolu]]></dc:creator>
+        <description><![CDATA[ <p>Hai iam also trying to write data,but iam getting success callback and iam getting OK in success calback. Can any one help me</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-unable-to-write-data-in-device-bluetooth-serial-connection/91532/9</link>
+        <pubDate>Sat, 07 Oct 2017 15:34:03 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290365</guid>
+      </item>
+      <item>
+        <title>Ionic 2 openweathermap api call</title>
+        <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+        <description><![CDATA[ <p>Thanks for the tutorial its helped</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032/6</link>
+        <pubDate>Sat, 07 Oct 2017 15:30:25 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290363</guid>
+      </item>
+      <item>
+        <title>Enable pinch and zoom for entire app or entire page</title>
+        <dc:creator><![CDATA[@danzac Danzac]]></dc:creator>
+        <description><![CDATA[ <p>I’m searching in vain to find info on how to enable zoom in either the entire app, or at least on a per page basis.  My pages usually consist of a mixture of text and images.</p>
+<p>Is there a way to apply something like <code>&lt;ion-scroll zoom="true"&gt;&lt;/ion-scroll&gt;</code>  to an entire page?</p>
+<p>Any help would be appreciated.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/enable-pinch-and-zoom-for-entire-app-or-entire-page/108033/1</link>
+        <pubDate>Sat, 07 Oct 2017 15:19:40 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290362</guid>
+      </item>
+      <item>
+        <title>Ionic 2 openweathermap api call</title>
+        <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+        <description><![CDATA[ <p>I have some javascript but I am unsure as in which file path to put it in to be able to use it</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032/5</link>
+        <pubDate>Sat, 07 Oct 2017 14:55:08 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290361</guid>
+      </item>
+      <item>
+        <title>Ionic 2 openweathermap api call</title>
+        <dc:creator><![CDATA[@LoLStats Daniel Sogl]]></dc:creator>
+        <description><![CDATA[ <p>It looks like you don’t know how to code in Angular and how to write/use an Angular Service. So you should learn how to code with Angular and TypeScript first. That’s my feedback for you</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032/4</link>
+        <pubDate>Sat, 07 Oct 2017 14:52:50 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290360</guid>
+      </item>
+      <item>
+        <title>I need a Backend service</title>
+        <dc:creator><![CDATA[@PersianTech Persian Tech]]></dc:creator>
+        <description><![CDATA[ <p>firebase dont work in iran. :\</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/i-need-a-backend-service/107776/3</link>
+        <pubDate>Sat, 07 Oct 2017 14:52:41 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290359</guid>
+      </item>
+      <item>
+        <title>Ionic 2 openweathermap api call</title>
+        <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+        <description><![CDATA[ <p>Any feedback on the question?</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032/3</link>
+        <pubDate>Sat, 07 Oct 2017 14:50:39 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290358</guid>
+      </item>
+      <item>
+        <title>Ionic 2 openweathermap api call</title>
+        <dc:creator><![CDATA[@LoLStats Daniel Sogl]]></dc:creator>
+        <description><![CDATA[ <p>You should learn how to use Angular first: <a href="https://angular.io/tutorial" rel="nofollow noopener">https://angular.io/tutorial</a></p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032/2</link>
+        <pubDate>Sat, 07 Oct 2017 14:49:10 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290357</guid>
+      </item>
+      <item>
+        <title>Adding a controller for bringing in the weather</title>
+        <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+        <description><![CDATA[ <p>Hi Tom,</p>
+<p>No it is for a specific page in my app and the data is coming in JSON format.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/adding-a-controller-for-bringing-in-the-weather/107272/4</link>
+        <pubDate>Sat, 07 Oct 2017 14:45:48 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290356</guid>
+      </item>
+      <item>
+        <title>Ionic 2 openweathermap api call</title>
+        <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+        <description><![CDATA[ <p>Im creating my first app in ionic 2, I am making a call to the api and that is working fine. The thing I am struggling with is the javascript side. My app doesnt have a .js file/folder so I am a little unsure in to where to put the javascript that handles the JSON from the API or if i create a javascript file then where do i call it from?</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032/1</link>
+        <pubDate>Sat, 07 Oct 2017 14:44:44 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290355</guid>
+      </item>
+      <item>
+        <title>Ios build error: Error: Command failed: xcrun simctl list --json</title>
+        <dc:creator><![CDATA[@lsantaniello Luca]]></dc:creator>
+        <description><![CDATA[ <p>Hi guys,<br>
+I need of support for this error:</p>
+<pre><code class="lang-auto">&gt; ionic-app-scripts build "--prod" "--release"
+
+[16:35:44]  ionic-app-scripts 1.3.7 
+[16:35:44]  build prod started ... 
+[16:35:44]  clean started ... 
+[16:35:44]  clean finished in 7 ms 
+[16:35:44]  copy started ... 
+[16:35:44]  ngc started ... 
+[16:35:58]  ngc finished in 13.93 s 
+[16:35:58]  preprocess started ... 
+[16:35:58]  deeplinks started ... 
+[16:36:00]  deeplinks finished in 1.63 s 
+[16:36:00]  optimization started ... 
+[16:36:00]  copy finished in 15.79 s 
+[16:36:20]  optimization finished in 20.26 s 
+[16:36:20]  preprocess finished in 21.88 s 
+[16:36:20]  webpack started ... 
+[16:36:44]  webpack finished in 23.61 s 
+[16:36:44]  sass started ... 
+[16:36:44]  uglifyjs started ... 
+[16:36:45]  sass finished in 1.58 s 
+[16:36:45]  cleancss started ... 
+[16:36:47]  cleancss finished in 2.15 s 
+[16:37:38]  uglifyjs finished in 54.76 s 
+[16:37:38]  postprocess started ... 
+[16:37:38]  postprocess finished in 52 ms 
+[16:37:38]  lint started ... 
+[16:37:38]  build prod finished in 114.30 s 
+[16:37:43]  lint finished in 4.26 s 
+Error: Command failed: xcrun simctl list --json
+dyld: Library not loaded: /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator
+  Referenced from: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl
+  Reason: image not found
+</code></pre>
+<p>Could you please help me?</p>
+<p>Thanks in advance</p>
+<p>Luca</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ios-build-error-error-command-failed-xcrun-simctl-list-json/108031/1</link>
+        <pubDate>Sat, 07 Oct 2017 14:40:16 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290354</guid>
+      </item>
+      <item>
+        <title>iOS builds old files and livereload doesn&#39;t work</title>
+        <dc:creator><![CDATA[@dariot Dariot]]></dc:creator>
+        <description><![CDATA[ <p>It seems that my emulator and my iphone was pulling code from Ionic’s git.<br>
+When I was connected to the internet it was downloading some data and then I figured out that it was taking the code from Ionic’s git. When I was offline it was pulling my local code</p>
+<p>I guess that’s the part of Ionic that makes it easy to update the app without actually uploading new version to the app store</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/ios-builds-old-files-and-livereload-doesnt-work/107699/21</link>
+        <pubDate>Sat, 07 Oct 2017 14:33:48 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290353</guid>
+      </item>
+      <item>
+        <title>Cordova-plugin-inappbrowser : download from external website with inAppBrowser in IONIC 3 app</title>
+        <dc:creator><![CDATA[@dvtopiya Darshana]]></dc:creator>
+        <description><![CDATA[ <p>Hello,</p>
+<p>How can I download from external website which is opened in cordova inAppBrowser in IONIC 3. Currently I am using “cordova-plugin-inappbrowser”: “^1.7.1”.</p>
+<p>Any help would be greatly appreciated.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/cordova-plugin-inappbrowser-download-from-external-website-with-inappbrowser-in-ionic-3-app/108029/1</link>
+        <pubDate>Sat, 07 Oct 2017 14:26:39 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290351</guid>
+      </item>
+      <item>
+        <title>Google services version conflict (Maps / FCM)</title>
+        <dc:creator><![CDATA[@eakkew Eakkew]]></dc:creator>
+        <description><![CDATA[ <p>i got this problem also. you may need to specific <code>'com.google.gms.google-services'</code> version insted of “<code>+</code>”.</p>
+<p>In my case, i need to change <code>play-services-location</code> from “<code>+</code>” to “<code>11.0.4</code>”.</p>
+<pre><code class="lang-auto">dependencies {
+    ....
+    compile "com.google.android.gms:play-services-location:11.0.4"
+   ....
+    compile "com.google.firebase:firebase-core:11.0.4"
+    compile "com.google.firebase:firebase-messaging:11.0.4"
+    // SUB-PROJECT DEPENDENCIES END
+}
+
+apply plugin: 'com.google.gms.google-services'
+</code></pre> ]]></description>
+        <link>https://forum.ionicframework.com/t/google-services-version-conflict-maps-fcm/93695/55</link>
+        <pubDate>Sat, 07 Oct 2017 14:26:22 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290350</guid>
+      </item>
+      <item>
+        <title>Cordova 7.0.1 - is it SAFE to update?</title>
+        <dc:creator><![CDATA[@jans-y]]></dc:creator>
+        <description><![CDATA[ <p><strong>Hi guys!</strong></p>
+<p>Is it safe to update to Cordova 7.0.1 right now?</p>
+<p>I am using a lot of plugins like intercom, facebook, googleplus, branch.</p>
+<p>Is there a possibility I will have problems with any of this plugins?</p>
+<p>What are the pros of updating?</p>
+<p><strong>Thank you very much for your answers!</strong></p> ]]></description>
+        <link>https://forum.ionicframework.com/t/cordova-7-0-1-is-it-safe-to-update/108028/1</link>
+        <pubDate>Sat, 07 Oct 2017 14:25:04 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290349</guid>
+      </item>
+      <item>
+        <title>WKWebView / Crosswalk</title>
+        <dc:creator><![CDATA[@Judgewest2000 Judgewest2000]]></dc:creator>
+        <description><![CDATA[ <p>Wkwebview is a technology, part of safari for iOS.  Nothing to do with Android as far as I know. Safari switched its rendering engine to this a few years back, but kept the old one for compatibility - using this plugin gives you the latest.</p>
+<p>Crosswalk was for Android in particular (though did port certain aspects to others) to bridge the functionality gap between what android 4.x would give you as the chrome version versus what you got with actual chrome - it was tied to the OS. From Android 5.x however Chrome itself determines the engine in use instead - brill as it means you’re not waiting on manufacturers to update the Android version to get the latest.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/wkwebview-crosswalk/108025/2</link>
+        <pubDate>Sat, 07 Oct 2017 14:19:29 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290348</guid>
+      </item>
+      <item>
+        <title>Error with --prod</title>
+        <dc:creator><![CDATA[@nyffellare Nyffellare]]></dc:creator>
+        <description><![CDATA[ <p>Hello,</p>
+<p>When i use ionic cordova build android --prod --release it gives a strange error. I tried to fix it but it always results in a broken app. Does anyone have an ideahow to solve this?<br>
+Ionic cordova build android --realease works perfect btw.</p>
+<p>Thanks in advance!</p>
+<p>Greetings,<br>
+Nyffellare</p>
+<p>Here is the error:</p>
+<pre><code class="lang-auto">PS D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers&gt; ionic cordova build android --prod --release
+[INFO] Running app-scripts build: --prod --platform android --target cordova
+
+[15:35:02]  build prod started ...
+[15:35:02]  clean started ...
+[15:35:02]  clean finished in 1 ms
+[15:35:02]  copy started ...
+[15:35:02]  ngc started ...
+Error: Type AboutPage in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.ts is part of the declarations of 2 modules: AppModule in D:/Personal_Files/Documenten/Ion
+ic/ChecklistByBlackSuitDevelopers/src/app/app.module.ts and AboutPageModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.module.ts! Please consider moving Ab
+outPage in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.ts to a higher module that imports AppModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitD
+evelopers/src/app/app.module.ts and AboutPageModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.module.ts. You can also create a new NgModule that exports a
+nd includes AboutPage in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.ts then import that NgModule in AppModule in D:/Personal_Files/Documenten/Ionic/ChecklistB
+yBlackSuitDevelopers/src/app/app.module.ts and AboutPageModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.module.ts.
+    at Error (native)
+    at syntaxError (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:1550:34)
+    at CompileMetadataResolver._addTypeToModule (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:14655:31)
+    at D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:14543:27
+    at Array.forEach (native)
+    at CompileMetadataResolver.getNgModuleMetadata (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:14534:54)
+    at addNgModule (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:23050:58)
+    at D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:23061:14
+    at Array.forEach (native)
+    at _createNgModules (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:23060:26)
+</code></pre> ]]></description>
+        <link>https://forum.ionicframework.com/t/error-with-prod/108027/1</link>
+        <pubDate>Sat, 07 Oct 2017 13:42:15 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290347</guid>
+      </item>
+      <item>
+        <title>Stripe Elements malfunctioning</title>
+        <dc:creator><![CDATA[@hudi Hudi]]></dc:creator>
+        <description><![CDATA[ <p>Hi!<br>
+I have a very similar issue that I entirely described here: <a href="https://forum.ionicframework.com/t/stripe-element-keyboard-bug-with-ios/107817">Stripe Element: keyboard bug with iOS</a></p>
+<p>Note that I’m not using Cordova at all.<br>
+It works perfectly on web browser, on android devices, but never in iOS (tested in safari and chrome)</p>
+<p>I am in touch with Stripe support team which tries to find workaround, but nothing for now.<br>
+Any news from ionic team ? Should we open an issue? Thanks.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/stripe-elements-malfunctioning/102039/9</link>
+        <pubDate>Sat, 07 Oct 2017 13:20:38 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290345</guid>
+      </item>
+      <item>
+        <title>WKWebView / Crosswalk</title>
+        <dc:creator><![CDATA[@JayKay Jay Kay]]></dc:creator>
+        <description><![CDATA[ <p>Mike currently released a post about the <a href="http://blog.ionic.io/wkwebview-for-all-a-new-webview-for-ionic/" rel="nofollow noopener">WKWebView</a>.<br>
+I’m not sure what this means to me, as I use Crosswalk (<a href="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview" rel="nofollow noopener">cordova-plugin-crosswalk-webview</a>) in my Ionic 3 app.</p>
+<p>Does the WKWebView replace Crosswalk in my app and should I hence remove Crosswalk and add the WKWebView? How are they related? What are the advantages / disadvantages of using either one?</p>
+<p>Any help on this is appreciated. Thank you!</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/wkwebview-crosswalk/108025/1</link>
+        <pubDate>Sat, 07 Oct 2017 13:09:37 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290344</guid>
+      </item>
+      <item>
+        <title>Is there any plugin that make application work in background mode?</title>
+        <dc:creator><![CDATA[@Judgewest2000 Judgewest2000]]></dc:creator>
+        <description><![CDATA[ <p>Aha lol sorry. Reading on my phone walking the dog</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/is-there-any-plugin-that-make-application-work-in-background-mode/108014/4</link>
+        <pubDate>Sat, 07 Oct 2017 13:00:31 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290343</guid>
+      </item>
+      <item>
+        <title>Admob-free with ionic 2</title>
+        <dc:creator><![CDATA[@samikoren1 Samikoren1]]></dc:creator>
+        <description><![CDATA[ <p>Thanks for prompt response<br>
+I have:<br>
+"<span class="mention">@ionic-native</span>/admob-free": “^4.3.1”,<br>
+"<span class="mention">@ionic-native</span>/core": “^4.3.1”,</p>
+<p>but I also have:<br>
+“cordova-plugin-admob-free”: “^0.11.0”,<br>
+and<br>
+<span class="mention">@angular</span>/core": “2.0.0-rc.4”</p>
+<p>I tryied to erase the “cordova-plugin-admob-free”: “^0.11.0”,<br>
+from package json and the error still exists</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/admob-free-with-ionic-2/108024/3</link>
+        <pubDate>Sat, 07 Oct 2017 13:00:17 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290342</guid>
+      </item>
+      <item>
+        <title>Admob-free with ionic 2</title>
+        <dc:creator><![CDATA[@LoLStats Daniel Sogl]]></dc:creator>
+        <description><![CDATA[ <p>Check the version of the <span class="mention">@ionic-native</span>/core plugin and the <span class="mention">@ionic-native</span>/admob-free plugin in your package.json.<br>
+They should have the same version.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/admob-free-with-ionic-2/108024/2</link>
+        <pubDate>Sat, 07 Oct 2017 12:57:18 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290341</guid>
+      </item>
+      <item>
+        <title>Admob-free with ionic 2</title>
+        <dc:creator><![CDATA[@samikoren1 Samikoren1]]></dc:creator>
+        <description><![CDATA[ <p>I am trying to install admob-free to ionic2 project. after installing:<br>
+<strong>$ ionic cordova plugin add cordova-plugin-admob-free</strong><br>
+<strong>$ npm install --save <span class="mention">@ionic-native</span>/admob-free</strong></p>
+<p>now running: ionic serve</p>
+<p>I get this error:<br>
+<strong>node_modules@ionic-native\admob-free\index.js:20</strong><br>
+<strong>import { Plugin, Cordova, IonicNativePlugin } from ‘<span class="mention">@ionic-native</span>/core’;</strong><br>
+<strong>ParseError: ‘import’ and ‘export’ may appear only with ‘sourceType: module’</strong></p>
+<p>anyone can help? how should I resolve it?<br>
+Thanks.</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/admob-free-with-ionic-2/108024/1</link>
+        <pubDate>Sat, 07 Oct 2017 12:55:44 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290340</guid>
+      </item>
+      <item>
+        <title>Is there any plugin that make application work in background mode?</title>
+        <dc:creator><![CDATA[@LoLStats Daniel Sogl]]></dc:creator>
+        <description><![CDATA[ <p><a class="mention" href="/u/judgewest2000">@Judgewest2000</a> That’s the same plugin as he described</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/is-there-any-plugin-that-make-application-work-in-background-mode/108014/3</link>
+        <pubDate>Sat, 07 Oct 2017 12:55:17 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290339</guid>
+      </item>
+      <item>
+        <title>Problem with Angular 4 HttpClient</title>
+        <dc:creator><![CDATA[@RehanHassan Rehan Hassan]]></dc:creator>
+        <description><![CDATA[ <p>I’ve checked pdfmake &amp; jspdf but both are printing text as a pdf file. I want to make pdf from my html content. How can i pass my html content to pdfMake?</p> ]]></description>
+        <link>https://forum.ionicframework.com/t/problem-with-angular-4-httpclient/107955/8</link>
+        <pubDate>Sat, 07 Oct 2017 12:45:20 +0000</pubDate>
+        <guid isPermaLink="false">forum.ionicframework.com-post-290334</guid>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/pro/view/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>Beta Testing with Ionic View - Ionic Pro Documentation</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  </head>
+  <body id="docs-page-pro-beta-testing"
+        class="page-pro-beta-testing transparent light
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    <nav class="navbar navbar-default transparent light">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <a class="navbar-brand" href="https://ionicframework.com/">
+        <div id="ionic-io-logo"></div>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../../dashboard.ionicjs.com/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white blue">
+          <a href="../../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../../components/index.html">UI Components</a></li>
+        <li><a href="../../api/index.html">API Reference</a></li>
+        <li><a href="../../native/index.html">Native Plugins</a></li>
+        <li><a href="../../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="index.html">View app</a></li>
+        <li><a href="../package/index.html">Package</a></li>
+        <li><a href="../live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <div class="sub-header">
+  <div class="container">
+    <ul class="left breadcrumbs">
+      <li><a href="https://ionicframework.com/developers/">Documentation</a></li>
+      <li>Pro docs</li>
+    </ul>
+    <ul class="right">
+      <li><a href="../index.html" class="active">Documentation</a></li>
+      <li><a href="http://support.ionicjs.com/">Support</a></li>
+      <li><a href="../../../../dashboard.ionicjs.com/index.html">Dashboard</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="pro-docs" class="responsive-docs-container docs-container" ng-controller="ProDocsCtrl as vm">
+  <div class="container">
+    <div class="row">
+      <nav class="side-nav responsive-side-nav col-md-4" data-spy="affix" data-offset="193">
+        <ul id="pro-nav" class="nested-menu">
+  <li class="active">
+    <ul>
+      <li class="" >
+        <a ng-click="toggle('intro')" class="pro-intro-link">Introduction</a>
+        <ul ng-show="sections.intro" ng-cloak >
+          <li>
+            <a href="../basics/welcome/index.html" class="">Welcome</a>
+          </li>
+          <li>
+            <a href="../basics/getting-started/index.html" class="">Installation</a>
+          </li>
+          <li>
+            <a href="../basics/git/index.html" class="">Git Workflow</a>
+            <ul>
+              <li>
+                <a href="../basics/git/index.html#installing-git">Installing Git</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#adding-your-existing-repository">Adding Existing Repositories</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#pushing-new-builds">Pushing Builds</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#working-with-branches">Using Branches</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#working-with-other-team-members">Working w/ Team Members</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#ssh-keys">Adding SSH Keys</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="../basics/concepts/index.html" class="">Concepts</a>
+            <ul>
+              <li><a href="../basics/concepts/index.html#channels">Channels</a></li>
+              <li><a href="../basics/concepts/index.html#builds">Builds</a></li>
+              <li><a href="../basics/concepts/customizing-builds.html">Customizing Builds</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../basics/help/index.html" class="">Help and Support</a>
+          </li>
+        </ul>
+      </li>
+      <li class="active" >
+        <a ng-click="toggle('view')" class="pro-view-link">View</a>
+        <ul ng-show="sections.view" ng-cloak ng-init="sections.view = true">
+          <li>
+            <a href="index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="index.html#using-channels-with-ionic-view">Using Channels</a>
+          </li>
+          <li>
+            <a href="index.html#inviting-private-testers">Inviting Testers</a>
+          </li>
+          <li>
+            <a href="index.html#sharing-publicly">Sharing Publicly</a>
+          </li>
+          <li class="">
+            <a href="../view.html">Using the App</a>
+            <ul>
+              <li>
+                <a href="../view.html#testing-apps">Testing Apps</a>
+              </li>
+              <li>
+                <a href="../view.html#submitting-feedback">Submitting Feedback</a>
+              </li>
+              <li>
+                <a href="../view.html#plugin-support">Plugin Support</a>
+                </li>
+              </ul>
+            </li>
+        </ul>
+      </li>
+      <li class="">
+        <a ng-click="toggle('deploy')" class="pro-deploy-link">Deploy</a>
+        <ul ng-show="sections.deploy" ng-cloak >
+          <li>
+            <a href="../deploy/index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="../deploy/setup/index.html#installation">Installation</a>
+          </li>
+          <li>
+            <a href="../deploy/setup/index.html#usage">Deploying</a>
+          </li>
+          <li>
+            <a href="../deploy/plugin-api.html">Plugin API</a>
+          </li>
+        </ul>
+      </li>
+      <li class="" >
+        <a ng-click="toggle('package')" class="pro-package-link">Package</a>
+        <ul ng-show="sections.package" ng-cloak >
+          <li>
+            <a href="../package/index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="../package/profiles.html">Generating Credentials</a>
+          </li>
+          <li>
+            <a href="../package/profiles.html#creating-security-profiles">Adding Credentials</a>
+          </li>
+          <li>
+            <a href="../package/index-2.html#performing-a-build">Performing Builds</a>
+          </li>
+        </ul>
+      </li>
+      <li class="" >
+        <a ng-click="toggle('monitoring')" class="pro-monitoring-link">Monitoring</a>
+        <ul ng-show="sections.monitoring" ng-cloak >
+          <li>
+            <a href="../monitoring/index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="../monitoring/index.html#getting-started">Installation</a>
+          </li>
+          <li>
+            <a href="../monitoring/index.html#manual-capture">Manual Capture</a>
+          </li>
+          <li>
+            <a href="../monitoring/index.html#source-maps">Adding SourceMaps</a>
+          </li>
+        </ul>
+      </li>
+      <li class="" >
+        <a ng-click="toggle('advanced')" class="pro-advanced-link">Advanced</a>
+        <ul ng-show="sections.advanced" ng-cloak >
+          <li>
+            <a href="../migration/index.html">Cloud Migration</a>
+            <ul>
+              <li>
+                <a href="../migration/live-deploy.html">Live updates</a>
+              </li>
+              <li>
+                <a href="../migration/package.html">Package</a>
+              </li>
+              <li>
+                <a href="../migration/view.html">Ionic View Legacy</a>
+              </li>
+              <li>
+                <a href="../migration/push.html">Ionic Push</a>
+              </li>
+              <li>
+                <a href="../migration/auth.html">Ionic Auth</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!--
+      <li class="">
+        <a href="/docs/pro/pwa-hosting.html">Progressive Web App Hosting</a>
+      </li>
+    -->
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+      <main class="col-md-8">
+        <h1 id="beta-testing-with-ionic-view">Beta Testing with Ionic View</h1>
+
+<p>Ionic View makes it easy to distribute versions of your app to beta testers, clients, co-workers, and more, without dealing with the complicated device provisioning and configuration required with traditional beta testing services.</p>
+
+<p>Looking for a reference of Ionic View the app? Take a look at the <a href="../view.html">Ionic View app docs</a> for an overview of features in the app itself.</p>
+
+<p>In order to share &amp; test with Ionic View, you’ll have to push any code up to Ionic Pro that you’d like to share with <a href="../basics/git/index.html#pushing-new-builds">git push ionic master</a>.</p>
+
+<h2 id="install-ionic-view">Install Ionic View</h2>
+
+<p>As a Developer with an Ionic Pro account, you can log into your own account in View to access your projects. You can download Ionic View for iOS or Android:</p>
+
+<div id="badges" style="text-align:center">
+  <a href="https://itunes.apple.com/us/app/ionic-view-test-share-ionic-apps/id1271789931?ls=1&amp;mt=8">
+    <img style="width: 148px" src="https://ionicframework.com/img/pro/appstore.png" id="appstore-image" />
+  </a>
+
+  <a href="https://play.google.com/store/apps/details?id=com.ionicframework.view">
+    <img style="width: 180px" alt="Get it on Google Play" src="https://ionicframework.com/img/pro/playstore.png" id="playstore-image" />
+  </a>
+</div>
+<p><br /></p>
+
+<p>If you are working with testers, the email they receive inviting them to look at your app will include links to the respective app stores and help get them set up.</p>
+
+<p><br /></p>
+
+<script src="https://fast.wistia.com/embed/medias/za0joonedd.jsonp" async=""></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
+<div class="wistia_embed wistia_async_za0joonedd" style="height:400px;width:640px">&nbsp;</div>
+
+<h2 id="using-channels-with-ionic-view">Using Channels with Ionic View</h2>
+
+<p>In order to test anything in Ionic View, you will have to assign your Builds to a Channel. These Channels are what you will use to share a version of your app with someone.</p>
+
+<p>For instance, you could set up a <strong>Staging</strong> Channel that you can share with your QA Testers, a <strong>Marketing Preview</strong> Channel that you can share with the Marketing department to give them an early preview, a <strong>Public</strong> Channel to be shared with anyone via a QR code, etc.</p>
+
+<p>You have complete control over these Channels and what Build is set to active for them. If you push a new build to <strong>Staging</strong>, anyone who has been given access to that Channel will be able to see the update right in Ionic View.</p>
+
+<p>For more information on setting up and deploying to Channels, please see our <a href="../basics/concepts/%23channels.html">Channels Documentation</a>.</p>
+
+<h2 id="inviting-private-testers">Inviting Private Testers</h2>
+
+<p>Once you have a Channel set up to share, click on the <strong>Share App</strong> button in the top right of your Apps dashboard. Here you’ll be able to choose which Channel to share, and manage the email addresses you’ve shared with.</p>
+
+<p>These users will receive an email with a link that will automatically download Ionic View for them, and then grant them access to your App.</p>
+
+<script src="https://fast.wistia.com/embed/medias/6uubjvj0q6.jsonp" async=""></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
+<div class="wistia_embed wistia_async_6uubjvj0q6" style="height:400px;width:640px">&nbsp;</div>
+
+<h2 id="sharing-publicly">Sharing Publicly</h2>
+
+<p>If you’d like to share your App publicly in Ionic View (for instance, on our Marketplace), all you have to do is set up one or more Public Channels (See <a href="../basics/concepts/%23channels.html#using-public-channels">Using Public Channels</a>).</p>
+
+<p>Once your Public channels have been set up, click on the <strong>Share App</strong> button in the top right of your Apps dashboard and click the “Public Ionic View” tab. Copy your AppId and share it with whomever you’d like.</p>
+
+<h2 id="viewing-feedback">Viewing Feedback</h2>
+
+<p>You can view feedback submitted by testers for any app from the Feedback tab in your Ionic Pro dashboard for that app.</p>
+
+<div style="text-align: center">
+  <img style="width: 950px" src="https://ionicframework.com/img/pro/beta-testing-feedback.png" />
+</div>
+
+<p>See the <a href="../view.html#submitting-feedback">Submitting Feedback</a> for more details.</p>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/pro/view/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:58 GMT -->
+</html>

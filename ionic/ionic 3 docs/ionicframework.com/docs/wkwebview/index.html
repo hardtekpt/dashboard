@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/wkwebview/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:39:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>WKWebview</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  </head>
+  <body id="docs-page-docs-wkwebview"
+        class="v2 docs fluid page-docs-wkwebview
+               
+               
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    
+      <nav class="navbar navbar-default" id="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <button type="button"
+              class="sidebar-toggle collapsed"
+              id="sidebar-toggle">
+        <span class="sr-only">Toggle sidebar</span>
+        <i class="ion-md-menu"></i>
+        <i class="ion-md-close"></i>
+      </button>
+      <a class="navbar-brand logo" href="https://ionicframework.com/">
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon.png" id="ionic-docs-logo" />
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon-back.png" id="ionic-docs-back" />
+      </a>
+      <a class="navbar-brand" href="https://ionicframework.com/docs">
+        
+        <img src="https://ionicframework.com/img/docs/ionic-docs-type.png" id="ionic-docs-text" />
+        
+      </a>
+      
+      <ul class="version">
+        <li class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="active">
+                Current Framework Docs <i class="ion-ios-checkmark"></i>
+              </a>
+            </li>
+            <li><a href="../v1/index.html">v1 Framework Docs</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../components/index.html">UI Components</a></li>
+        <li><a href="../api/index.html">API Reference</a></li>
+        <li><a href="../native/index.html">Native Plugins</a></li>
+        <li><a href="../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../pro/index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../pro/view/index.html">View app</a></li>
+        <li><a href="../pro/package/index.html">Package</a></li>
+        <li><a href="../pro/live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../pro/monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../apps.ionic.io/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white">
+          <a href="../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+
+    <div class="docs-container"
+     >
+  <nav class="side-nav" id="side-nav" data-spy="affix" data-offset-top="38">
+    <form class="form-group search" role="search">
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search"
+             data-searchpos="sidebar"
+             ng-model="searchTerm">
+    </form>
+    
+      <ul ng-controller="DocsNavCtrl">
+
+  
+  <li class="">
+    <a href="../index.html">Home</a>
+  </li>
+
+  
+  <li class="">
+    <a ng-click="showIntro = !showIntro">Intro</a>
+    <ul ng-show="showIntro"
+        ng-cloak
+        >
+      <li class="">
+        <a href="../intro/installation/index.html">Installation</a>
+      </li>
+      <li class="">
+        <a href="../intro/tutorial/index.html">Tutorial</a>
+      </li>
+      <li class="">
+        <a href="../intro/deploying/index.html">Deploying</a>
+      </li>
+      <li class="">
+        <a href="../intro/migration/index.html">Migration</a>
+      </li>
+      <li class="">
+        <a href="../intro/concepts/index.html">Concepts</a>
+      </li>
+    </ul>
+  </li>
+
+  
+
+ 
+  <li id="components-index"
+      class="">
+    <a ng-click="showComponents = !showComponents">Components</a>
+    <ul class="nav"
+        ng-cloak
+        ng-show="showComponents"
+       >
+      <li><a href="../components/index.html#overview">Overview</a></li>
+      <li><a href="../components/index.html#action-sheets">Action Sheets</a></li>
+
+      <li id="components-alerts"><a href="../components/index.html#alert">Alerts</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-prompt">Prompt Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-confirm">Confirmation Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-radio">Radio</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-checkbox">Checkbox</a></li>
+        </ul>
+
+      <li><a href="../components/index.html#badges">Badges</a></li>
+
+      <li id="components-buttons"><a href="../components/index.html#buttons">Buttons</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#outline-buttons">Outline Style</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#clear-buttons">Clear Style</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#round-buttons">Round Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#block-buttons">Block Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#full-buttons">Full Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#button-sizes">Button Sizes</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#icon-buttons">Icon Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#buttons-in-components">Buttons In Components</a></li>
+        </ul>
+
+      <li id="components-cards"><a href="../components/index.html#cards">Cards</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#card-header">Card Headers</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-list">List In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-image">Images In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-background">Background Images</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#advanced-cards">Advanced Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-advanced-social">Social Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-advanced-map">Map Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-advanced-weather"></a></li>
+        </ul>
+
+      <li><a href="../components/index.html#checkbox">Checkbox</a></li>
+
+      <li><a href="../components/index.html#datetime">DateTime</a></li>
+
+      <li><a href="../components/index.html#fabs">FABs</a></li>
+
+      <li><a href="../components/index.html#gestures">Gestures</a></li>
+
+      <li><a href="../components/index.html#grid">Grid</a></li>
+      <li><a href="../components/index.html#icons">Icons</a></li>
+
+      <li id="components-forms"><a href="../components/index.html#inputs">Inputs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#fixed-inline-labels">Fixed Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#floating-labels">Floating Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#inline-labels">Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#inset-labels">Inset Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#placeholder-labels">Placeholder Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#stacked-labels">Stacked Labels</a></li>
+        </ul>
+
+      <li id="components-lists"><a href="../components/index.html#lists">Lists</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#list-lines">Basic Usage</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#list-no-lines">No Lines</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#inset-list">Inset List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#list-dividers">List Dividers</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#list-headers">List Headers</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#icon-list">Icon List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#avatar-list">Avatar List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#multiline-list">Multi-line List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#sliding-list">Sliding List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#thumbnail-list">Thumbnail List</a></li>
+        </ul>
+
+
+      <li><a href="../components/index.html#loading">Loading</a></li>
+      <li><a href="../components/index.html#menus">Menus</a></li>
+      <li><a href="../components/index.html#modals">Modals</a></li>
+      <li><a href="../components/index.html#navigation">Navigation</a></li>
+      <li><a href="../components/index.html#popovers">Popover</a></li>
+      <li><a href="../components/index.html#radio">Radio</a></li>
+      <li><a href="../components/index.html#range">Range</a></li>
+      <li><a href="../components/index.html#searchbar">Searchbar</a></li>
+      <li><a href="../components/index.html#segment">Segment</a></li>
+      <li><a href="../components/index.html#select">Select</a></li>
+      <li><a href="../components/index.html#slides">Slides</a></li>
+
+      <li id="components-tabs"><a href="../components/index.html#tabs">Tabs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#tabs-icon">Icon Tabs</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#tabs-icon-text">Icon and Text</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#tabs-badges">Badges</a></li>
+        </ul>
+
+      <li><a href="../components/index.html#toast">Toast</a></li>
+      <li><a href="../components/index.html#toggle">Toggle</a></li>
+
+      <li id="components-toolbar"><a href="../components/index.html#toolbar">Toolbar</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-buttons">Buttons in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-segment">Segment in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-searchbar">Searchbar in Toolbars      s</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-colors">Changing the Color</a></li>
+        </ul>
+
+    </ul>
+  </li>
+
+
+    
+    <li>
+      <a href="../api/index.html">API</a>
+    </li>
+
+  
+   <li>
+     <a href="../native/index.html">Native</a>
+   </li>
+
+   
+    <li class="">
+      <a href="../storage/index.html">Storage</a>
+    </li>
+
+  
+  <li class="">
+    <a ng-click="showTheming = !showTheming">Theming</a>
+    <ul ng-show="showTheming"
+        ng-cloak
+        >
+      <li class="">
+        <a href="../theming/index.html">Intro</a>
+      </li>
+      <li class="">
+        <a href="../theming/css-utilities/index.html">CSS Utilities</a>
+      </li>
+      <li class="">
+        <a href="../theming/responsive-grid/index.html">Responsive Grid</a>
+      </li>
+      <li class="">
+        <a href="../theming/theming-your-app/index.html">Theming your App</a>
+      </li>
+      <li class="">
+        <a href="../theming/sass-variables/index.html">Sass Variables</a>
+      </li>
+      <li class="">
+        <a href="../theming/platform-specific-styles/index.html">
+          Platform Styles
+        </a>
+      </li>
+      <li class="">
+        <a href="../theming/overriding-ionic-variables/index.html">
+          Overriding Ionic Variables
+        </a>
+      </li>
+      <li class="">
+        <a href="../theming/rtl-support/index.html">
+         RTL Support
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  
+  <li class="">
+    <a href="../ionicons/index.html">Ionicons</a>
+  </li>
+
+  
+  <li>
+    <a href="../cli/index.html">CLI</a>
+  </li>
+
+  
+  <li class="active">
+    <a href="index.html">WKWebview</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../troubleshooting/index.html">Troubleshooting</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../developer-resources/index.html">Developer Resources</a>
+    
+  </li>
+</ul>
+
+    
+  </nav>
+  
+  <main>
+    <h1 id="wkwebview">WKWebView</h1>
+
+<p><img src="https://ionicframework.com/img/docs/webkit-icon.png" style="     display: inline-block;     float: right;     margin-top: 25px;     margin-left: 5px;     width: 30%;     max-width: 200px;" /></p>
+
+<p>In iOS, there have been two webviews for a few years now, UIWebView and WKWebView. Historically, Ionic apps have used UIWebView, but no longer. Ionic now uses WKWebview by default when building for iOS.</p>
+
+<p>We strongly believe WKWebview is the best option for any app, as it features many improvements over the older, legacy webview (UIWebView). These features include:</p>
+
+<ul>
+  <li>JIT conversion of JS code down to machine code, which runs much faster</li>
+  <li>Improved rendering performance</li>
+  <li>Less memory consumption</li>
+  <li>Better adherence to web standards</li>
+  <li>Reliable scroll events (important for virtual-list)</li>
+</ul>
+
+<p>We wanted to make sure that people could easily switch to WKWebView without many issues, but there are still some things that you’ll need to consider.</p>
+
+<h2 id="update-ionic-cli">Update Ionic CLI</h2>
+
+<blockquote>
+  <p>WKWebView plugin needs latest Ionic CLI in order to work properly.</p>
+</blockquote>
+
+<p>Please make sure that your global CLI is using the latest 3.x release. If not, please upgrade:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>npm uninstall -g ionic
+npm install -g ionic
+</code></pre>
+</div>
+
+<h2 id="cors">CORS</h2>
+
+<blockquote>
+  <p>UIWebView never enforced CORS, but WKWebView does.</p>
+</blockquote>
+
+<p>Unfortunately there’s no API to disable this, so you’ll need to ensure any remote API that your app use, implement CORS correctly: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS MDN Docs</a></p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Origin: http://localhost:8080
+</code></pre>
+</div>
+
+<h4 id="cors-checklist">CORS checklist:</h4>
+
+<ol>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">Whitelist Origin</a>: <code class="highlighter-rouge">http://localhost:8080</code></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods">Whitelist Methods</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers">Whitelist Header</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request">CORS preflight request (OPTION)</a></li>
+</ol>
+
+<h3 id="rewriting-file">Rewriting file://</h3>
+
+<p>WKWebView still has some issues when referencing local files, <code class="highlighter-rouge">file://</code>. We tried <a href="https://docs.google.com/document/d/19VQ-n7hGr9IDPPstQqU8_8WgqUh7R6sgQfL2neoT-Xw/edit?usp=sharing">many solutions</a> but went with a local server, as it was the only solution that worked for every case.</p>
+
+<p>If you’re working with local files (text files, images, videos), you’ll need to make sure that the path of file <strong>does not have</strong> <code class="highlighter-rouge">file://</code> in front of it.</p>
+
+<p>For example:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>file:///usr/home/dev/app/index.html
+</code></pre>
+</div>
+
+<p>Should be rewritten to:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>/usr/home/dev/app/index.html
+</code></pre>
+</div>
+
+<p>We added built-in function (Ionic 3.2.0) that will rewrite <code class="highlighter-rouge">file://</code> URLs  automatically:</p>
+
+<div class="language-ts highlighter-rouge"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">normalizeURL</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'ionic-angular'</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Original: '</span> <span class="o">+</span> <span class="nx">path</span><span class="p">);</span>
+
+<span class="nx">path</span> <span class="o">=</span> <span class="nx">normalizeURL</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Fixed: '</span> <span class="o">+</span> <span class="nx">path</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Output:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Original: file:///Users/manuelmartinez-almeida/Library/Developer/CoreSimulator/Devices/94646EFE-DE04-46BD-AFC1-B4F312BA06CB/data/Containers/Bundle/Application/6AD1018C-6836-4BF9-83DA-4430392D10D5/ionic-wk-test.app/www/index.html
+
+Fixed: /Users/manuelmartinez-almeida/Library/Developer/CoreSimulator/Devices/94646EFE-DE04-46BD-AFC1-B4F312BA06CB/data/Containers/Bundle/Application/6AD1018C-6836-4BF9-83DA-4430392D10D5/ionic-wk-test.app/www/index.html
+</code></pre>
+</div>
+
+<p>Or from within a template:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="err">[</span><span class="na">src</span><span class="err">]="</span><span class="na">imagePath</span><span class="err">"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<div class="language-ts highlighter-rouge"><pre class="highlight"><code><span class="nx">takePhoto</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">img</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">imagePath</span> <span class="o">=</span> <span class="nx">normalizeURL</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Note</strong>: Core cordova plugins also allow you to reference a file via the <code class="highlighter-rouge">cdvfile://</code> protocol. Unfortunately, we cannot rewrite this path as it is something that gets resolved in native code. We suggest that when ever you reference a file, use the full path for rewrites, not <code class="highlighter-rouge">cdvfile://</code>.</p>
+
+<h2 id="upgrading-to-wkwebview-uiwebview-users-only">Upgrading to WKWebView (UIWebView users only)</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ionic cordova plugin add cordova-plugin-ionic-webview --save
+</code></pre>
+</div>
+
+<p>More info: <a href="../../../github.com/ionic-team/cordova-plugin-ionic-webview.html#installation-instructions">https://github.com/ionic-team/cordova-plugin-ionic-webview#installation-instructions</a></p>
+
+<h2 id="downgrading-to-uiwebview">Downgrading to UIWebView</h2>
+
+<p>As we said previously, we strongly recommend developers upgrade to WKWebView, but if you still need to use UIWebView, here’s the step to downgrade:</p>
+
+<h3 id="option-1-force-uiwebview-usage">Option 1: Force UIWebView usage</h3>
+
+<p>You can force cordova to use the default engine (UIWebView) by explicitally telling so:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVUIWebViewEngine"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="option-2-uninstall-the-ionics-webview-plugin">Option 2: Uninstall the Ionic’s WebView plugin</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ionic cordova plugin remove cordova cordova-plugin-ionic-webview --save
+<span class="gp">$ </span>rm -rf platforms/
+<span class="gp">$ </span>rm -rf plugins/
+<span class="gp">$ </span>ionic cordova build ios
+</code></pre>
+</div>
+
+<h1 id="faqs">FAQs</h1>
+
+<h2 id="app-data-is-not-copied-over">App data is not copied over</h2>
+
+<blockquote>
+  <p>I just migrated from UIWebView to WKWebView and the storage data looks lost.</p>
+</blockquote>
+
+<p>Since WKWebView is essentially a new browser, any data that you could have in LocalStorage or IndexDB will not be copied over. In this case, migrating data to a native storage mechanism, SQLite, is suggested to make sure that the data will still be available.</p>
+
+<p>We strongly recommend to use the <a href="../storage/index.html">ionic-storage</a> package which abstracts aways most of the problems with persistent storage.</p>
+
+<h2 id="my-app-does-not-load-white-screen">My app does not load, white screen</h2>
+
+<blockquote>
+  <p>I don’t have any error in my code, but still I get a blank screen</p>
+</blockquote>
+
+<p>Most of the time, this kind of problems come from an incorrect installation of cordova.</p>
+
+<ul>
+  <li>
+    <p>Ensure Xcode is closed</p>
+  </li>
+  <li>
+    <p>Clean install:</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>rm -rf platforms
+rm -rf plugins
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Add the platform back</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>ionic cordova platform add ios
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Make sure localhost is allowed:</p>
+
+    <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"http://localhost:8080/*"</span><span class="nt">/&gt;</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Make sure WKWebView is the default engine:</p>
+
+    <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"CDVWKWebViewEngine"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"CDVWKWebViewEngine"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/feature&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVWKWebViewEngine"</span> <span class="nt">/&gt;</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Build ionic ios</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>ionic cordova build ios
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Open Xcode and try to build again.</p>
+  </li>
+</ul>
+
+<h2 id="malloc--error-for-object-0x1700af180-pointer-being-freed-was-not-allocated">Malloc: *** error for object 0x1700af180: pointer being freed was not allocated</h2>
+
+<p>It looks like its a Safari bug and therefore only appears when you are debugging your webview with Safari. In Safari under:
+Develop -&gt; <em>Your_Device_Name</em> uncheck <strong>“Automatically Show Web Inspector for JSContexts”</strong>.</p>
+
+<p>This should resolve your issue.</p>
+
+<h2 id="my-local-resources-does-not-load">My local resources does not load</h2>
+
+<blockquote>
+  <p>Some of the <code class="highlighter-rouge">&lt;img&gt;</code>/<code class="highlighter-rouge">&lt;video&gt;</code>/<code class="highlighter-rouge">&lt;audio&gt;</code> does not load.</p>
+</blockquote>
+
+<p>Ensure, that the URL of the resource does not start with <code class="highlighter-rouge">file://</code>.
+If it is the case, use <code class="highlighter-rouge">normalizeURL()</code> to rewrite the path:</p>
+
+<div class="language-ts highlighter-rouge"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">normalizeURL</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'ionic-angular'</span><span class="p">;</span>
+
+<span class="nx">imageSRC</span> <span class="o">=</span> <span class="nx">normalizeURL</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="configuring-avaudiosession-doesnt-affect-wkwebview">Configuring AVAudioSession doesn’t affect WKWebView</h2>
+
+<p>WKWebView runs in a separate process from your app. It is likely that it has its own AudioSession separate from your app’s AudioSession. One possible workaround is to allow your app’s AudioSession to mix with others:</p>
+
+<pre><code class="language-obj-c">[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord 
+                                 withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                                       error:&amp;error];
+</code></pre>
+
+<p>Fortunatelly, Ionic’s WebView can do this for you by setting the <code class="highlighter-rouge">AudioCanMix</code> cordova preference to <code class="highlighter-rouge">true</code>.</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AudioCanMix"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="xhr-requests-does-not-work">XHR requests does not work</h2>
+
+<blockquote>
+  <p>I am trying to call some remote service using XHR (or fetch), but it is not working.</p>
+</blockquote>
+
+<p>As we said previously, WKWebView enforces CORS. You will need to whitelist <code class="highlighter-rouge">http://localhost:8080</code> as “Origin” and/or implement CORS properly.</p>
+
+<h2 id="i-cant-implement-cors">I can’t implement CORS</h2>
+
+<blockquote>
+  <p>I don’t control the backend, so I can’t add CORS to it, how can I make it work with WKWebView?</p>
+</blockquote>
+
+<p>If it is not an possibility to implement or configure CORS in the server, there is a native plugin that can “proxy” the HTTP requests using native code, so CORS can be completely bypassed:</p>
+
+<p>Read more here: <a href="../native/http/index.html">cordova-plugin-http</a>.</p>
+
+
+  </main>
+  
+</div>
+
+
+    
+
+    
+      <section id="pre-footer" class="continue">
+  <ul class="container">
+    
+      <li class="forum">
+        <a href="../../../forum.ionicframework.com/index.html">Community Forum</a>
+        <p>
+          Stop by and say hello. The Forum is the best place to connect, ask a
+          question, or help out other Ionic developers!
+        </p>
+      </li>
+    
+    
+      <li class="explor-docs">
+        <a href="../index.html">Explore the docs</a>
+        <p>
+          Take a look and get coding! Our documentation covers all you need to
+          know to get an app up and running in minutes.
+        </p>
+      </li>
+    
+  </ul>
+</section>
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
+<script>
+  anchors.options.placement = 'left';
+  anchors.add('main h2, main h3');
+</script>
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/wkwebview/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:39:28 GMT -->
+</html>

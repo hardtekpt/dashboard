@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/theming/css-utilities/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:39:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>CSS Utilities</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body id="docs-page-responsive-utilities"
+        class="v2 docs fluid page-responsive-utilities
+               
+               
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    
+      <nav class="navbar navbar-default" id="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <button type="button"
+              class="sidebar-toggle collapsed"
+              id="sidebar-toggle">
+        <span class="sr-only">Toggle sidebar</span>
+        <i class="ion-md-menu"></i>
+        <i class="ion-md-close"></i>
+      </button>
+      <a class="navbar-brand logo" href="https://ionicframework.com/">
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon.png" id="ionic-docs-logo" />
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon-back.png" id="ionic-docs-back" />
+      </a>
+      <a class="navbar-brand" href="https://ionicframework.com/docs">
+        
+        <img src="https://ionicframework.com/img/docs/ionic-docs-type.png" id="ionic-docs-text" />
+        
+      </a>
+      
+      <ul class="version">
+        <li class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="active">
+                Current Framework Docs <i class="ion-ios-checkmark"></i>
+              </a>
+            </li>
+            <li><a href="../../v1/index.html">v1 Framework Docs</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      
+      <form class="navbar-form navbar-left"
+            id="header-search"
+            role="search"
+            data-searchpos="header">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control search-input"
+                 placeholder="Search"
+                 data-searchpos="header"
+                 ng-model="searchTerm">
+        </div>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../../components/index.html">UI Components</a></li>
+        <li><a href="../../api/index.html">API Reference</a></li>
+        <li><a href="../../native/index.html">Native Plugins</a></li>
+        <li><a href="../../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../../pro/index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../../pro/view/index.html">View app</a></li>
+        <li><a href="../../pro/package/index.html">Package</a></li>
+        <li><a href="../../pro/live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../../pro/monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../../apps.ionic.io/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white">
+          <a href="../../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+
+    <div class="docs-container"
+     >
+  <nav class="side-nav" id="side-nav" data-spy="affix" data-offset-top="38">
+    <form class="form-group search" role="search">
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search"
+             data-searchpos="sidebar"
+             ng-model="searchTerm">
+    </form>
+    
+      <ul ng-controller="DocsNavCtrl">
+
+  
+  <li class="">
+    <a href="../../index.html">Home</a>
+  </li>
+
+  
+  <li class="">
+    <a ng-click="showIntro = !showIntro">Intro</a>
+    <ul ng-show="showIntro"
+        ng-cloak
+        >
+      <li class="">
+        <a href="../../intro/installation/index.html">Installation</a>
+      </li>
+      <li class="">
+        <a href="../../intro/tutorial/index.html">Tutorial</a>
+      </li>
+      <li class="">
+        <a href="../../intro/deploying/index.html">Deploying</a>
+      </li>
+      <li class="">
+        <a href="../../intro/migration/index.html">Migration</a>
+      </li>
+      <li class="">
+        <a href="../../intro/concepts/index.html">Concepts</a>
+      </li>
+    </ul>
+  </li>
+
+  
+
+ 
+  <li id="components-index"
+      class="">
+    <a ng-click="showComponents = !showComponents">Components</a>
+    <ul class="nav"
+        ng-cloak
+        ng-show="showComponents"
+       >
+      <li><a href="../../components/index.html#overview">Overview</a></li>
+      <li><a href="../../components/index.html#action-sheets">Action Sheets</a></li>
+
+      <li id="components-alerts"><a href="../../components/index.html#alert">Alerts</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-prompt">Prompt Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-confirm">Confirmation Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-radio">Radio</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-checkbox">Checkbox</a></li>
+        </ul>
+
+      <li><a href="../../components/index.html#badges">Badges</a></li>
+
+      <li id="components-buttons"><a href="../../components/index.html#buttons">Buttons</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#outline-buttons">Outline Style</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#clear-buttons">Clear Style</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#round-buttons">Round Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#block-buttons">Block Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#full-buttons">Full Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#button-sizes">Button Sizes</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#icon-buttons">Icon Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#buttons-in-components">Buttons In Components</a></li>
+        </ul>
+
+      <li id="components-cards"><a href="../../components/index.html#cards">Cards</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-header">Card Headers</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-list">List In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-image">Images In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-background">Background Images</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#advanced-cards">Advanced Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-advanced-social">Social Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-advanced-map">Map Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-advanced-weather"></a></li>
+        </ul>
+
+      <li><a href="../../components/index.html#checkbox">Checkbox</a></li>
+
+      <li><a href="../../components/index.html#datetime">DateTime</a></li>
+
+      <li><a href="../../components/index.html#fabs">FABs</a></li>
+
+      <li><a href="../../components/index.html#gestures">Gestures</a></li>
+
+      <li><a href="../../components/index.html#grid">Grid</a></li>
+      <li><a href="../../components/index.html#icons">Icons</a></li>
+
+      <li id="components-forms"><a href="../../components/index.html#inputs">Inputs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#fixed-inline-labels">Fixed Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#floating-labels">Floating Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#inline-labels">Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#inset-labels">Inset Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#placeholder-labels">Placeholder Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#stacked-labels">Stacked Labels</a></li>
+        </ul>
+
+      <li id="components-lists"><a href="../../components/index.html#lists">Lists</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-lines">Basic Usage</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-no-lines">No Lines</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#inset-list">Inset List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-dividers">List Dividers</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-headers">List Headers</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#icon-list">Icon List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#avatar-list">Avatar List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#multiline-list">Multi-line List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#sliding-list">Sliding List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#thumbnail-list">Thumbnail List</a></li>
+        </ul>
+
+
+      <li><a href="../../components/index.html#loading">Loading</a></li>
+      <li><a href="../../components/index.html#menus">Menus</a></li>
+      <li><a href="../../components/index.html#modals">Modals</a></li>
+      <li><a href="../../components/index.html#navigation">Navigation</a></li>
+      <li><a href="../../components/index.html#popovers">Popover</a></li>
+      <li><a href="../../components/index.html#radio">Radio</a></li>
+      <li><a href="../../components/index.html#range">Range</a></li>
+      <li><a href="../../components/index.html#searchbar">Searchbar</a></li>
+      <li><a href="../../components/index.html#segment">Segment</a></li>
+      <li><a href="../../components/index.html#select">Select</a></li>
+      <li><a href="../../components/index.html#slides">Slides</a></li>
+
+      <li id="components-tabs"><a href="../../components/index.html#tabs">Tabs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#tabs-icon">Icon Tabs</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#tabs-icon-text">Icon and Text</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#tabs-badges">Badges</a></li>
+        </ul>
+
+      <li><a href="../../components/index.html#toast">Toast</a></li>
+      <li><a href="../../components/index.html#toggle">Toggle</a></li>
+
+      <li id="components-toolbar"><a href="../../components/index.html#toolbar">Toolbar</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-buttons">Buttons in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-segment">Segment in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-searchbar">Searchbar in Toolbars      s</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-colors">Changing the Color</a></li>
+        </ul>
+
+    </ul>
+  </li>
+
+
+    
+    <li>
+      <a href="../../api/index.html">API</a>
+    </li>
+
+  
+   <li>
+     <a href="../../native/index.html">Native</a>
+   </li>
+
+   
+    <li class="">
+      <a href="../../storage/index.html">Storage</a>
+    </li>
+
+  
+  <li class="active">
+    <a ng-click="showTheming = !showTheming">Theming</a>
+    <ul ng-show="showTheming"
+        ng-cloak
+        
+          ng-init="showTheming = true"
+        >
+      <li class="">
+        <a href="../index.html">Intro</a>
+      </li>
+      <li class="active">
+        <a href="index.html">CSS Utilities</a>
+      </li>
+      <li class="">
+        <a href="../responsive-grid/index.html">Responsive Grid</a>
+      </li>
+      <li class="">
+        <a href="../theming-your-app/index.html">Theming your App</a>
+      </li>
+      <li class="">
+        <a href="../sass-variables/index.html">Sass Variables</a>
+      </li>
+      <li class="">
+        <a href="../platform-specific-styles/index.html">
+          Platform Styles
+        </a>
+      </li>
+      <li class="">
+        <a href="../overriding-ionic-variables/index.html">
+          Overriding Ionic Variables
+        </a>
+      </li>
+      <li class="">
+        <a href="../rtl-support/index.html">
+         RTL Support
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  
+  <li class="">
+    <a href="../../ionicons/index.html">Ionicons</a>
+  </li>
+
+  
+  <li>
+    <a href="../../cli/index.html">CLI</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../../wkwebview/index.html">WKWebview</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../../troubleshooting/index.html">Troubleshooting</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../../developer-resources/index.html">Developer Resources</a>
+    
+  </li>
+</ul>
+
+    
+  </nav>
+  
+  <main>
+    <h1 class="title">CSS Utilities</h1>
+
+<p><a class="improve-v2-docs" href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fionic-team%2Fionic-site%2Fedit%2Fmaster%2Fcontent%2Fdocs%2Ftheming%2Fcss-utilities%2Findex.md">
+  Improve this doc
+</a></p>
+
+<p>Ionic provides a set of utility attributes that can be used on any element in order to modify the text or adjust the padding or margin.</p>
+
+<ul>
+  <li><a href="#text-modification">Text Modification</a>
+    <ul>
+      <li><a href="#text-alignment">Text Alignment</a></li>
+      <li><a href="#text-transformation">Text Transformation</a></li>
+      <li><a href="#responsive-text-attributes">Responsive Text Attributes</a></li>
+    </ul>
+  </li>
+  <li><a href="#element-placement">Element Placement</a>
+    <ul>
+      <li><a href="#float-elements">Float Elements</a></li>
+      <li><a href="#responsive-float-attributes">Responsive Float Attributes</a></li>
+    </ul>
+  </li>
+  <li><a href="#content-space">Content Space</a>
+    <ul>
+      <li><a href="#element-padding">Element Padding</a></li>
+      <li><a href="#element-margin">Element Margin</a></li>
+    </ul>
+  </li>
+  <li><a href="#setting-attributes-dynamically">Setting Attributes Dynamically</a></li>
+</ul>
+
+<h2 id="text-modification">Text Modification</h2>
+
+<h3 id="text-alignment">Text Alignment</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Style Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">text-left</code></td>
+      <td><code class="highlighter-rouge">text-align: left</code></td>
+      <td>The inline contents are aligned to the left edge of the line box.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-right</code></td>
+      <td><code class="highlighter-rouge">text-align: right</code></td>
+      <td>The inline contents are aligned to the right edge of the line box.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-start</code></td>
+      <td><code class="highlighter-rouge">text-align: start</code></td>
+      <td>The same as <code class="highlighter-rouge">text-left</code> if direction is left-to-right and <code class="highlighter-rouge">text-right</code> if direction is right-to-left.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-end</code></td>
+      <td><code class="highlighter-rouge">text-align: end</code></td>
+      <td>The same as <code class="highlighter-rouge">text-right</code> if direction is left-to-right and <code class="highlighter-rouge">text-left</code> if direction is right-to-left.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-center</code></td>
+      <td><code class="highlighter-rouge">text-align: center</code></td>
+      <td>The inline contents are centered within the line box.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-justify</code></td>
+      <td><code class="highlighter-rouge">text-align: justify</code></td>
+      <td>The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-wrap</code></td>
+      <td><code class="highlighter-rouge">white-space: nowrap</code></td>
+      <td>Sequences of whitespace are collapsed. Newline characters in the source are handled as other whitespace. Breaks lines as necessary to fill line boxes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-nowrap</code></td>
+      <td><code class="highlighter-rouge">white-space: normal</code></td>
+      <td>Collapses whitespace as for <code class="highlighter-rouge">normal</code>, but suppresses line breaks (text wrapping) within text.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ion-grid>
+  <ion-row>
+    <ion-col text-left="">
+      <b>text-left</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-right="">
+      <b>text-right</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-center="">
+      <b>text-center</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-justify="">
+      <b>text-justify</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-wrap="">
+      <b>text-wrap</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-nowrap="" style="min-width: 0; overflow: hidden; text-overflow: ellipsis;">
+      <b>text-nowrap</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<p><i>Note: the example above is shown with custom styling.</i></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">text-left</span><span class="nt">&gt;</span>
+  text-left
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-right</span><span class="nt">&gt;</span>
+  text-right
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-center</span><span class="nt">&gt;</span>
+  text-center
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-justify</span><span class="nt">&gt;</span>
+  text-justify
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-wrap</span><span class="nt">&gt;</span>
+  text-wrap
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-nowrap</span><span class="nt">&gt;</span>
+  text-nowrap
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="text-transformation">Text Transformation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Style Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">text-uppercase</code></td>
+      <td><code class="highlighter-rouge">text-transform: uppercase</code></td>
+      <td>Forces all characters to be converted to uppercase.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-lowercase</code></td>
+      <td><code class="highlighter-rouge">text-transform: lowercase</code></td>
+      <td>Forces all characters to be converted to lowercase.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-capitalize</code></td>
+      <td><code class="highlighter-rouge">text-transform: capitalize</code></td>
+      <td>Forces the first letter of each word to be converted to uppercase.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ion-grid>
+  <ion-row>
+    <ion-col text-uppercase="">
+      <b>text-uppercase</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-lowercase="">
+      <b>text-lowercase</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col text-capitalize="">
+      <b>text-capitalize</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<p><i>Note: the example above is shown with custom styling.</i></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">text-uppercase</span><span class="nt">&gt;</span>
+  text-uppercase
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-lowercase</span><span class="nt">&gt;</span>
+  text-lowercase
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">text-capitalize</span><span class="nt">&gt;</span>
+  text-capitalize
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="responsive-text-attributes">Responsive Text Attributes</h3>
+
+<p>All of the text attributes listed above have additional attributes to modify the text based on the screen size. Instead of <code class="highlighter-rouge">text-</code> in each attribute, use <code class="highlighter-rouge">text-{breakpoint}-</code> to only use the attribute on specific screen sizes, where <code class="highlighter-rouge"><span class="p">{</span><span class="err">breakpoint</span><span class="p">}</span></code> is one of the defined breakpoints in the <code class="highlighter-rouge">$screen-breakpoints</code> variable.
+The table below shows the default behavior, where <code class="highlighter-rouge"><span class="p">{</span><span class="err">modifier</span><span class="p">}</span></code> is any of the following: <code class="highlighter-rouge">left</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">start</code>, <code class="highlighter-rouge">end</code>, <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">justify</code>, <code class="highlighter-rouge">wrap</code>, <code class="highlighter-rouge">nowrap</code>, <code class="highlighter-rouge">uppercase</code>, <code class="highlighter-rouge">lowercase</code>, or <code class="highlighter-rouge">capitalize</code>, as they are described above.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">text-{modifier}</code></td>
+      <td>Applies the modifier to the element on all screen sizes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-sm-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 576px</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-md-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 768px</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-lg-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 992px</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">text-xl-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 1200px</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="element-placement">Element Placement</h2>
+
+<h3 id="float-elements">Float Elements</h3>
+
+<p>The float CSS property specifies that an element should be placed along the left or right side of its container, where text and inline elements will wrap around it. This way, the element is taken from the normal flow of the web page, though still remaining a part of the flow, contrary to absolute positioning.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Style Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">float-left</code></td>
+      <td><code class="highlighter-rouge">float: left</code></td>
+      <td>The element will float on the left side of its containing block.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-right</code></td>
+      <td><code class="highlighter-rouge">float: right</code></td>
+      <td>The element will float on the right side of its containing block.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-start</code></td>
+      <td><code class="highlighter-rouge">float: left | float: right</code></td>
+      <td>The same as <code class="highlighter-rouge">float-left</code> if direction is left-to-right and <code class="highlighter-rouge">float-right</code> if direction is right-to-left.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-end</code></td>
+      <td><code class="highlighter-rouge">float: left | float: right</code></td>
+      <td>The same as <code class="highlighter-rouge">float-right</code> if direction is left-to-right and <code class="highlighter-rouge">float-left</code> if direction is right-to-left.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ion-grid>
+  <ion-row>
+    <ion-col float-left="">
+      <b>float-left</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+    <ion-col float-right="">
+      <b>float-right</b><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<p><i>Note: the example above is shown with custom styling.</i></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">float-left</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;b&gt;</span>float-left<span class="nt">&lt;/b&gt;&lt;br&gt;</span>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">float-right</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;b&gt;</span>float-right<span class="nt">&lt;/b&gt;&lt;br&gt;</span>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="responsive-float-attributes">Responsive Float Attributes</h3>
+
+<p>All of the float attributes listed above have additional attributes to modify the float based on the screen size. Instead of <code class="highlighter-rouge">float-</code> in each attribute, use <code class="highlighter-rouge">float-{breakpoint}-</code> to only use the attribute on specific screen sizes, where <code class="highlighter-rouge"><span class="p">{</span><span class="err">breakpoint</span><span class="p">}</span></code> is one of the defined breakpoints in the <code class="highlighter-rouge">$screen-breakpoints</code> variable.
+The table below shows the default behavior, where <code class="highlighter-rouge"><span class="p">{</span><span class="err">modifier</span><span class="p">}</span></code> is any of the following: <code class="highlighter-rouge">left</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">start</code>, or <code class="highlighter-rouge">end</code>, as they are described above.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">float-{modifier}</code></td>
+      <td>Applies the modifier to the element on all screen sizes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-sm-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 576px</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-md-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 768px</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-lg-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 992px</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float-xl-{modifier}</code></td>
+      <td>Applies the modifier to the element when <code class="highlighter-rouge">min-width: 1200px</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="content-space">Content Space</h2>
+
+<h3 id="element-padding">Element Padding</h3>
+
+<p>The padding attribute sets the padding area of an element. The padding area is the space between the content of the element and its border.</p>
+
+<p>The default amount of <code class="highlighter-rouge">padding</code> to be applied is set by the <code class="highlighter-rouge">$content-padding</code> variable to <code class="highlighter-rouge">16px</code>. Each mode can have a different value for padding by setting <code class="highlighter-rouge">$content-ios-padding</code>, <code class="highlighter-rouge">$content-md-padding</code>, or <code class="highlighter-rouge">$content-wp-padding</code>. See the <a href="../overriding-ionic-variables/index.html">overriding ionic variables section</a> to change this value.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Style Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">padding</code></td>
+      <td><code class="highlighter-rouge">padding: 16px</code></td>
+      <td>Applies padding to all sides.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding-top</code></td>
+      <td><code class="highlighter-rouge">padding-top: 16px</code></td>
+      <td>Applies padding to the top.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding-left</code></td>
+      <td><code class="highlighter-rouge">padding-left: 16px</code></td>
+      <td>Applies padding to the left.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding-right</code></td>
+      <td><code class="highlighter-rouge">padding-right: 16px</code></td>
+      <td>Applies padding to the right.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding-bottom</code></td>
+      <td><code class="highlighter-rouge">padding-bottom: 16px</code></td>
+      <td>Applies padding to the bottom.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding-vertical</code></td>
+      <td><code class="highlighter-rouge">padding: 16px 0</code></td>
+      <td>Applies padding to the top and botttom.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding-horizontal</code></td>
+      <td><code class="highlighter-rouge">padding: 0 16px</code></td>
+      <td>Applies padding to the left and right.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">no-padding</code></td>
+      <td><code class="highlighter-rouge">padding: 0</code></td>
+      <td>Applies no padding to all sides.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ion-grid>
+  <ion-row>
+    <ion-col class="padding-col" padding="">
+      padding
+    </ion-col>
+    <ion-col class="padding-col" padding-top="">
+      padding-top
+    </ion-col>
+    <ion-col class="padding-col" padding-left="">
+      padding-left
+    </ion-col>
+    <ion-col class="padding-col" padding-right="">
+      padding-right
+    </ion-col>
+    <ion-col class="padding-col" padding-bottom="">
+      padding-bottom
+    </ion-col>
+    <ion-col class="padding-col" padding-vertical="">
+      padding-vertical
+    </ion-col>
+    <ion-col class="padding-col" padding-horizontal="">
+      padding-horizontal
+    </ion-col>
+    <ion-col class="padding-col" no-padding="">
+      no-padding
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<p><i>Note: the example above is shown with custom styling to show the padding that gets applied in green.</i></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">padding</span><span class="nt">&gt;</span>
+  padding
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">padding-top</span><span class="nt">&gt;</span>
+  padding-top
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">padding-left</span><span class="nt">&gt;</span>
+  padding-left
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">padding-right</span><span class="nt">&gt;</span>
+  padding-right
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">padding-bottom</span><span class="nt">&gt;</span>
+  padding-bottom
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">padding-vertical</span><span class="nt">&gt;</span>
+  padding-vertical
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">padding-horizontal</span><span class="nt">&gt;</span>
+  padding-horizontal
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">no-padding</span><span class="nt">&gt;</span>
+  no-padding
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="element-margin">Element Margin</h3>
+
+<p>The margin area extends the border area with an empty area used to separate the element from its neighbors.</p>
+
+<p>The default amount of <code class="highlighter-rouge">margin</code> to be applied is set by the <code class="highlighter-rouge">$content-margin</code> variable to <code class="highlighter-rouge">16px</code>. Each mode can have a different value for margin by setting <code class="highlighter-rouge">$content-ios-margin</code>, <code class="highlighter-rouge">$content-md-margin</code>, or <code class="highlighter-rouge">$content-wp-margin</code>. See the <a href="../overriding-ionic-variables/index.html">overriding ionic variables section</a> to change this value.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Style Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">margin</code></td>
+      <td><code class="highlighter-rouge">margin: 16px</code></td>
+      <td>Applies margin to all sides.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin-top</code></td>
+      <td><code class="highlighter-rouge">margin-top: 16px</code></td>
+      <td>Applies margin to the top.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin-left</code></td>
+      <td><code class="highlighter-rouge">margin-left: 16px</code></td>
+      <td>Applies margin to the left.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin-right</code></td>
+      <td><code class="highlighter-rouge">margin-right: 16px</code></td>
+      <td>Applies margin to the right.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin-bottom</code></td>
+      <td><code class="highlighter-rouge">margin-bottom: 16px</code></td>
+      <td>Applies margin to the bottom.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin-vertical</code></td>
+      <td><code class="highlighter-rouge">margin: 16px 0</code></td>
+      <td>Applies margin to the top and botttom.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin-horizontal</code></td>
+      <td><code class="highlighter-rouge">margin: 0 16px</code></td>
+      <td>Applies margin to the left and right.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">no-margin</code></td>
+      <td><code class="highlighter-rouge">margin: 0</code></td>
+      <td>Applies no margin to all sides.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Little bit of faking it here, using padding attributes so we can show it with a background -->
+<ion-grid>
+  <ion-row>
+    <ion-col class="margin-col" padding="">
+      <div>margin</div>
+    </ion-col>
+    <ion-col class="margin-col" padding-top="">
+      <div>margin-top</div>
+    </ion-col>
+    <ion-col class="margin-col" padding-left="">
+      <div>margin-left</div>
+    </ion-col>
+    <ion-col class="margin-col" padding-right="">
+      <div>margin-right</div>
+    </ion-col>
+    <ion-col class="margin-col" padding-bottom="">
+      <div>margin-bottom</div>
+    </ion-col>
+    <ion-col class="margin-col" padding-vertical="">
+      <div>margin-vertical</div>
+    </ion-col>
+    <ion-col class="margin-col" padding-horizontal="">
+      <div>margin-horizontal</div>
+    </ion-col>
+    <ion-col class="margin-col" no-padding="">
+      <div>no-margin</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<p><i>Note: the example above is shown with custom styling to show the margin that gets applied in orange.</i></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">margin</span><span class="nt">&gt;</span>
+  margin
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">margin-top</span><span class="nt">&gt;</span>
+  margin-top
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">margin-left</span><span class="nt">&gt;</span>
+  margin-left
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">margin-right</span><span class="nt">&gt;</span>
+  margin-right
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">margin-bottom</span><span class="nt">&gt;</span>
+  margin-bottom
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">margin-vertical</span><span class="nt">&gt;</span>
+  margin-vertical
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">margin-horizontal</span><span class="nt">&gt;</span>
+  margin-horizontal
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">no-margin</span><span class="nt">&gt;</span>
+  no-margin
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="setting-attributes-dynamically">Setting Attributes Dynamically</h2>
+
+<p>By setting a CSS attribute dynamically, you can add or remove functionality from a component based on a certain condition. To set an attribute dynamically, use the following syntax:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="err">[</span><span class="na">attr</span><span class="err">.</span><span class="na">text-center</span><span class="err">]="</span><span class="na">isMD</span> <span class="err">?</span> <span class="err">''</span> <span class="na">:</span> <span class="na">null</span><span class="err">"</span><span class="nt">&gt;</span>I will be centered when isMD is true.<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>This will set the <code class="highlighter-rouge">text-center</code> attribute on the <code class="highlighter-rouge">div</code> if <code class="highlighter-rouge">isMD</code> evaluates to true. Otherwise, the attribute will not be added.</p>
+
+  </main>
+  
+</div>
+
+
+    
+      <div class="footer-links">
+        <hr>
+        
+          <a class="footer-link prev" href="../index.html">
+            Intro</a>
+        
+        
+          <a class="footer-link next" href="../responsive-grid/index.html">
+            Responsive Grid</a>
+        
+      </div>
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/theming/css-utilities/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:39:11 GMT -->
+</html>

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/developer-resources/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>Ionic Developer Resources</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  </head>
+  <body id="docs-page-resources-index"
+        class="v2 docs fluid page-resources-index
+               
+               
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    
+      <nav class="navbar navbar-default" id="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <button type="button"
+              class="sidebar-toggle collapsed"
+              id="sidebar-toggle">
+        <span class="sr-only">Toggle sidebar</span>
+        <i class="ion-md-menu"></i>
+        <i class="ion-md-close"></i>
+      </button>
+      <a class="navbar-brand logo" href="https://ionicframework.com/">
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon.png" id="ionic-docs-logo" />
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon-back.png" id="ionic-docs-back" />
+      </a>
+      <a class="navbar-brand" href="https://ionicframework.com/docs">
+        
+        <img src="https://ionicframework.com/img/docs/ionic-docs-type.png" id="ionic-docs-text" />
+        
+      </a>
+      
+      <ul class="version">
+        <li class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="active">
+                Current Framework Docs <i class="ion-ios-checkmark"></i>
+              </a>
+            </li>
+            <li><a href="../v1/index.html">v1 Framework Docs</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      
+      <form class="navbar-form navbar-left"
+            id="header-search"
+            role="search"
+            data-searchpos="header">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control search-input"
+                 placeholder="Search"
+                 data-searchpos="header"
+                 ng-model="searchTerm">
+        </div>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../components/index.html">UI Components</a></li>
+        <li><a href="../api/index.html">API Reference</a></li>
+        <li><a href="../native/index.html">Native Plugins</a></li>
+        <li><a href="index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../pro/index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../pro/view/index.html">View app</a></li>
+        <li><a href="../pro/package/index.html">Package</a></li>
+        <li><a href="../pro/live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../pro/monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../apps.ionic.io/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white">
+          <a href="../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+
+    <div class="docs-container"
+     
+       ng-controller="ResourcesCtrl"
+     >
+  <nav class="side-nav" id="side-nav" data-spy="affix" data-offset-top="38">
+    <form class="form-group search" role="search">
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search"
+             data-searchpos="sidebar"
+             ng-model="searchTerm">
+    </form>
+    
+      <ul ng-controller="DocsNavCtrl">
+
+  
+  <li class="">
+    <a href="../index.html">Home</a>
+  </li>
+
+  
+  <li class="">
+    <a ng-click="showIntro = !showIntro">Intro</a>
+    <ul ng-show="showIntro"
+        ng-cloak
+        >
+      <li class="">
+        <a href="../intro/installation/index.html">Installation</a>
+      </li>
+      <li class="">
+        <a href="../intro/tutorial/index.html">Tutorial</a>
+      </li>
+      <li class="">
+        <a href="../intro/deploying/index.html">Deploying</a>
+      </li>
+      <li class="">
+        <a href="../intro/migration/index.html">Migration</a>
+      </li>
+      <li class="">
+        <a href="../intro/concepts/index.html">Concepts</a>
+      </li>
+    </ul>
+  </li>
+
+  
+
+ 
+  <li id="components-index"
+      class="">
+    <a ng-click="showComponents = !showComponents">Components</a>
+    <ul class="nav"
+        ng-cloak
+        ng-show="showComponents"
+       >
+      <li><a href="../components/index.html#overview">Overview</a></li>
+      <li><a href="../components/index.html#action-sheets">Action Sheets</a></li>
+
+      <li id="components-alerts"><a href="../components/index.html#alert">Alerts</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-prompt">Prompt Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-confirm">Confirmation Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-radio">Radio</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#alert-checkbox">Checkbox</a></li>
+        </ul>
+
+      <li><a href="../components/index.html#badges">Badges</a></li>
+
+      <li id="components-buttons"><a href="../components/index.html#buttons">Buttons</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#outline-buttons">Outline Style</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#clear-buttons">Clear Style</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#round-buttons">Round Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#block-buttons">Block Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#full-buttons">Full Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#button-sizes">Button Sizes</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#icon-buttons">Icon Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#buttons-in-components">Buttons In Components</a></li>
+        </ul>
+
+      <li id="components-cards"><a href="../components/index.html#cards">Cards</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#card-header">Card Headers</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-list">List In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-image">Images In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-background">Background Images</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#advanced-cards">Advanced Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-advanced-social">Social Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-advanced-map">Map Cards</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#card-advanced-weather"></a></li>
+        </ul>
+
+      <li><a href="../components/index.html#checkbox">Checkbox</a></li>
+
+      <li><a href="../components/index.html#datetime">DateTime</a></li>
+
+      <li><a href="../components/index.html#fabs">FABs</a></li>
+
+      <li><a href="../components/index.html#gestures">Gestures</a></li>
+
+      <li><a href="../components/index.html#grid">Grid</a></li>
+      <li><a href="../components/index.html#icons">Icons</a></li>
+
+      <li id="components-forms"><a href="../components/index.html#inputs">Inputs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#fixed-inline-labels">Fixed Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#floating-labels">Floating Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#inline-labels">Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#inset-labels">Inset Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#placeholder-labels">Placeholder Labels</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#stacked-labels">Stacked Labels</a></li>
+        </ul>
+
+      <li id="components-lists"><a href="../components/index.html#lists">Lists</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#list-lines">Basic Usage</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#list-no-lines">No Lines</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#inset-list">Inset List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#list-dividers">List Dividers</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#list-headers">List Headers</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#icon-list">Icon List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#avatar-list">Avatar List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#multiline-list">Multi-line List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#sliding-list">Sliding List</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#thumbnail-list">Thumbnail List</a></li>
+        </ul>
+
+
+      <li><a href="../components/index.html#loading">Loading</a></li>
+      <li><a href="../components/index.html#menus">Menus</a></li>
+      <li><a href="../components/index.html#modals">Modals</a></li>
+      <li><a href="../components/index.html#navigation">Navigation</a></li>
+      <li><a href="../components/index.html#popovers">Popover</a></li>
+      <li><a href="../components/index.html#radio">Radio</a></li>
+      <li><a href="../components/index.html#range">Range</a></li>
+      <li><a href="../components/index.html#searchbar">Searchbar</a></li>
+      <li><a href="../components/index.html#segment">Segment</a></li>
+      <li><a href="../components/index.html#select">Select</a></li>
+      <li><a href="../components/index.html#slides">Slides</a></li>
+
+      <li id="components-tabs"><a href="../components/index.html#tabs">Tabs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#tabs-icon">Icon Tabs</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#tabs-icon-text">Icon and Text</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#tabs-badges">Badges</a></li>
+        </ul>
+
+      <li><a href="../components/index.html#toast">Toast</a></li>
+      <li><a href="../components/index.html#toggle">Toggle</a></li>
+
+      <li id="components-toolbar"><a href="../components/index.html#toolbar">Toolbar</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-buttons">Buttons in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-segment">Segment in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-searchbar">Searchbar in Toolbars      s</a></li>
+          <li class="nav-item-hidden"><a href="../components/index.html#toolbar-colors">Changing the Color</a></li>
+        </ul>
+
+    </ul>
+  </li>
+
+
+    
+    <li>
+      <a href="../api/index.html">API</a>
+    </li>
+
+  
+   <li>
+     <a href="../native/index.html">Native</a>
+   </li>
+
+   
+    <li class="">
+      <a href="../storage/index.html">Storage</a>
+    </li>
+
+  
+  <li class="">
+    <a ng-click="showTheming = !showTheming">Theming</a>
+    <ul ng-show="showTheming"
+        ng-cloak
+        >
+      <li class="">
+        <a href="../theming/index.html">Intro</a>
+      </li>
+      <li class="">
+        <a href="../theming/css-utilities/index.html">CSS Utilities</a>
+      </li>
+      <li class="">
+        <a href="../theming/responsive-grid/index.html">Responsive Grid</a>
+      </li>
+      <li class="">
+        <a href="../theming/theming-your-app/index.html">Theming your App</a>
+      </li>
+      <li class="">
+        <a href="../theming/sass-variables/index.html">Sass Variables</a>
+      </li>
+      <li class="">
+        <a href="../theming/platform-specific-styles/index.html">
+          Platform Styles
+        </a>
+      </li>
+      <li class="">
+        <a href="../theming/overriding-ionic-variables/index.html">
+          Overriding Ionic Variables
+        </a>
+      </li>
+      <li class="">
+        <a href="../theming/rtl-support/index.html">
+         RTL Support
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  
+  <li class="">
+    <a href="../ionicons/index.html">Ionicons</a>
+  </li>
+
+  
+  <li>
+    <a href="../cli/index.html">CLI</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../wkwebview/index.html">WKWebview</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../troubleshooting/index.html">Troubleshooting</a>
+  </li>
+
+  
+  <li class="active">
+    <a href="index.html">Developer Resources</a>
+    
+      <ul>
+        <li ng-class="{active:hash == 'guides'}">
+          <a href="#guides">Guides</a></li>
+        <li ng-class="{active:hash == 'videos'}">
+          <a href="#videos">Videos</a></li>
+        <li ng-class="{active:hash == 'books'}">
+          <a href="#books">Books</a></li>
+        <li ng-class="{active:hash == 'courses'}">
+          <a href="#courses">Courses</a></li>
+        <li ng-class="{active:hash == 'tools'}">
+          <a href="#tools">Tools</a></li>
+        <li ng-class="{active:hash == 'community'}">
+          <a href="#community">Community Posts</a></li>
+      </ul>
+    
+  </li>
+</ul>
+
+    
+  </nav>
+  
+  <main>
+    <h1 class="banner resources">
+  <div class="bg default" ng-class="{active: hash == ''}">Resources</div>
+  <div class="bg videos" ng-class="{active: hash == 'videos'}">Videos</div>
+  <div class="bg books" ng-class="{active: hash == 'books'}">Books</div>
+  <div class="bg courses" ng-class="{active: hash == 'courses'}">Courses</div>
+  <div class="bg guides" ng-class="{active: hash == 'guides'}">Guides</div>
+  <div class="bg tools" ng-class="{active: hash == 'tools'}">Tools</div>
+  <div class="bg community" ng-class="{active: hash == 'community'}">Community</div>
+
+</h1>
+
+<div class="sections" ng-class="{filtered: !!hash}">
+  <h4 class="show-all" ng-click="hash = ''">Show All Resources</h4>
+
+  <section class="guides" ng-class="{active: hash == 'guides'}">
+    <h3 ng-click="hash = 'guides'">Guides</h3>
+    <ul>
+      <li>
+        <a href="platform-setup/mac-setup.html"
+           target="_blank">Mac OS Setup</a>
+        <p>Get up and running with Ionic on a Mac OS computer</p>
+      </li>
+      <li>
+        <a href="platform-setup/windows-setup.html"
+           target="_blank">Windows Setup</a>
+        <p>Get up and running with Ionic on a PC</p>
+      </li>
+      <li>
+        <a href="../resources/developer-tips/index.html"
+           target="_blank">Developer Tips</a>
+        <p>Stuff you should know</p>
+      </li>
+      <li>
+        <a href="../resources/third-party-libs/index.html"
+           target="_blank">Third Party Libs</a>
+        <p>
+          Learn how to incorporate third party libraries in to your Ionic project.
+        </p>
+      </li>
+      <li>
+        <a href="../../../blog.ionic.io/ionic-native-native-powers-for-your-app/index68f1.html?_ga=1.173861603.1924877790.1482850890"
+           target="_blank">Ionic Native: Superpowers for your App</a>
+        <p>
+          Learn all about Ionic Native and how to access powerful native
+          features in your apps.
+        </p>
+      </li>
+      <li>
+        <a href="../resources/app-scripts/index.html"
+           target="_blank">App Scripts</a>
+        <p>Learn how to automate tasks in your development process.</p>
+      </li>
+      <li>
+        <a href="../resources/desktop-support/index.html"
+           target="_blank">Desktop Support</a>
+        <p>Learn some common tips that can help improve your cross platform experience.</p>
+      </li>
+      <li ng-show="hash != 'guides'">
+        <a href="#guides" ng-click="hash = 'guides'">More Guides...</a>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../resources/ng2-translate/index.html"
+           target="_blank">Using ngx-translate</a>
+        <p>
+          Learn how to manage multiple languages in a single project with
+          ngx-translate
+        </p>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../resources/using-npm/index.html"
+           target="_blank">Using NPM</a>
+        <p>Key concepts with Node/NPM, and how they relate to Ionic.</p>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../resources/using-nvm/index.html"
+           target="_blank">Using NVM</a>
+        <p>Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../../../blog.ionic.io/ionic-native-accessing-ios-photos-and-android-gallery-part-i/index.html"
+           target="_blank">Accessing Photos</a>
+        <p>Select multiple images from your photos on iOS and Android.</p>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../../../blog.ionic.io/ionic-native-accessing-ios-photos-and-android-gallery-part-2/index.html"
+           target="_blank">Using the Camera</a>
+        <p>Take and access photos on iOS and Android.</p>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../../../blog.ionic.io/ionic-native-enabling-login-with-touch-id-for-ios/index.html"
+           target="_blank">Using TouchID</a>
+        <p>Secure logins and improve user experience with the TouchID plugin.</p>
+      </li>
+      <li ng-show="hash == 'guides'">
+        <a href="../resources/service-worker/index.html"
+           target="_blank">Service Worker</a>
+        <p>Get a quick introduction to the Service Worker API.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section ng-class="{active: hash == 'videos'}">
+    <h3 ng-click="hash = 'videos'">Videos</h3>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com/watch?v=O2WiI9QrS5s&amp;feature=youtu.be"
+           target="_blank">Ionic 2 Crash Course</a>
+        <p>A quick introduction to Ionic 2 and how to build your first app.</p>
+      </li>
+      <li>
+        <a href="../../../blog.ionic.io/screencast-ionic-async/index.html"
+           target="_blank">Ionic &amp; Async</a>
+        <p>Learn how to coordinate multiple events in a timely manner.</p>
+      </li>
+      <li>
+        <a href="http://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/"
+           target="_blank">Building a TODO app in Ionic 2</a>
+        <p>Learn how to build out an entire Ionic 2 app.</p>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=bAlydPwFONY"
+           target="_blank">Angular Connect: Ionic 2</a>
+        <p>Dive into some of the ideas and goals behind Ionic 2.</p>
+      </li>
+      <li>
+        <a href="https://youtu.be/WAPQF_GA7Qg"
+           target="_blank">NgConf: Angular 2, John Papa</a>
+        <p>Learn some of the basics behind building an Angular 2 app.</p>
+      </li>
+      <li>
+        <a href="http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/"
+           target="_blank" >Google Maps in Ionic 2</a>
+        <p>Add Google Maps to your Ionic 2 app.</p>
+      </li>
+      <li>
+        <a href="../../../blog.ionic.io/ionic-and-typings/index.html"
+           target="_blank">Ionic &amp; Typings</a>
+        <p>
+          Learn how to add typings for libraries you are using in your Ionic 2
+          app.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="books" ng-class="{active: hash == 'books'}">
+    <h3 ng-click="hash = 'books'">Books</h3>
+    <ul>
+      <li>
+        <a href="https://www.joshmorony.com/building-mobile-apps-with-ionic-2/"
+           target="_blank">Building Mobile Apps with Ionic 2</a>
+        <p>by Joshua Morony</p>
+      </li>
+      <li>
+        <a href="https://devdactic.com/zero-to-app"
+           target="_blank">Ionic 2 From Zero to App Store</a>
+        <p>by Simon Reimler</p>
+      </li>
+      <li>
+        <a href="https://www.leanpub.com/masteringionic2"
+           target="_blank">Mastering Ionic 2</a>
+        <p>by James Griffiths</p>
+      </li>
+      <li>
+        <a href="https://www.packtpub.com/web-development/learning-ionic-2-second-edition"
+           target="_blank">Learning Ionic 2 Second Edition</a>
+        <p>by Arvind Ravulavaru</p>
+      </li>
+      <li>
+        <a href="https://www.amazon.com/Mobile-App-Development-Ionic-Cross-Platform/dp/1491937785/ref=sr_1_2?ie=UTF8&amp;qid=1464183332&amp;sr=8-2&amp;keywords=ionic+2"
+           target="_blank">
+          Mobile App Development with Ionic: Cross-Platform Apps with Ionic 2,
+          Angular 2, and Cordova
+        </a>
+        <p>by Chris Griffith</p>
+      </li>
+      <li>
+        <a href="https://www.packtpub.com/application-development/ionic-framework-example"
+           target="_blank">Ionic Framework By Example</a>
+        <p>by Sani Yusuf</p>
+      </li>
+      <li>
+        <a href="https://www.packtpub.com/application-development/hybrid-mobile-development-ionic"
+           target="_blank">Hybrid Mobile Development with Ionic</a>
+        <p>by Gaurav Saini</p>
+      </li>
+      <li ng-show="hash != 'books'">
+        <a href="#books" ng-click="hash = 'books'">More Books...</a>
+      <li ng-show="hash == 'books'">
+        <a href="https://www.amazon.com/Ionic-Cookbook-Second-Hoc-Phan-ebook/dp/B01C4D9VWS?ie=UTF8&amp;keywords=ionic%202&amp;qid=1464183332&amp;ref_=sr_1_3&amp;sr=8-3"
+           target="_blank">Ionic 2 Cookbook - Second Edition</a>
+        <p>by Hoc Phan </p>
+      </li>
+      <li ng-show="hash == 'books'">
+        <a href="https://www.packtpub.com/application-development/getting-started-ionic"
+           target="_blank">Getting Started with Ionic</a>
+        <p>by Rahat Khanna</p>
+      </li>
+      <li ng-show="hash == 'books'">
+        <a href="https://javebratt.com/ionic-firebase-book/"
+           target="_blank">Building Firebase Powered Ionic Apps</a>
+        <p>by Jorge Vergara</p>
+      </li>
+      <li ng-show="hash == 'books'">
+        <a href="https://www.packtpub.com/web-development/ionic-2-blueprints"
+           target="_blank">Ionic 2 Blueprints</a>
+        <p>by Indermohan Singh</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="courses" ng-class="{active: hash == 'courses'}">
+    <h3 ng-click="hash = 'courses'">Courses</h3>
+    <ul>
+      <li>
+        <a href="http://shop.oreilly.com/product/0636920050353.do"
+           target="_blank">Introducing Ionic 2</a>
+        <p>Mathieu Chauvinc</p>
+      </li>
+      <li>
+        <a href="https://app.pluralsight.com/library/courses/ionic2-angular2-typescript-mobile-apps/table-of-contents"
+           target="_blank">
+          Building Mobile Apps with Ionic 2, Angular 2, and TypeScript
+        </a>
+        <p>Pluralsight</p>
+      </li>
+      <li>
+        <a href="https://www.udemy.com/ionic-2-tutorial/?couponCode=IONIC15/"
+           target="_blank">Ionic 2 Master Course</a>
+        <p>50% Off code - Udemy</p>
+      </li>
+      <li>
+        <a href="https://www.udemy.com/ionic-2-quickstart/"
+           target="_blank">Ionic 2 Quickstart</a>
+        <p>Udemy</p>
+      </li>
+      <li>
+        <a href="https://www.udemy.com/introducing-ionic-2/"
+           target="_blank">Introducing Ionic 2</a>
+        <p>Udemy</p>
+      </li>
+      <li>
+        <a href="https://www.packtpub.com/web-development/ionic-2-solutions-video"
+           target="_blank">Ionic 2 Solutions</a>
+        <p>Hoc Phan</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="tools" ng-class="{active: hash == 'tools'}">
+    <h3 ng-click="hash = 'tools'">Tools</h3>
+    <ul>
+      <li>
+        <a href="../resources/editors_and_ides/index.html"
+           target="_blank">Editors and IDEs</a>
+        <p>Check out the best options in editors for your project.</p>
+      </li>
+      <li>
+        <a href="https://www.visualstudio.com/en-us/features/cordova-vs.aspx"
+           target="_blank">Visual Studio Tools for Apache Cordova</a>
+        <p>
+          Visual Studio has release a tool set that makes setting up your
+          environment a breeze. Learn how it works.
+        </p>
+      </li>
+      <li>
+        <a href="http://www.typescriptlang.org/"
+           target="_blank">Typescript</a>
+        <p>Check out the features that make working with Typescript amazing.</p>
+      </li>
+      <li>
+        <a href="../resources/what-is/index.html"
+           target="_blank">Glossary</a>
+        <p>A list of common terms you'll see while developing in Ionic</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="community" ng-class="{active: hash == 'community'}">
+    <h3 ng-click="hash = 'community'">Community Posts</h3>
+    <ul>
+      <li>
+        <a href="http://mcgivery.com/understanding-ionic-2-imports/"
+           target="_blank">Understanding Ionic 2: Imports</a>
+        <p>
+          ES6/TS introduce a new way to bring in external code. Learn about
+          Imports.
+        </p>
+      </li>
+      <li>
+        <a href="https://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/"
+           target="_blank">Ionic2 and Angular 2 Concepts</a>
+        <p>
+          Familiarize yourself with some of the new concepts in Ionic 2 and
+          Angular 2.
+        </p>
+      </li>
+      <li>
+        <a href="http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-ionic-2/"
+           target="_blank">Ionic, PouchDB, &amp; SQLite For Storage</a>
+        <p>Simplify storage using PouchDB and Sqlite.</p>
+      </li>
+      <li>
+        <a href="https://www.joshmorony.com/creating-an-advanced-google-maps-component-in-ionic-2/"
+           target="_blank">Advanced Google Maps</a>
+        <p>
+          Go beyond adding a simple map to handling offline conditions and
+          complex maps.
+        </p>
+      </li>
+      <li>
+        <a href="https://www.joshmorony.com/adding-background-geolocation-to-an-ionic-2-application/"
+           target="_blank">Background Geolocation</a>
+        <p>
+          Learn how to add geolocation that can run in the background of your
+          app.
+        </p>
+      </li>
+      <li>
+        <a href="https://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html"
+           target="_blank">Taking Advantage of Observables</a>
+        <p>Learn how to use observables in your Ionic 2 app.</p>
+      </li>
+    </ul>
+  </section>
+</div>
+
+  </main>
+  
+</div>
+
+
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/developer-resources/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:25 GMT -->
+</html>

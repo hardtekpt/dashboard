@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/theming/responsive-grid/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:39:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>Responsive Grid</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body id="docs-page-responsive-grid"
+        class="v2 docs fluid page-responsive-grid
+               
+               
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    
+      <nav class="navbar navbar-default" id="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <button type="button"
+              class="sidebar-toggle collapsed"
+              id="sidebar-toggle">
+        <span class="sr-only">Toggle sidebar</span>
+        <i class="ion-md-menu"></i>
+        <i class="ion-md-close"></i>
+      </button>
+      <a class="navbar-brand logo" href="https://ionicframework.com/">
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon.png" id="ionic-docs-logo" />
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon-back.png" id="ionic-docs-back" />
+      </a>
+      <a class="navbar-brand" href="https://ionicframework.com/docs">
+        
+        <img src="https://ionicframework.com/img/docs/ionic-docs-type.png" id="ionic-docs-text" />
+        
+      </a>
+      
+      <ul class="version">
+        <li class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="active">
+                Current Framework Docs <i class="ion-ios-checkmark"></i>
+              </a>
+            </li>
+            <li><a href="../../v1/index.html">v1 Framework Docs</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      
+      <form class="navbar-form navbar-left"
+            id="header-search"
+            role="search"
+            data-searchpos="header">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control search-input"
+                 placeholder="Search"
+                 data-searchpos="header"
+                 ng-model="searchTerm">
+        </div>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../../components/index.html">UI Components</a></li>
+        <li><a href="../../api/index.html">API Reference</a></li>
+        <li><a href="../../native/index.html">Native Plugins</a></li>
+        <li><a href="../../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../../pro/index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../../pro/view/index.html">View app</a></li>
+        <li><a href="../../pro/package/index.html">Package</a></li>
+        <li><a href="../../pro/live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../../pro/monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../../apps.ionic.io/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white">
+          <a href="../../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+
+    <div class="docs-container"
+     >
+  <nav class="side-nav" id="side-nav" data-spy="affix" data-offset-top="38">
+    <form class="form-group search" role="search">
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search"
+             data-searchpos="sidebar"
+             ng-model="searchTerm">
+    </form>
+    
+      <ul ng-controller="DocsNavCtrl">
+
+  
+  <li class="">
+    <a href="../../index.html">Home</a>
+  </li>
+
+  
+  <li class="">
+    <a ng-click="showIntro = !showIntro">Intro</a>
+    <ul ng-show="showIntro"
+        ng-cloak
+        >
+      <li class="">
+        <a href="../../intro/installation/index.html">Installation</a>
+      </li>
+      <li class="">
+        <a href="../../intro/tutorial/index.html">Tutorial</a>
+      </li>
+      <li class="">
+        <a href="../../intro/deploying/index.html">Deploying</a>
+      </li>
+      <li class="">
+        <a href="../../intro/migration/index.html">Migration</a>
+      </li>
+      <li class="">
+        <a href="../../intro/concepts/index.html">Concepts</a>
+      </li>
+    </ul>
+  </li>
+
+  
+
+ 
+  <li id="components-index"
+      class="">
+    <a ng-click="showComponents = !showComponents">Components</a>
+    <ul class="nav"
+        ng-cloak
+        ng-show="showComponents"
+       >
+      <li><a href="../../components/index.html#overview">Overview</a></li>
+      <li><a href="../../components/index.html#action-sheets">Action Sheets</a></li>
+
+      <li id="components-alerts"><a href="../../components/index.html#alert">Alerts</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-prompt">Prompt Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-confirm">Confirmation Alerts</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-radio">Radio</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#alert-checkbox">Checkbox</a></li>
+        </ul>
+
+      <li><a href="../../components/index.html#badges">Badges</a></li>
+
+      <li id="components-buttons"><a href="../../components/index.html#buttons">Buttons</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#outline-buttons">Outline Style</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#clear-buttons">Clear Style</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#round-buttons">Round Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#block-buttons">Block Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#full-buttons">Full Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#button-sizes">Button Sizes</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#icon-buttons">Icon Buttons</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#buttons-in-components">Buttons In Components</a></li>
+        </ul>
+
+      <li id="components-cards"><a href="../../components/index.html#cards">Cards</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-header">Card Headers</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-list">List In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-image">Images In Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-background">Background Images</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#advanced-cards">Advanced Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-advanced-social">Social Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-advanced-map">Map Cards</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#card-advanced-weather"></a></li>
+        </ul>
+
+      <li><a href="../../components/index.html#checkbox">Checkbox</a></li>
+
+      <li><a href="../../components/index.html#datetime">DateTime</a></li>
+
+      <li><a href="../../components/index.html#fabs">FABs</a></li>
+
+      <li><a href="../../components/index.html#gestures">Gestures</a></li>
+
+      <li><a href="../../components/index.html#grid">Grid</a></li>
+      <li><a href="../../components/index.html#icons">Icons</a></li>
+
+      <li id="components-forms"><a href="../../components/index.html#inputs">Inputs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#fixed-inline-labels">Fixed Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#floating-labels">Floating Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#inline-labels">Inline Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#inset-labels">Inset Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#placeholder-labels">Placeholder Labels</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#stacked-labels">Stacked Labels</a></li>
+        </ul>
+
+      <li id="components-lists"><a href="../../components/index.html#lists">Lists</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-lines">Basic Usage</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-no-lines">No Lines</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#inset-list">Inset List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-dividers">List Dividers</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#list-headers">List Headers</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#icon-list">Icon List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#avatar-list">Avatar List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#multiline-list">Multi-line List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#sliding-list">Sliding List</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#thumbnail-list">Thumbnail List</a></li>
+        </ul>
+
+
+      <li><a href="../../components/index.html#loading">Loading</a></li>
+      <li><a href="../../components/index.html#menus">Menus</a></li>
+      <li><a href="../../components/index.html#modals">Modals</a></li>
+      <li><a href="../../components/index.html#navigation">Navigation</a></li>
+      <li><a href="../../components/index.html#popovers">Popover</a></li>
+      <li><a href="../../components/index.html#radio">Radio</a></li>
+      <li><a href="../../components/index.html#range">Range</a></li>
+      <li><a href="../../components/index.html#searchbar">Searchbar</a></li>
+      <li><a href="../../components/index.html#segment">Segment</a></li>
+      <li><a href="../../components/index.html#select">Select</a></li>
+      <li><a href="../../components/index.html#slides">Slides</a></li>
+
+      <li id="components-tabs"><a href="../../components/index.html#tabs">Tabs</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#tabs-icon">Icon Tabs</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#tabs-icon-text">Icon and Text</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#tabs-badges">Badges</a></li>
+        </ul>
+
+      <li><a href="../../components/index.html#toast">Toast</a></li>
+      <li><a href="../../components/index.html#toggle">Toggle</a></li>
+
+      <li id="components-toolbar"><a href="../../components/index.html#toolbar">Toolbar</a></li>
+        <ul class="nav">
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-buttons">Buttons in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-segment">Segment in Toolbars</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-searchbar">Searchbar in Toolbars      s</a></li>
+          <li class="nav-item-hidden"><a href="../../components/index.html#toolbar-colors">Changing the Color</a></li>
+        </ul>
+
+    </ul>
+  </li>
+
+
+    
+    <li>
+      <a href="../../api/index.html">API</a>
+    </li>
+
+  
+   <li>
+     <a href="../../native/index.html">Native</a>
+   </li>
+
+   
+    <li class="">
+      <a href="../../storage/index.html">Storage</a>
+    </li>
+
+  
+  <li class="active">
+    <a ng-click="showTheming = !showTheming">Theming</a>
+    <ul ng-show="showTheming"
+        ng-cloak
+        
+          ng-init="showTheming = true"
+        >
+      <li class="">
+        <a href="../index.html">Intro</a>
+      </li>
+      <li class="">
+        <a href="../css-utilities/index.html">CSS Utilities</a>
+      </li>
+      <li class="active">
+        <a href="index.html">Responsive Grid</a>
+      </li>
+      <li class="">
+        <a href="../theming-your-app/index.html">Theming your App</a>
+      </li>
+      <li class="">
+        <a href="../sass-variables/index.html">Sass Variables</a>
+      </li>
+      <li class="">
+        <a href="../platform-specific-styles/index.html">
+          Platform Styles
+        </a>
+      </li>
+      <li class="">
+        <a href="../overriding-ionic-variables/index.html">
+          Overriding Ionic Variables
+        </a>
+      </li>
+      <li class="">
+        <a href="../rtl-support/index.html">
+         RTL Support
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  
+  <li class="">
+    <a href="../../ionicons/index.html">Ionicons</a>
+  </li>
+
+  
+  <li>
+    <a href="../../cli/index.html">CLI</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../../wkwebview/index.html">WKWebview</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../../troubleshooting/index.html">Troubleshooting</a>
+  </li>
+
+  
+  <li class="">
+    <a href="../../developer-resources/index.html">Developer Resources</a>
+    
+  </li>
+</ul>
+
+    
+  </nav>
+  
+  <main>
+    <h1 class="title">Responsive Grid</h1>
+<p><a class="improve-v2-docs" href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fionic-team%2Fionic-site%2Fedit%2Fmaster%2Fcontent%2Fdocs%2Ftheming%2Fresponsive-grid%2Findex.md">
+  Improve this doc
+</a></p>
+
+<p>The grid is a powerful mobile-first flexbox system for building custom layouts.
+It is heavily influenced by <a href="http://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap’s grid system</a>.</p>
+
+<p>The grid is composed of three units — a grid, row(s) and column(s). Columns will expand to fill their
+row, and will resize to fit additional columns. It is based on a 12 column layout with different
+breakpoints based on the screen size. The number of columns and breakpoints can be fully customized
+using Sass.</p>
+
+<ul>
+  <li><a href="#how-it-works">How it works</a></li>
+  <li><a href="#grid-size">Grid size</a></li>
+  <li><a href="#grid-attributes">Grid attributes</a></li>
+  <li><a href="#row-attributes">Row attributes</a></li>
+  <li><a href="#column-attributes">Column attributes</a></li>
+  <li><a href="#default-breakpoints">Default breakpoints</a></li>
+  <li><a href="#auto-layout-columns">Auto-layout columns</a>
+    <ul>
+      <li><a href="#equal-width">Equal-width</a></li>
+      <li><a href="#setting-one-column-width">Setting one column width</a></li>
+      <li><a href="#variable-width">Variable-width</a></li>
+    </ul>
+  </li>
+  <li><a href="#responsive-attributes">Responsive attributes</a>
+    <ul>
+      <li><a href="#all-breakpoints">All breakpoints</a></li>
+      <li><a href="#stacked-to-horizontal">Stacked to horizontal</a></li>
+    </ul>
+  </li>
+  <li><a href="#reordering">Reordering</a>
+    <ul>
+      <li><a href="#offsetting-columns">Offsetting columns</a></li>
+      <li><a href="#push-and-pull">Push and pull</a></li>
+    </ul>
+  </li>
+  <li><a href="#alignment">Alignment</a>
+    <ul>
+      <li><a href="#vertical-alignment">Vertical Alignment</a></li>
+      <li><a href="#horizontal-alignment">Horizontal Alignment</a></li>
+    </ul>
+  </li>
+  <li><a href="#customizing-the-grid">Customizing the grid</a>
+    <ul>
+      <li><a href="#number-of-columns-and-padding">Number of columns and padding</a></li>
+      <li><a href="#grid-tiers">Grid tiers</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-it-works">How it works</h2>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      1 of 3
+    </ion-col>
+    <ion-col>
+      2 of 3
+    </ion-col>
+    <ion-col>
+      3 of 3
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<p>The grid is a mobile-first system made up of any number of rows and columns.
+It is built with flexbox making it extremely responsive. The components that
+make up the grid can be written as an element (e.g., <code class="highlighter-rouge">&lt;ion-grid&gt;</code>) or added as
+an attribute to any element (e.g., <code class="highlighter-rouge">&lt;div ion-row&gt;</code>).</p>
+
+<p>Here’s how it works:</p>
+
+<ul>
+  <li>Grids act as a container for all rows and columns. Grids take up the full width of their container,
+but adding the <code class="highlighter-rouge">fixed</code> attribute will specify the width per screen size, see <a href="#grid-size">grid size</a> below.</li>
+  <li>Rows are horizontal groups of columns that line the columns up properly.</li>
+  <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+  <li>Grid columns without a specified width will automatically have equal widths.
+For example, four instances of <code class="highlighter-rouge">col-sm</code> will each automatically be 25% wide for small breakpoints.</li>
+  <li>Column attributes indicate the number of columns to use out of the default 12 per row.
+So, <code class="highlighter-rouge">col-4</code> can be added in order to have three equal-width columns.</li>
+  <li>Column widths are set as a percentage, so they’re always fluid and sized relative to their parent element.</li>
+  <li>Columns have padding between individual columns, however, the padding can be removed from the grid and
+columns by adding <code class="highlighter-rouge">no-padding</code> on the grid.</li>
+  <li>There are five grid tiers by default, one for each responsive breakpoint: all breakpoints (extra small),
+small, medium, large, and extra large.</li>
+  <li>Grid tiers are based on minimum widths, meaning they apply to their tier and all those larger than it
+(e.g., <code class="highlighter-rouge">col-sm-4</code> applies to small, medium, large, and extra large devices).</li>
+  <li>Grids can easily be customized via Sass variables. See <a href="#customizing-the-grid">customizing the grid</a>.</li>
+</ul>
+
+<p>There are some <a href="https://github.com/philipwalton/flexbugs">known bugs with flexbox</a> that
+should be checked prior to creating issues with Ionic.</p>
+
+<h2 id="grid-size">Grid size</h2>
+
+<p>By default, the grid will take up 100% width. To set a maximum width based on the screen
+size add the <code class="highlighter-rouge">fixed</code> attribute. The maximum width of the grid for each breakpoint is defined
+in the <code class="highlighter-rouge">$grid-max-widths</code> Sass variable. For more information, see
+<a href="#customizing-the-grid">customizing the grid</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>xs</td>
+      <td>auto</td>
+      <td>Don’t set the grid width for xs screens</td>
+    </tr>
+    <tr>
+      <td>sm</td>
+      <td>540px</td>
+      <td>Set grid width to 540px when (min-width: 576px)</td>
+    </tr>
+    <tr>
+      <td>md</td>
+      <td>720px</td>
+      <td>Set grid width to 720px when (min-width: 768px)</td>
+    </tr>
+    <tr>
+      <td>lg</td>
+      <td>960px</td>
+      <td>Set grid width to 960px when (min-width: 992px)</td>
+    </tr>
+    <tr>
+      <td>xl</td>
+      <td>1140px</td>
+      <td>Set grid width to 1140px when (min-width: 1200px)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="grid-attributes">Grid attributes</h2>
+
+<p>The grid takes up full width and has padding added to it based on the screen size. There are two
+attributes that can be used to adjust this behavior.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>no-padding</td>
+      <td>Removes padding from the grid and immediate children columns.</td>
+    </tr>
+    <tr>
+      <td>fixed</td>
+      <td>Set a max width based on the screen size.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="row-attributes">Row attributes</h2>
+
+<p>Rows are horizontal components of the <a href="../Grid.html">grid</a> system and contain varying numbers of
+<a href="../Col.html">columns</a>. They ensure the columns are positioned properly.</p>
+
+<p>By default, columns will stretch to fill the entire height of the row and wrap when necessary.
+There are several attributes that can be added to a row to customize this behavior.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nowrap</td>
+      <td>Adds <code class="highlighter-rouge">flex-wrap: nowrap</code>. Forces the columns to a single row.</td>
+    </tr>
+    <tr>
+      <td>wrap-reverse</td>
+      <td>Adds <code class="highlighter-rouge">flex-wrap: wrap-reverse</code>. The columns will wrap in reverse.</td>
+    </tr>
+    <tr>
+      <td>align-items-start</td>
+      <td>Adds <code class="highlighter-rouge">align-items: flex-start</code>. All columns will be vertically aligned at the top, unless they specify their own alignment.</td>
+    </tr>
+    <tr>
+      <td>align-items-center</td>
+      <td>Adds <code class="highlighter-rouge">align-items: center</code>. All columns will be vertically aligned in the center, unless they specify their own alignment.</td>
+    </tr>
+    <tr>
+      <td>align-items-end</td>
+      <td>Adds <code class="highlighter-rouge">align-items: flex-end</code>. All columns will be vertically aligned at the bottom, unless they specify their own alignment.</td>
+    </tr>
+    <tr>
+      <td>align-items-stretch</td>
+      <td>Adds <code class="highlighter-rouge">align-items: stretch</code>. All columns will be stretched to take up the entire height of the row, unless they specify their own alignment.</td>
+    </tr>
+    <tr>
+      <td>align-items-baseline</td>
+      <td>Adds <code class="highlighter-rouge">align-items: baseline</code>. All columns will be vertically aligned at their baselines, unless they specify their own alignment.</td>
+    </tr>
+    <tr>
+      <td>justify-content-start</td>
+      <td>Adds <code class="highlighter-rouge">justify-content: start</code>. All columns will be horizontally aligned at the start.</td>
+    </tr>
+    <tr>
+      <td>justify-content-center</td>
+      <td>Adds <code class="highlighter-rouge">justify-content: center</code>. All columns will be horizontally aligned at the center.</td>
+    </tr>
+    <tr>
+      <td>justify-content-end</td>
+      <td>Adds <code class="highlighter-rouge">justify-content: end</code>. All columns will be horizontally aligned at the end.</td>
+    </tr>
+    <tr>
+      <td>justify-content-around</td>
+      <td>Adds <code class="highlighter-rouge">justify-content: space-around</code>. All columns will be horizontally aligned with equal space around them.</td>
+    </tr>
+    <tr>
+      <td>justify-content-between</td>
+      <td>Adds <code class="highlighter-rouge">justify-content: space-between</code>. All columns will be horizontally aligned with a half-size space on either end.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="column-attributes">Column attributes</h2>
+
+<p>Columns are cellular components of the <a href="../Grid.html">grid</a> system and go inside of a <a href="../Row.html">row</a>.
+They will expand to fill their row. All content within a grid should go inside of a column.</p>
+
+<p>By default, columns will stretch to fill the entire height of the row.
+There are several attributes that can be added to a column to customize this behavior.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>align-self-start</td>
+      <td>Adds <code class="highlighter-rouge">align-self: flex-start</code>. The column will be vertically aligned at the top.</td>
+    </tr>
+    <tr>
+      <td>align-self-center</td>
+      <td>Adds <code class="highlighter-rouge">align-self: center</code>. The column will be vertically aligned in the center.</td>
+    </tr>
+    <tr>
+      <td>align-self-end</td>
+      <td>Adds <code class="highlighter-rouge">align-self: flex-end</code>. The column will be vertically aligned at the bottom.</td>
+    </tr>
+    <tr>
+      <td>align-self-stretch</td>
+      <td>Adds <code class="highlighter-rouge">align-self: stretch</code>. The column will be stretched to take up the entire height of the row.</td>
+    </tr>
+    <tr>
+      <td>align-self-baseline</td>
+      <td>Adds <code class="highlighter-rouge">align-self: baseline</code>. The column will be vertically aligned at its baseline.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="default-breakpoints">Default breakpoints</h2>
+
+<p>The default breakpoints are defined by the <code class="highlighter-rouge">$grid-breakpoints</code> Sass variable. It can be
+customized to use different values for the breakpoint, rename and add/remove breakpoints.
+For more information, see <a href="#customizing-the-grid">customizing the grid</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Width Prefix</th>
+      <th>Offset Prefix</th>
+      <th>Push Prefix</th>
+      <th>Pull Prefix</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>xs</td>
+      <td>0</td>
+      <td><code class="highlighter-rouge">col-</code></td>
+      <td><code class="highlighter-rouge">offset-</code></td>
+      <td><code class="highlighter-rouge">push-</code></td>
+      <td><code class="highlighter-rouge">pull-</code></td>
+      <td>Set columns when (min-width: 0)</td>
+    </tr>
+    <tr>
+      <td>sm</td>
+      <td>576px</td>
+      <td><code class="highlighter-rouge">col-sm-</code></td>
+      <td><code class="highlighter-rouge">offset-sm-</code></td>
+      <td><code class="highlighter-rouge">push-sm-</code></td>
+      <td><code class="highlighter-rouge">pull-sm-</code></td>
+      <td>Set columns when (min-width: 576px)</td>
+    </tr>
+    <tr>
+      <td>md</td>
+      <td>768px</td>
+      <td><code class="highlighter-rouge">col-md-</code></td>
+      <td><code class="highlighter-rouge">offset-md-</code></td>
+      <td><code class="highlighter-rouge">push-md-</code></td>
+      <td><code class="highlighter-rouge">pull-md-</code></td>
+      <td>Set columns when (min-width: 768px)</td>
+    </tr>
+    <tr>
+      <td>lg</td>
+      <td>992px</td>
+      <td><code class="highlighter-rouge">col-lg-</code></td>
+      <td><code class="highlighter-rouge">offset-lg-</code></td>
+      <td><code class="highlighter-rouge">push-lg-</code></td>
+      <td><code class="highlighter-rouge">pull-lg-</code></td>
+      <td>Set columns when (min-width: 992px)</td>
+    </tr>
+    <tr>
+      <td>xl</td>
+      <td>1200px</td>
+      <td><code class="highlighter-rouge">col-xl-</code></td>
+      <td><code class="highlighter-rouge">offset-xl-</code></td>
+      <td><code class="highlighter-rouge">push-xl-</code></td>
+      <td><code class="highlighter-rouge">pull-xl-</code></td>
+      <td>Set columns when (min-width: 1200px)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note: the first breakpoint must have the value set to 0 and all breakpoint values must be in
+ascending order.</em></p>
+
+<h2 id="auto-layout-columns">Auto-layout columns</h2>
+
+<h3 id="equal-width">Equal-width</h3>
+
+<p>By default, columns will take up equal width inside of a row for all devices and screen sizes.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      1 of 2
+    </ion-col>
+    <ion-col>
+      2 of 2
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      1 of 3
+    </ion-col>
+    <ion-col>
+      2 of 3
+    </ion-col>
+    <ion-col>
+      3 of 3
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h3 id="setting-one-column-width">Setting one column width</h3>
+
+<p>Set the width of one column and the others will automatically resize around it.
+This can be done using our predefined grid attributes. In the example below,
+the other columns will resize no matter the width of the center column.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      1 of 3
+    </ion-col>
+    <ion-col col-8="">
+      2 of 3 (wider)
+    </ion-col>
+    <ion-col>
+      3 of 3
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      1 of 3
+    </ion-col>
+    <ion-col col-6="">
+      2 of 3 (wider)
+    </ion-col>
+    <ion-col>
+      3 of 3
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-8&gt;
+      2 of 3 (wider)
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-6&gt;
+      2 of 3 (wider)
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h3 id="variable-width">Variable-width</h3>
+
+<p>Using the <code class="highlighter-rouge">col-{breakpoint}-auto</code> attributes, the column can size itself based on the
+natural width of its content. This is extremely useful for setting a column width
+using pixels. The columns next to the variable-width column will resize to fill the row.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      1 of 3
+    </ion-col>
+    <ion-col col-auto="">
+      Variable width content
+    </ion-col>
+    <ion-col>
+      3 of 3
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      1 of 4
+    </ion-col>
+    <ion-col>
+      2 of 4
+    </ion-col>
+    <ion-col col-auto="">
+      <input placeholder="Variable width input" />
+    </ion-col>
+    <ion-col>
+      4 of 4
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-auto&gt;
+      Variable width content
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col&gt;
+      1 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-auto&gt;
+      &lt;ion-input placeholder="Variable width input"&gt;&lt;/ion-input&gt;
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      4 of 4
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h2 id="responsive-attributes">Responsive attributes</h2>
+
+<h3 id="all-breakpoints">All breakpoints</h3>
+
+<p>To customize a column’s width for all devices and screens, add the <code class="highlighter-rouge">col-*</code>
+attribute. These attributes tell the column to take up <code class="highlighter-rouge">*</code> columns out
+of the available columns.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-4="">
+      1 of 4
+    </ion-col>
+    <ion-col col-2="">
+      2 of 4
+    </ion-col>
+    <ion-col col-2="">
+      3 of 4
+    </ion-col>
+    <ion-col col-4="">
+      4 of 4
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col col-4&gt;
+      1 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-2&gt;
+      2 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-2&gt;
+      3 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-4&gt;
+      4 of 4
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h3 id="stacked-to-horizontal">Stacked to horizontal</h3>
+
+<p>Use a combination of width and breakpoint attributes to create a grid that starts out stacked
+on extra small screens before becoming horizontal on small screens.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-12="" col-sm="">
+      1 of 4
+    </ion-col>
+    <ion-col col-12="" col-sm="">
+      2 of 4
+    </ion-col>
+    <ion-col col-12="" col-sm="">
+      3 of 4
+    </ion-col>
+    <ion-col col-12="" col-sm="">
+      4 of 4
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col col-12 col-sm&gt;
+      1 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-12 col-sm&gt;
+      2 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-12 col-sm&gt;
+      3 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col col-12 col-sm&gt;
+      4 of 4
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h2 id="reordering">Reordering</h2>
+
+<h3 id="offsetting-columns">Offsetting columns</h3>
+
+<p>Move columns to the right by adding the <code class="highlighter-rouge">offset-*</code> attributes. These attributes
+increase the margin left of the column by <code class="highlighter-rouge">*</code> columns. For example, in the following
+grid the last column will be offset by 3 columns and take up 3 columns:</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="" offset-3="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col col-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3 offset-3&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<p>Offsets can also be added based on screen breakpoints. Here’s an example of a
+grid where the last column will be offset by 3 columns for <code class="highlighter-rouge">md</code> screens and up:</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-md-3="">
+      1 of 3
+    </ion-col>
+    <ion-col col-md-3="">
+      2 of 3
+    </ion-col>
+    <ion-col col-md-3="" offset-md-3="">
+      3 of 3
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col col-md-3&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-md-3&gt;
+      2 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-md-3 offset-md-3&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h3 id="push-and-pull">Push and pull</h3>
+
+<p>Reorder the columns by adding the <code class="highlighter-rouge">push-*</code> and <code class="highlighter-rouge">pull-*</code> attributes. These attributes
+adjust the <code class="highlighter-rouge">left</code> and <code class="highlighter-rouge">right</code> of the columns by <code class="highlighter-rouge">*</code> columns making it easy to reorder
+columns. For example, in the following grid the column with the <code class="highlighter-rouge">1st col</code> description
+will actually be the last column and the <code class="highlighter-rouge">2nd col</code> will be the first column.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-9="" push-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="" pull-9="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col col-9 push-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3 pull-9&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<p>Push and pull can also be added based on screen breakpoints. In the following example,
+the column with the <code class="highlighter-rouge">3rd</code> column description will actually be the first column for
+<code class="highlighter-rouge">md</code> screens and up:</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-md-6="" push-md-3="">
+      1 of 3
+    </ion-col>
+    <ion-col col-md-3="" push-md-3="">
+      2 of 3
+    </ion-col>
+    <ion-col col-md-3="" pull-md-9="">
+      3 of 3
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col col-md-6 push-md-3&gt;
+      1 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-md-3 push-md-3&gt;
+      2 of 3
+    &lt;/ion-col&gt;
+    &lt;ion-col col-md-3 pull-md-9&gt;
+      3 of 3
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h2 id="alignment">Alignment</h2>
+
+<h3 id="vertical-alignment">Vertical alignment</h3>
+
+<p>All columns can be vertically aligned inside of a row by adding different
+attributes to the row. For a list of available attributes, see
+<a href="../Row.html#row-attributes">row attributes</a>.</p>
+
+<ion-grid>
+  <ion-row align-items-start="">
+    <ion-col>
+      1 of 4
+    </ion-col>
+    <ion-col>
+      2 of 4
+    </ion-col>
+    <ion-col>
+      3 of 4
+    </ion-col>
+    <ion-col>
+      4 of 4 <br />#<br />#<br />#
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-center="">
+    <ion-col>
+      1 of 4
+    </ion-col>
+    <ion-col>
+      2 of 4
+    </ion-col>
+    <ion-col>
+      3 of 4
+    </ion-col>
+    <ion-col>
+      4 of 4 <br />#<br />#<br />#
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-end="">
+    <ion-col>
+      1 of 4
+    </ion-col>
+    <ion-col>
+      2 of 4
+    </ion-col>
+    <ion-col>
+      3 of 4
+    </ion-col>
+    <ion-col>
+      4 of 4 <br />#<br />#<br />#
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row align-items-start&gt;
+    &lt;ion-col&gt;
+      1 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      4 of 4 &lt;br&gt;#&lt;br&gt;#&lt;br&gt;#
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+
+  &lt;ion-row align-items-center&gt;
+    &lt;ion-col&gt;
+      1 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      4 of 4 &lt;br&gt;#&lt;br&gt;#&lt;br&gt;#
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+
+  &lt;ion-row align-items-end&gt;
+    &lt;ion-col&gt;
+      1 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      2 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      3 of 4
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      4 of 4 &lt;br&gt;#&lt;br&gt;#&lt;br&gt;#
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<p>Columns can also align themselves differently than other columns by
+adding the alignment attribute directly to the column. For a list of available
+attributes, see <a href="../Col.html#column-attributes">column attributes</a>.</p>
+
+<ion-grid>
+  <ion-row>
+    <ion-col align-self-start="">
+      <div>
+        1 of 4
+      </div>
+    </ion-col>
+    <ion-col align-self-center="">
+      <div>
+        2 of 4
+      </div>
+    </ion-col>
+    <ion-col align-self-end="">
+      <div>
+        3 of 4
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        4 of 4 <br />#<br />#<br />#
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row&gt;
+    &lt;ion-col align-self-start&gt;
+      &lt;div&gt;
+        1 of 4
+      &lt;/div&gt;
+    &lt;/ion-col&gt;
+    &lt;ion-col align-self-center&gt;
+      &lt;div&gt;
+        2 of 4
+      &lt;/div&gt;
+    &lt;/ion-col&gt;
+    &lt;ion-col align-self-end&gt;
+      &lt;div&gt;
+        3 of 4
+      &lt;/div&gt;
+    &lt;/ion-col&gt;
+    &lt;ion-col&gt;
+      &lt;div&gt;
+        4 of 4 &lt;br&gt;#&lt;br&gt;#&lt;br&gt;#
+      &lt;/div&gt;
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h3 id="horizontal-alignment">Horizontal alignment</h3>
+
+<p>All columns can be horizontally aligned inside of a row by adding different
+attributes to the row. For a list of available attributes, see
+<a href="../Row.html#row-attributes">row attributes</a>.</p>
+
+<ion-grid>
+  <ion-row justify-content-start="">
+    <ion-col col-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+
+  <ion-row justify-content-center="">
+    <ion-col col-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+
+  <ion-row justify-content-end="">
+    <ion-col col-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+
+  <ion-row justify-content-around="">
+    <ion-col col-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+
+  <ion-row justify-content-between="">
+    <ion-col col-3="">
+      1 of 2
+    </ion-col>
+    <ion-col col-3="">
+      2 of 2
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ion-grid&gt;
+  &lt;ion-row justify-content-start&gt;
+    &lt;ion-col col-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+
+  &lt;ion-row justify-content-center&gt;
+    &lt;ion-col col-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+
+  &lt;ion-row justify-content-end&gt;
+    &lt;ion-col col-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+
+  &lt;ion-row justify-content-around&gt;
+    &lt;ion-col col-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+
+  &lt;ion-row justify-content-between&gt;
+    &lt;ion-col col-3&gt;
+      1 of 2
+    &lt;/ion-col&gt;
+    &lt;ion-col col-3&gt;
+      2 of 2
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre>
+</div>
+
+<h2 id="customizing-the-grid">Customizing the grid</h2>
+
+<p>Using our built-in grid Sass variables and maps, it’s possible to completely customize
+the predefined grid attributes. Change the number of breakpoints, the media query values,
+the number of columns, and more.</p>
+
+<h3 id="number-of-columns-and-padding">Number of columns and padding</h3>
+
+<p>The number of grid columns and their padding can be modified via Sass variables.
+<code class="highlighter-rouge">$grid-columns</code> is used to generate the widths (in percent) of each individual column.
+<code class="highlighter-rouge">$grid-padding-width</code> is used for the padding on the grid, while <code class="highlighter-rouge">$grid-padding-widths</code>
+allows breakpoint-specific widths that are divided evenly across <code class="highlighter-rouge">padding-left</code> and
+<code class="highlighter-rouge">padding-right</code> as well as <code class="highlighter-rouge">padding-top</code> and <code class="highlighter-rouge">padding-bottom</code> of the grid and columns.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$grid-columns:               12 !default;
+
+$grid-padding-width:         10px !default;
+
+$grid-padding-widths: (
+  xs: $grid-padding-width,
+  sm: $grid-padding-width,
+  md: $grid-padding-width,
+  lg: $grid-padding-width,
+  xl: $grid-padding-width
+) !default;
+</code></pre>
+</div>
+
+<h3 id="grid-tiers">Grid tiers</h3>
+
+<p>To customize the breakpoints and their values, override the values of
+<code class="highlighter-rouge">$grid-breakpoints</code> and <code class="highlighter-rouge">$grid-max-widths</code>. For example, to only use
+3 breakpoints, the following could be written:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$grid-breakpoints: (
+  sm: 0,
+  md: 768px,
+  lg: 1024px
+);
+
+$grid-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+</code></pre>
+</div>
+
+  </main>
+  
+</div>
+
+
+    
+      <div class="footer-links">
+        <hr>
+        
+          <a class="footer-link prev" href="../css-utilities/index.html">
+            CSS Utilities</a>
+        
+        
+          <a class="footer-link next" href="../theming-your-app/index.html">
+            Theming your App</a>
+        
+      </div>
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/theming/responsive-grid/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:39:17 GMT -->
+</html>

@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Ionic - Latest topics</title>
+    <link>https://forum.ionicframework.com/latest</link>
+    <description>Latest topics</description>
+    
+      <lastBuildDate>Sat, 07 Oct 2017 16:29:45 +0000</lastBuildDate>
+      <atom:link href="https://forum.ionicframework.com/latest.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Returning a value from a function</title>
+          <dc:creator><![CDATA[@Dubicki Dubicki]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/dubicki">@Dubicki</a> wrote:</p>
+            <blockquote>
+              <p>Hello All,</p>
+<p>I have the following function:</p>
+<pre><code class="lang-auto">  getMonth(month) {
+    this.calendarProvider.getMonths().then(data =&gt; {
+      let months = data[0].months_of_year;
+      for (let i = 0; i &lt; months.length; i++) {
+        if (i === month) {
+          console.log(months[i]);
+        }
+      }
+    });
+  }
+</code></pre>
+<p>This function is called like so:</p>
+<pre><code class="lang-auto">let now = new Date();
+let month = this.getMonth(now.getMonth());
+</code></pre>
+<p>It is using a json file that is laid out like so:</p>
+<pre><code class="lang-auto">[{
+  "months_of_year": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ]
+}]
+</code></pre>
+<p>Can some please tell me how to edit my function so that ii will return a string.</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/returning-a-value-from-a-function/108036">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/returning-a-value-from-a-function/108036</link>
+          <pubDate>Sat, 07 Oct 2017 16:29:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108036</guid>
+          <source url="https://forum.ionicframework.com/t/returning-a-value-from-a-function/108036.rss">Returning a value from a function</source>
+        </item>
+        <item>
+          <title>Livereload problem</title>
+          <dc:creator><![CDATA[@gantonelli Gantonelli]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/gantonelli">@gantonelli</a> wrote:</p>
+            <blockquote>
+              <p>Hi,<br>
+I’m new with Ionic, I have a problem with the lab livereload, it doesn’t work and in chrome console this error is showed:</p>
+<p>VM54:164 WebSocket connection to ‘ws://localhost:35729/livereload’ failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED…</p>
+<p>Does anyone have a solution?</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/livereload-problem/108035">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/livereload-problem/108035</link>
+          <pubDate>Sat, 07 Oct 2017 15:45:46 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108035</guid>
+          <source url="https://forum.ionicframework.com/t/livereload-problem/108035.rss">Livereload problem</source>
+        </item>
+        <item>
+          <title>Enable pinch and zoom for entire app or entire page</title>
+          <dc:creator><![CDATA[@danzac Danzac]]></dc:creator>
+          <category>ionic-v1</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/danzac">@danzac</a> wrote:</p>
+            <blockquote>
+              <p>I’m searching in vain to find info on how to enable zoom in either the entire app, or at least on a per page basis.  My pages usually consist of a mixture of text and images.</p>
+<p>Is there a way to apply something like <code>&lt;ion-scroll zoom="true"&gt;&lt;/ion-scroll&gt;</code>  to an entire page?</p>
+<p>Any help would be appreciated.</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/enable-pinch-and-zoom-for-entire-app-or-entire-page/108033">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/enable-pinch-and-zoom-for-entire-app-or-entire-page/108033</link>
+          <pubDate>Sat, 07 Oct 2017 15:19:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108033</guid>
+          <source url="https://forum.ionicframework.com/t/enable-pinch-and-zoom-for-entire-app-or-entire-page/108033.rss">Enable pinch and zoom for entire app or entire page</source>
+        </item>
+        <item>
+          <title>Ionic 2 openweathermap api call</title>
+          <dc:creator><![CDATA[@Louis101 Louis101]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/louis101">@Louis101</a> wrote:</p>
+            <blockquote>
+              <p>Im creating my first app in ionic 2, I am making a call to the api and that is working fine. The thing I am struggling with is the javascript side. My app doesnt have a .js file/folder so I am a little unsure in to where to put the javascript that handles the JSON from the API or if i create a javascript file then where do i call it from?</p>
+            </blockquote>
+            <p>Posts: 6</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032</link>
+          <pubDate>Sat, 07 Oct 2017 14:44:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108032</guid>
+          <source url="https://forum.ionicframework.com/t/ionic-2-openweathermap-api-call/108032.rss">Ionic 2 openweathermap api call</source>
+        </item>
+        <item>
+          <title>Ios build error: Error: Command failed: xcrun simctl list --json</title>
+          <dc:creator><![CDATA[@lsantaniello Luca]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/lsantaniello">@lsantaniello</a> wrote:</p>
+            <blockquote>
+              <p>Hi guys,<br>
+I need of support for this error:</p>
+<pre><code class="lang-auto">&gt; ionic-app-scripts build "--prod" "--release"
+
+[16:35:44]  ionic-app-scripts 1.3.7 
+[16:35:44]  build prod started ... 
+[16:35:44]  clean started ... 
+[16:35:44]  clean finished in 7 ms 
+[16:35:44]  copy started ... 
+[16:35:44]  ngc started ... 
+[16:35:58]  ngc finished in 13.93 s 
+[16:35:58]  preprocess started ... 
+[16:35:58]  deeplinks started ... 
+[16:36:00]  deeplinks finished in 1.63 s 
+[16:36:00]  optimization started ... 
+[16:36:00]  copy finished in 15.79 s 
+[16:36:20]  optimization finished in 20.26 s 
+[16:36:20]  preprocess finished in 21.88 s 
+[16:36:20]  webpack started ... 
+[16:36:44]  webpack finished in 23.61 s 
+[16:36:44]  sass started ... 
+[16:36:44]  uglifyjs started ... 
+[16:36:45]  sass finished in 1.58 s 
+[16:36:45]  cleancss started ... 
+[16:36:47]  cleancss finished in 2.15 s 
+[16:37:38]  uglifyjs finished in 54.76 s 
+[16:37:38]  postprocess started ... 
+[16:37:38]  postprocess finished in 52 ms 
+[16:37:38]  lint started ... 
+[16:37:38]  build prod finished in 114.30 s 
+[16:37:43]  lint finished in 4.26 s 
+Error: Command failed: xcrun simctl list --json
+dyld: Library not loaded: /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator
+  Referenced from: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl
+  Reason: image not found
+</code></pre>
+<p>Could you please help me?</p>
+<p>Thanks in advance</p>
+<p>Luca</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/ios-build-error-error-command-failed-xcrun-simctl-list-json/108031">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ios-build-error-error-command-failed-xcrun-simctl-list-json/108031</link>
+          <pubDate>Sat, 07 Oct 2017 14:40:16 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108031</guid>
+          <source url="https://forum.ionicframework.com/t/ios-build-error-error-command-failed-xcrun-simctl-list-json/108031.rss">Ios build error: Error: Command failed: xcrun simctl list --json</source>
+        </item>
+        <item>
+          <title>Cordova-plugin-inappbrowser : download from external website with inAppBrowser in IONIC 3 app</title>
+          <dc:creator><![CDATA[@dvtopiya Darshana]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/dvtopiya">@dvtopiya</a> wrote:</p>
+            <blockquote>
+              <p>Hello,</p>
+<p>How can I download from external website which is opened in cordova inAppBrowser in IONIC 3. Currently I am using “cordova-plugin-inappbrowser”: “^1.7.1”.</p>
+<p>Any help would be greatly appreciated.</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/cordova-plugin-inappbrowser-download-from-external-website-with-inappbrowser-in-ionic-3-app/108029">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/cordova-plugin-inappbrowser-download-from-external-website-with-inappbrowser-in-ionic-3-app/108029</link>
+          <pubDate>Sat, 07 Oct 2017 14:26:39 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108029</guid>
+          <source url="https://forum.ionicframework.com/t/cordova-plugin-inappbrowser-download-from-external-website-with-inappbrowser-in-ionic-3-app/108029.rss">Cordova-plugin-inappbrowser : download from external website with inAppBrowser in IONIC 3 app</source>
+        </item>
+        <item>
+          <title>Cordova 7.0.1 - is it SAFE to update?</title>
+          <dc:creator><![CDATA[@jans-y]]></dc:creator>
+          <category>Ionic Native</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/jans-y">@jans-y</a> wrote:</p>
+            <blockquote>
+              <p><strong>Hi guys!</strong></p>
+<p>Is it safe to update to Cordova 7.0.1 right now?</p>
+<p>I am using a lot of plugins like intercom, facebook, googleplus, branch.</p>
+<p>Is there a possibility I will have problems with any of this plugins?</p>
+<p>What are the pros of updating?</p>
+<p><strong>Thank you very much for your answers!</strong></p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/cordova-7-0-1-is-it-safe-to-update/108028">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/cordova-7-0-1-is-it-safe-to-update/108028</link>
+          <pubDate>Sat, 07 Oct 2017 14:25:04 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108028</guid>
+          <source url="https://forum.ionicframework.com/t/cordova-7-0-1-is-it-safe-to-update/108028.rss">Cordova 7.0.1 - is it SAFE to update?</source>
+        </item>
+        <item>
+          <title>Error with --prod</title>
+          <dc:creator><![CDATA[@nyffellare Nyffellare]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/nyffellare">@nyffellare</a> wrote:</p>
+            <blockquote>
+              <p>Hello,</p>
+<p>When i use ionic cordova build android --prod --release it gives a strange error. I tried to fix it but it always results in a broken app. Does anyone have an ideahow to solve this?<br>
+Ionic cordova build android --realease works perfect btw.</p>
+<p>Thanks in advance!</p>
+<p>Greetings,<br>
+Nyffellare</p>
+<p>Here is the error:</p>
+<pre><code class="lang-auto">PS D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers&gt; ionic cordova build android --prod --release
+[INFO] Running app-scripts build: --prod --platform android --target cordova
+
+[15:35:02]  build prod started ...
+[15:35:02]  clean started ...
+[15:35:02]  clean finished in 1 ms
+[15:35:02]  copy started ...
+[15:35:02]  ngc started ...
+Error: Type AboutPage in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.ts is part of the declarations of 2 modules: AppModule in D:/Personal_Files/Documenten/Ion
+ic/ChecklistByBlackSuitDevelopers/src/app/app.module.ts and AboutPageModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.module.ts! Please consider moving Ab
+outPage in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.ts to a higher module that imports AppModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitD
+evelopers/src/app/app.module.ts and AboutPageModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.module.ts. You can also create a new NgModule that exports a
+nd includes AboutPage in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.ts then import that NgModule in AppModule in D:/Personal_Files/Documenten/Ionic/ChecklistB
+yBlackSuitDevelopers/src/app/app.module.ts and AboutPageModule in D:/Personal_Files/Documenten/Ionic/ChecklistByBlackSuitDevelopers/src/pages/about/about.module.ts.
+    at Error (native)
+    at syntaxError (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:1550:34)
+    at CompileMetadataResolver._addTypeToModule (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:14655:31)
+    at D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:14543:27
+    at Array.forEach (native)
+    at CompileMetadataResolver.getNgModuleMetadata (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:14534:54)
+    at addNgModule (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:23050:58)
+    at D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:23061:14
+    at Array.forEach (native)
+    at _createNgModules (D:\Personal_Files\Documenten\Ionic\ChecklistByBlackSuitDevelopers\node_modules\@angular\compiler\bundles\compiler.umd.js:23060:26)
+</code></pre>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/error-with-prod/108027">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/error-with-prod/108027</link>
+          <pubDate>Sat, 07 Oct 2017 13:42:15 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108027</guid>
+          <source url="https://forum.ionicframework.com/t/error-with-prod/108027.rss">Error with --prod</source>
+        </item>
+        <item>
+          <title>WKWebView / Crosswalk</title>
+          <dc:creator><![CDATA[@JayKay Jay Kay]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/jaykay">@JayKay</a> wrote:</p>
+            <blockquote>
+              <p>Mike currently released a post about the <a href="http://blog.ionic.io/wkwebview-for-all-a-new-webview-for-ionic/" rel="nofollow noopener">WKWebView</a>.<br>
+I’m not sure what this means to me, as I use Crosswalk (<a href="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview" rel="nofollow noopener">cordova-plugin-crosswalk-webview</a>) in my Ionic 3 app.</p>
+<p>Does the WKWebView replace Crosswalk in my app and should I hence remove Crosswalk and add the WKWebView? How are they related? What are the advantages / disadvantages of using either one?</p>
+<p>Any help on this is appreciated. Thank you!</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/wkwebview-crosswalk/108025">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/wkwebview-crosswalk/108025</link>
+          <pubDate>Sat, 07 Oct 2017 13:09:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108025</guid>
+          <source url="https://forum.ionicframework.com/t/wkwebview-crosswalk/108025.rss">WKWebView / Crosswalk</source>
+        </item>
+        <item>
+          <title>Admob-free with ionic 2</title>
+          <dc:creator><![CDATA[@samikoren1 Samikoren1]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/samikoren1">@samikoren1</a> wrote:</p>
+            <blockquote>
+              <p>I am trying to install admob-free to ionic2 project. after installing:<br>
+<strong>$ ionic cordova plugin add cordova-plugin-admob-free</strong><br>
+<strong>$ npm install --save <span class="mention">@ionic-native</span>/admob-free</strong></p>
+<p>now running: ionic serve</p>
+<p>I get this error:<br>
+<strong>node_modules@ionic-native\admob-free\index.js:20</strong><br>
+<strong>import { Plugin, Cordova, IonicNativePlugin } from ‘<span class="mention">@ionic-native</span>/core’;</strong><br>
+<strong>ParseError: ‘import’ and ‘export’ may appear only with ‘sourceType: module’</strong></p>
+<p>anyone can help? how should I resolve it?<br>
+Thanks.</p>
+            </blockquote>
+            <p>Posts: 3</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/admob-free-with-ionic-2/108024">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/admob-free-with-ionic-2/108024</link>
+          <pubDate>Sat, 07 Oct 2017 12:55:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108024</guid>
+          <source url="https://forum.ionicframework.com/t/admob-free-with-ionic-2/108024.rss">Admob-free with ionic 2</source>
+        </item>
+        <item>
+          <title>Present component on top of ion-tabs</title>
+          <dc:creator><![CDATA[@Daskus Daskus]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/daskus">@Daskus</a> wrote:</p>
+            <blockquote>
+              <p>I want to implement <a href="https://material.io/guidelines/growth-communications/feature-discovery.html#feature-discovery-design-patterns" rel="nofollow noopener">Material Design Feature Discovery</a>.<br>
+The implementation of the component itself is not a problem but when I try to display it the ion-tabs component is always on top of it and partially overlays/hides my component.</p>
+<p>How can I put my component on top of every other component, like navbar, ion-tabs, ion-fab? Something like action-sheet or alert (Those are always on top of everything else)…</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/present-component-on-top-of-ion-tabs/108020">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/present-component-on-top-of-ion-tabs/108020</link>
+          <pubDate>Sat, 07 Oct 2017 12:14:01 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108020</guid>
+          <source url="https://forum.ionicframework.com/t/present-component-on-top-of-ion-tabs/108020.rss">Present component on top of ion-tabs</source>
+        </item>
+        <item>
+          <title>Auth http: No JWT present or has expired</title>
+          <dc:creator><![CDATA[@nathantaal Nathantaal]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/nathantaal">@nathantaal</a> wrote:</p>
+            <blockquote>
+              <p>I know there is a lot on different forums on this issue. I looked here, on Auth0 forum and on stackoverflow.</p>
+<p>When I’m trying to make an api call I get the response 401 (Unauthorized): No JWT present or has expired.</p>
+<p>in my app.module.ts, above <span class="mention">@ngmodule</span> I have an getAuthHttp function:</p>
+<pre><code class="lang-auto">export function getAuthHttp(http) {
+    return new AuthHttp(new AuthConfig({
+        headerPrefix: 'bearer',
+        noJwtError: true,
+        globalHeaders: [{'Accept': 'application/json'}],
+        tokenGetter: (() =&gt; JSON.parse(window.localStorage.getItem('id_token'))),
+    }), http);
+}
+</code></pre>
+<p>(I tried to fix tokengetter by getting token from localstorage instead of creating new storage as is suggested in some official documentation)</p>
+<p>this is my providers array:</p>
+<pre><code class="lang-auto">providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: AuthHttp, useFactory: getAuthHttp, deps: [Http] },
+    AUTH_PROVIDERS,
+    ChallengeService, SettingsService, UserdataService, AuthService
+  ]
+</code></pre>
+<p>and of course I have an authservice file which handles login and logout and probaly more which I don’t use at the moment.</p>
+<p>My service which calls the api:</p>
+<pre><code class="lang-auto">import { Injectable} from '@angular/core';
+import { AuthService} from "./auth.service";
+import { AuthHttp } from "angular2-jwt";
+import 'rxjs/Rx';
+
+@Injectable()
+export class MessageService{
+
+    http: any;
+    messages: any;
+    authService: any;
+    
+    constructor(authService:AuthService, private authHttp:AuthHttp){
+        this.storage = storage;
+        this.authService = authService;
+        this.authHttp = authHttp;
+    }
+
+    getMessage(level, location)
+    {
+        this.messages=  this.authHttp.get('http://10.0.2.2:8080/api/message/1');
+
+        return this.messages;
+    }
+};
+</code></pre>
+<p>Now this goes wrong, obviously.</p>
+<p>I 'm pretty sure i’m forgetting something but i can’t pinpoint it and after days of getting closer now i’m totally stuck. Who can help me fix this? I would also be okay with just using angular http but I cannot get it working with sending the headers myself as well.</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/auth-http-no-jwt-present-or-has-expired/108019">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/auth-http-no-jwt-present-or-has-expired/108019</link>
+          <pubDate>Sat, 07 Oct 2017 12:08:23 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108019</guid>
+          <source url="https://forum.ionicframework.com/t/auth-http-no-jwt-present-or-has-expired/108019.rss">Auth http: No JWT present or has expired</source>
+        </item>
+        <item>
+          <title>Ionic firebase push subscription error</title>
+          <dc:creator><![CDATA[@SangeethSudha Sangeeth Sudha]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/sangeethsudha">@SangeethSudha</a> wrote:</p>
+            <blockquote>
+              <p>Guys, Im getting this subscription error, even after registering the device in firebase. All connectivity is correct and finally im getting this error when i run.</p>
+<p><strong>core.es5.js:1084 ERROR Error: Uncaught (in promise): Error: Error subscribing for Push notifications.</strong><br>
+<strong>Error: Error subscribing for Push notifications.</strong><br>
+**    at push.js:82**<br>
+**    at t.invoke (polyfills.js:3)**<br>
+**    at Object.onInvoke (core.es5.js:4149)**<br>
+**    at t.invoke (polyfills.js:3)**<br>
+**    at r.run (polyfills.js:3)**<br>
+**    at polyfills.js:3**<br>
+**    at t.invokeTask (polyfills.js:3)**<br>
+**    at Object.onInvokeTask (core.es5.js:4140)**<br>
+**    at t.invokeTask (polyfills.js:3)**<br>
+**    at r.runTask (polyfills.js:3)**<br>
+**    at push.js:82**<br>
+**    at t.invoke (polyfills.js:3)**<br>
+**    at Object.onInvoke (core.es5.js:4149)**<br>
+**    at t.invoke (polyfills.js:3)**<br>
+**    at r.run (polyfills.js:3)**<br>
+**    at polyfills.js:3**<br>
+**    at t.invokeTask (polyfills.js:3)**<br>
+**    at Object.onInvokeTask (core.es5.js:4140)**<br>
+**    at t.invokeTask (polyfills.js:3)**<br>
+**    at r.runTask (polyfills.js:3)**<br>
+**    at c (polyfills.js:3)**<br>
+**    at polyfills.js:3**<br>
+**    at t.invokeTask (polyfills.js:3)**<br>
+**    at Object.onInvokeTask (core.es5.js:4140)**<br>
+**    at t.invokeTask (polyfills.js:3)**<br>
+**    at r.runTask (polyfills.js:3)**<br>
+**    at o (polyfills.js:3)**<br>
+**    at **</p>
+<p>Can some one help on this?<br>
+<div class="lightbox-wrapper"><a data-download-href="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/b2a21070459ed9cda8073ed0c28c813b52bb3527" href="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/original/3X/b/2/b2a21070459ed9cda8073ed0c28c813b52bb3527.png" class="lightbox" title="Untitled.png"><img src="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/optimized/3X/b/2/b2a21070459ed9cda8073ed0c28c813b52bb3527_1_690x318.png" alt="Untitled" width="690" height="318"><div class="meta">
+<span class="filename">Untitled.png</span><span class="informations">1048x483 15 KB</span><span class="expand"></span>
+</div></a></div></p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/ionic-firebase-push-subscription-error/108018">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ionic-firebase-push-subscription-error/108018</link>
+          <pubDate>Sat, 07 Oct 2017 11:55:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108018</guid>
+          <source url="https://forum.ionicframework.com/t/ionic-firebase-push-subscription-error/108018.rss">Ionic firebase push subscription error</source>
+        </item>
+        <item>
+          <title>Badge notification issue an android ionic app</title>
+          <dc:creator><![CDATA[@youbapi Youbapi]]></dc:creator>
+          <category>ionic-v1</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/youbapi">@youbapi</a> wrote:</p>
+            <blockquote>
+              <p>Hi, We Technotrick Systems are developing an Android app on IONIC Framework.  We want to integrate Badge function to our app but IONIC framework is not supporting it.  It would be very helpful for us if you could guide on it.   Regards, TTS Team</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/badge-notification-issue-an-android-ionic-app/108016">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/badge-notification-issue-an-android-ionic-app/108016</link>
+          <pubDate>Sat, 07 Oct 2017 11:20:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108016</guid>
+          <source url="https://forum.ionicframework.com/t/badge-notification-issue-an-android-ionic-app/108016.rss">Badge notification issue an android ionic app</source>
+        </item>
+        <item>
+          <title>Is there any plugin that make application work in background mode?</title>
+          <dc:creator><![CDATA[@YousefRabieKhalil Yousef Rabie Khalil]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/yousefrabiekhalil">@YousefRabieKhalil</a> wrote:</p>
+            <blockquote>
+              <p>al slam alykoum<br>
+i use <a href="http://ionicframework.com/docs/native/background-mode/" rel="nofollow noopener">this</a> plugin to run the bakcgound mode in my ionic 2 application<br>
+i used this plugin to display some local notification  while the app in background mode</p>
+<p>but my app has been rejected because of this plugin use the audio permission.<br>
+so my question is there is any plugin that make application work in background without have audio permission ?</p>
+            </blockquote>
+            <p>Posts: 4</p>
+            <p>Participants: 3</p>
+            <p><a href="https://forum.ionicframework.com/t/is-there-any-plugin-that-make-application-work-in-background-mode/108014">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/is-there-any-plugin-that-make-application-work-in-background-mode/108014</link>
+          <pubDate>Sat, 07 Oct 2017 10:46:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108014</guid>
+          <source url="https://forum.ionicframework.com/t/is-there-any-plugin-that-make-application-work-in-background-mode/108014.rss">Is there any plugin that make application work in background mode?</source>
+        </item>
+        <item>
+          <title>Admob in ionic</title>
+          <dc:creator><![CDATA[@narjes Narjes]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/narjes">@narjes</a> wrote:</p>
+            <blockquote>
+              <p>Hello ,<br>
+i want to monetise my ionic app via Admob ,so i create an account and put the ID Publisher in the right code . but nothing is appearing ! (as a test in the browser) , but when i run with my devise (sumsung ) i got that problem:</p>
+<p>C:\Users\ATIA&gt;cd caf</p>
+<p>C:\Users\ATIA\caf&gt;ionic run android<br>
+(node:8872) fs: re-evaluating native module sources is not supported. If you are<br>
+using the graceful-fs module, please update it to a more recent version.<br>
+Running command: “C:\Program Files\nodejs\node.exe” C:\Users\ATIA\caf\hooks\afte<br>
+r_prepare\010_add_platform_class.js C:\Users\ATIA\caf</p>
+<p>ANDROID_HOME=C:\Apps\android-sdk_r24.4.1-windows\android-sdk-windows</p>
+<p>JAVA_HOME=C:\Program Files\Java\jdk1.8.0_91</p>
+<p>Subproject Path: CordovaLib</p>
+<p>Starting a new Gradle Daemon for this build (subsequent builds will be faster).</p>
+<p>FAILURE: Build failed with an exception.</p>
+<ul>
+<li>What went wrong:<br>
+Unable to start the daemon process.<br>
+This problem might be caused by incorrect configuration of the daemon.<br>
+For example, an unrecognized jvm option is used.<br>
+Please refer to the user guide chapter on the daemon at <a href="https://docs.gradle.org/" rel="nofollow noopener">https://docs.gradle.org/</a><br>
+2.14.1/userguide/gradle_daemon.html<br>
+Please read the following process output to find out more:</li>
+</ul>
+<hr>
+<p>Error occurred during initialization of VM<br>
+Could not reserve enough space for 2097152KB object heap</p>
+<ul>
+<li>Try:<br>
+Run with --stacktrace option to get the stack trace. Run with --info or --debug<br>
+option to get more log output.</li>
+</ul>
+<p>Error: cmd: Command failed with exit code 1 Error output:<br>
+FAILURE: Build failed with an exception.</p>
+<ul>
+<li>What went wrong:<br>
+Unable to start the daemon process.<br>
+This problem might be caused by incorrect configuration of the daemon.<br>
+For example, an unrecognized jvm option is used.<br>
+Please refer to the user guide chapter on the daemon at <a href="https://docs.gradle.org/" rel="nofollow noopener">https://docs.gradle.org/</a><br>
+2.14.1/userguide/gradle_daemon.html<br>
+Please read the following process output to find out more:</li>
+</ul>
+<hr>
+<p>Error occurred during initialization of VM<br>
+Could not reserve enough space for 2097152KB object heap</p>
+<ul>
+<li>Try:<br>
+Run with --stacktrace option to get the stack trace. Run with --info or --debug<br>
+option to get more log output.</li>
+</ul>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/admob-in-ionic/108012">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/admob-in-ionic/108012</link>
+          <pubDate>Sat, 07 Oct 2017 09:57:35 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108012</guid>
+          <source url="https://forum.ionicframework.com/t/admob-in-ionic/108012.rss">Admob in ionic</source>
+        </item>
+        <item>
+          <title>Designing complex layouts in Ionic 3 with Ion-Grid &amp; Breakpoint-Sass</title>
+          <dc:creator><![CDATA[@semoju Mojugbe Seme]]></dc:creator>
+          <category>tutorials</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/semoju">@semoju</a> wrote:</p>
+            <blockquote>
+              <p>Ionic 3 has been around for a while, and a lot has been done in making Ionic work not just in a mobile-centric manner but for large display devices from tablets to laptops, many thanks to features like split-pane and ion-grid. And while they do lot in speeding up your work, there’s a lot I learned in know where/when best to use them, and when/where best to add your own approach.</p>
+<p><a href="https://audacitus.com/site/2017/10/02/designing-for-mobile-tablet-and-pwa-in-ionic-3-what-i-learned/" class="onebox" target="_blank" rel="nofollow noopener">https://audacitus.com/site/2017/10/02/designing-for-mobile-tablet-and-pwa-in-ionic-3-what-i-learned/</a></p>
+<p><div class="lightbox-wrapper"><a data-download-href="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/0383fd1595a57f3fabc1ee18bb4d7c0512bfbf18" href="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/original/3X/0/3/0383fd1595a57f3fabc1ee18bb4d7c0512bfbf18.gif" class="lightbox" title="tut-showcase.gif"><img src="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/optimized/3X/0/3/0383fd1595a57f3fabc1ee18bb4d7c0512bfbf18_1_690x489.gif" alt="tut-showcase" width="690" height="489"><div class="meta">
+<span class="filename">tut-showcase.gif</span><span class="informations">848x602 1.26 MB</span><span class="expand"></span>
+</div></a></div></p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/designing-complex-layouts-in-ionic-3-with-ion-grid-breakpoint-sass/108009">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/designing-complex-layouts-in-ionic-3-with-ion-grid-breakpoint-sass/108009</link>
+          <pubDate>Sat, 07 Oct 2017 09:18:00 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108009</guid>
+          <source url="https://forum.ionicframework.com/t/designing-complex-layouts-in-ionic-3-with-ion-grid-breakpoint-sass/108009.rss">Designing complex layouts in Ionic 3 with Ion-Grid &amp; Breakpoint-Sass</source>
+        </item>
+        <item>
+          <title>Adding tabs to a modal view</title>
+          <dc:creator><![CDATA[@khaledAlkathiri Khaled Alkathiri]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/khaledalkathiri">@khaledAlkathiri</a> wrote:</p>
+            <blockquote>
+              <p>In my app, I have a page with a list of renters and when I click on a renter a modal view will be shown with the renter details. But I want to modify the modal view to have two tabs, one for the renter details and the other one for comments but when I try this I keep getting a black screen!!! Why???</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/adding-tabs-to-a-modal-view/108008">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/adding-tabs-to-a-modal-view/108008</link>
+          <pubDate>Sat, 07 Oct 2017 09:06:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108008</guid>
+          <source url="https://forum.ionicframework.com/t/adding-tabs-to-a-modal-view/108008.rss">Adding tabs to a modal view</source>
+        </item>
+        <item>
+          <title>How to post image/video to server using Rest API</title>
+          <dc:creator><![CDATA[@3starinfo Ankit Gorasiya (Ionic Kind)]]></dc:creator>
+          <category>Ionic Native</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/3starinfo">@3starinfo</a> wrote:</p>
+            <blockquote>
+              <p>Hi<br>
+i am building social network apps. so here how can i store image/video of each post by users.<br>
+simple where can we store image/video uploading from mobile gallery to server?</p>
+<p><a href="mailto:ankit.gorasiya@gmail.com">ankit.gorasiya@gmail.com</a> is my email please message me.</p>
+<p>Thanks</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/how-to-post-image-video-to-server-using-rest-api/108005">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/how-to-post-image-video-to-server-using-rest-api/108005</link>
+          <pubDate>Sat, 07 Oct 2017 08:35:24 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-108005</guid>
+          <source url="https://forum.ionicframework.com/t/how-to-post-image-video-to-server-using-rest-api/108005.rss">How to post image/video to server using Rest API</source>
+        </item>
+        <item>
+          <title>Ionic item transparent background</title>
+          <dc:creator><![CDATA[@SaeedAnsari Saeed Ansari]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/saeedansari">@SaeedAnsari</a> wrote:</p>
+            <blockquote>
+              <p>Hello</p>
+<p>i am trying to make my ionic items transparent to 70% opacity. i am following <a href="https://forum.ionicframework.com/t/how-to-make-ion-items-transparent/2525/6">How to make ion-items transparent?</a> but am unable to achieve the desired result</p>
+<p>My code is basic:</p>
+<pre><code class="lang-auto">
+      &lt;ion-list&gt;
+        &lt;ion-item *ngFor="let post of posts" no-padding no-lines&gt;
+....
+.....
+...
+</code></pre>
+<p>can you show me how to do this?</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/ionic-item-transparent-background/107999">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ionic-item-transparent-background/107999</link>
+          <pubDate>Sat, 07 Oct 2017 06:25:17 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107999</guid>
+          <source url="https://forum.ionicframework.com/t/ionic-item-transparent-background/107999.rss">Ionic item transparent background</source>
+        </item>
+        <item>
+          <title>iOS app img src field</title>
+          <dc:creator><![CDATA[@ankarthik Ankarthik]]></dc:creator>
+          <category>Ionic Native</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/ankarthik">@ankarthik</a> wrote:</p>
+            <blockquote>
+              <p>I am working on a iOS based Ionic-Native mobile app.<br>
+I want to load images from photos library in iOS.</p>
+<p>And, I want to load them as</p>
+<p><code>&lt;img src="/path/to/img" /&gt;</code></p>
+<p>However, I am not able to figure out what kind of path to use.</p>
+<p>Any help is appreciated.</p>
+<p>Thanks in advance.</p>
+            </blockquote>
+            <p>Posts: 3</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/ios-app-img-src-field/107998">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ios-app-img-src-field/107998</link>
+          <pubDate>Sat, 07 Oct 2017 04:37:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107998</guid>
+          <source url="https://forum.ionicframework.com/t/ios-app-img-src-field/107998.rss">iOS app img src field</source>
+        </item>
+        <item>
+          <title>Ionic 3. Make sign up page fixed / stay in place</title>
+          <dc:creator><![CDATA[@danmemememe Danmemememe]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/danmemememe">@danmemememe</a> wrote:</p>
+            <blockquote>
+              <p>I have a simple sign up page with some inputs.  However, when focusing on an input element my whole page shifts upwards.  Can I make the whole page be fixed?  Or not move around even when keyboard is launched?</p>
+<p>Thanks</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/ionic-3-make-sign-up-page-fixed-stay-in-place/107997">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ionic-3-make-sign-up-page-fixed-stay-in-place/107997</link>
+          <pubDate>Sat, 07 Oct 2017 03:50:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107997</guid>
+          <source url="https://forum.ionicframework.com/t/ionic-3-make-sign-up-page-fixed-stay-in-place/107997.rss">Ionic 3. Make sign up page fixed / stay in place</source>
+        </item>
+        <item>
+          <title>Sudo npm install -g ionic@latest installs 3.6.1 and not 3.7 on mac</title>
+          <dc:creator><![CDATA[@zoinky Zoinky]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/zoinky">@zoinky</a> wrote:</p>
+            <blockquote>
+              <p>After fixing my node and running the command <code>sudo npm install -g ionic@latest</code><br>
+it installs 3.6.1 on mac but the same thing installs 3.7 on windows.<br>
+My initial issue started with trying to upgrade 3.6.1 following instructions posted here <a href="http://blog.ionic.io/updates-for-all-ionic-angular-3-7-and-more/" rel="nofollow noopener">http://blog.ionic.io/updates-for-all-ionic-angular-3-7-and-more/</a> and the problems I had posted here <a href="https://forum.ionicframework.com/t/error-upgrading-to-3-7-on-mac-windows-was-fine/107882">Error upgrading to 3.7 on Mac (windows was fine)</a></p>
+            </blockquote>
+            <p>Posts: 4</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/sudo-npm-install-g-ionic-latest-installs-3-6-1-and-not-3-7-on-mac/107995">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/sudo-npm-install-g-ionic-latest-installs-3-6-1-and-not-3-7-on-mac/107995</link>
+          <pubDate>Sat, 07 Oct 2017 01:27:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107995</guid>
+          <source url="https://forum.ionicframework.com/t/sudo-npm-install-g-ionic-latest-installs-3-6-1-and-not-3-7-on-mac/107995.rss">Sudo npm install -g ionic@latest installs 3.6.1 and not 3.7 on mac</source>
+        </item>
+        <item>
+          <title>Failed to upload ipa to storage</title>
+          <dc:creator><![CDATA[@sammoka Sam Moka]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/sammoka">@sammoka</a> wrote:</p>
+            <blockquote>
+              <p>Hi All,</p>
+<p>Trying to build and keep getting this error. Has anyone come across this before?</p>
+<p><img src="https://cdn-enterprise.discourse.org/ionicframework/uploads/default/original/3X/2/f/2fa977593bf06460cbcfc0008fc838ca62d88ef5.png" alt="Screenshot at Oct 07 03-02-34" width="532" height="175"></p>
+<p>Seems to be related to this post<br>
+<aside class="quote" data-post="1" data-topic="106277">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img alt="" width="20" height="20" src="/user_avatar/forum.ionicframework.com/dlazzy/40/113503_1.png" class="avatar">
+    <a href="https://forum.ionicframework.com/t/ionic-pro-ios-build-error/106277?source_topic_id=107994" rel="nofollow noopener">Ionic pro iOS build error</a> <a class="badge-wrapper  bullet" href="/c/ionic"><span class="badge-category-bg" style="background-color: #313744;"></span><span class="badge-category clear-badge" title="The Ionic category is for all posts related to ionic-angular 2.0.0 or newer of the framework itself. If you have any questions about the forum, please use the meta tag instead.">ionic</span></a>
+  </div>
+  <blockquote>
+    Hello, 
+Today I’m trying ionic pro and the native build in case I will buy this service. It works great for Android. But there is a problem for iOS. I added a plugin OneSignal (work on Android). 
+But when the build with ionic pro begin, I get an error : 
+Installing "onesignal-cordova-plugin" for ios
+Failed to install 'onesignal-cordova-plugin': undefined
+Failed to restore plugin "onesignal-cordova-plugin" from config.xml. You might need to try adding it again. Error: CocoaPods was not found. Ple…
+  </blockquote>
+</aside>
+</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/failed-to-upload-ipa-to-storage/107994">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/failed-to-upload-ipa-to-storage/107994</link>
+          <pubDate>Sat, 07 Oct 2017 01:03:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107994</guid>
+          <source url="https://forum.ionicframework.com/t/failed-to-upload-ipa-to-storage/107994.rss">Failed to upload ipa to storage</source>
+        </item>
+        <item>
+          <title>Ionic Pro: Build Fails</title>
+          <dc:creator><![CDATA[@jmbinnacle John Mosher]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/jmbinnacle">@jmbinnacle</a> wrote:</p>
+            <blockquote>
+              <p>I am trying to follow the guidelines online to add monitoring to an app in Ionic Pro.  It works when running locally using “ionic serve” but the build script is failing with the following error:</p>
+<p>Cannot find module ‘<span class="mention">@ionic</span>/pro’ on the line where I am trying to import Pro.</p>
+<p>Any thoughts?</p>
+            </blockquote>
+            <p>Posts: 6</p>
+            <p>Participants: 3</p>
+            <p><a href="https://forum.ionicframework.com/t/ionic-pro-build-fails/107992">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/ionic-pro-build-fails/107992</link>
+          <pubDate>Fri, 06 Oct 2017 23:22:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107992</guid>
+          <source url="https://forum.ionicframework.com/t/ionic-pro-build-fails/107992.rss">Ionic Pro: Build Fails</source>
+        </item>
+        <item>
+          <title>Cordova CLI `--browserify`</title>
+          <dc:creator><![CDATA[@Sujan12 Jan]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/sujan12">@Sujan12</a> wrote:</p>
+            <blockquote>
+              <p>Just found out that Cordova CLI has a <code>--browserify</code> option that “Compile plugin JS at build time using browserify instead of runtime.”-</p>
+<p>What’s the benefit of that?<br>
+Has anybody used it?</p>
+            </blockquote>
+            <p>Posts: 1</p>
+            <p>Participants: 1</p>
+            <p><a href="https://forum.ionicframework.com/t/cordova-cli-browserify/107990">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/cordova-cli-browserify/107990</link>
+          <pubDate>Fri, 06 Oct 2017 23:07:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107990</guid>
+          <source url="https://forum.ionicframework.com/t/cordova-cli-browserify/107990.rss">Cordova CLI `--browserify`</source>
+        </item>
+        <item>
+          <title>Is background plugin illegal plugin?</title>
+          <dc:creator><![CDATA[@YousefRabieKhalil Yousef Rabie Khalil]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/yousefrabiekhalil">@YousefRabieKhalil</a> wrote:</p>
+            <blockquote>
+              <p>i use background plugin for doing some processing while the app in background mode from <a href="http://ionicframework.com/docs/native/background-mode/" rel="nofollow noopener">here</a></p>
+<p>appstore just reject my app and the replay was</p>
+<blockquote>
+<p>Your app declares support for audio in the UIBackgroundModes key in your Info.plist but did not include features that require persistent audio.</p>
+<p>Next Steps</p>
+<p>The audio key is intended for use by apps that provide audible content to the user while in the background, such as music player or streaming audio apps. Please revise your app to provide audible content to the user while the app is in the background or remove the “audio” setting from the UIBackgroundModes key.</p>
+</blockquote>
+<p>i’m didn’t use any audio plugin i just use <code>phonegap-plugin-local-notification</code> <a href="http://ionicframework.com/docs/native/phonegap-local-notification/" rel="nofollow noopener">here</a><br>
+is phonegap-plugin-local-notification use sound ?<br>
+and if yes can i disable this sound ?<br>
+if no what a solution for this situation ?</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/is-background-plugin-illegal-plugin/107989">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/is-background-plugin-illegal-plugin/107989</link>
+          <pubDate>Fri, 06 Oct 2017 22:27:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107989</guid>
+          <source url="https://forum.ionicframework.com/t/is-background-plugin-illegal-plugin/107989.rss">Is background plugin illegal plugin?</source>
+        </item>
+        <item>
+          <title>How to use @IonicPage with angular cli</title>
+          <dc:creator><![CDATA[@salmanmd786 Salmanmd786]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/salmanmd786">@salmanmd786</a> wrote:</p>
+            <blockquote>
+              <p>I have my app already developed on angular-cli version 4.4.3, I tried integrating the ionic-angular version 3.7.1, and did some modifications on top of it to make the app run, everything works fine. But the issue is <span class="mention">@IonicPage</span>, this is not working. Is there a way to make it work using angular-cli?</p>
+<p>Error:</p>
+<p>ERROR Error: Uncaught (in promise): invalid link: HomePage<br>
+at resolvePromise (zone.js:824)<br>
+at Object.reject (zone.js:746)<br>
+at Nav.webpackJsonp…/…/…/…/ionic-angular/navigation/nav-controller-base.js.NavControllerBase._fireError (nav-controller-base.js:322)<br>
+at Nav.webpackJsonp…/…/…/…/ionic-angular/navigation/nav-controller-base.js.NavControllerBase._failed (nav-controller-base.js:310)<br>
+at nav-controller-base.js:365<br>
+at ZoneDelegate.webpackJsonp…/…/…/…/zone.js/dist/zone.js.ZoneDelegate.invoke (zone.js:392)<br>
+at Object.onInvoke (core.es5.js:3890)<br>
+at ZoneDelegate.webpackJsonp…/…/…/…/zone.js/dist/zone.js.ZoneDelegate.invoke (zone.js:391)<br>
+at Zone.webpackJsonp…/…/…/…/zone.js/dist/zone.js.Zone.run (zone.js:142)<br>
+at zone.js:873</p>
+<p>Thanks.</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/how-to-use-ionicpage-with-angular-cli/107988">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/how-to-use-ionicpage-with-angular-cli/107988</link>
+          <pubDate>Fri, 06 Oct 2017 22:25:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107988</guid>
+          <source url="https://forum.ionicframework.com/t/how-to-use-ionicpage-with-angular-cli/107988.rss">How to use @IonicPage with angular cli</source>
+        </item>
+        <item>
+          <title>How to update list of toggles in the DOM</title>
+          <dc:creator><![CDATA[@ghostrunners Ghostrunners]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/ghostrunners">@ghostrunners</a> wrote:</p>
+            <blockquote>
+              <p>Hi, I have a list of places that I want user to select from. The interface I chose for this is a toggle. I chose toggle because I really like the look and feel, and I may want to allow selecting multiple down the road.</p>
+<pre><code class="lang-auto">&lt;ion-list&gt;
+   &lt;ion-item *ngFor="let location of places"&gt;
+      &lt;ion-label&gt;{{location}}&lt;/ion-label&gt;
+         &lt;ion-toggle (ionChange)="locationSelected($event, location)"&gt;
+         &lt;/ion-toggle&gt;
+   &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+</code></pre>
+<p>Currently, however, I only want the user to select one toggle from that list. Which means when they select that toggle, all the other toggles will be checked to false. I’ve explored using ViewChild, contentRef. If I recall something about React, is that once I modify the data set (places), it would re-render the DOM. Does ng/ionic do something similar for my problem. I know it does it for a 2-way data bind. Is there a way to group all my toggles into an ngModel or something? A bit stuck. Thanks,</p>
+            </blockquote>
+            <p>Posts: 11</p>
+            <p>Participants: 3</p>
+            <p><a href="https://forum.ionicframework.com/t/how-to-update-list-of-toggles-in-the-dom/107987">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/how-to-update-list-of-toggles-in-the-dom/107987</link>
+          <pubDate>Fri, 06 Oct 2017 22:04:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107987</guid>
+          <source url="https://forum.ionicframework.com/t/how-to-update-list-of-toggles-in-the-dom/107987.rss">How to update list of toggles in the DOM</source>
+        </item>
+        <item>
+          <title>Https post not working on iOS</title>
+          <dc:creator><![CDATA[@shaun2344 Shaun2344]]></dc:creator>
+          <category>ionic</category>
+          <description><![CDATA[
+            <p><a href="https://forum.ionicframework.com/u/shaun2344">@shaun2344</a> wrote:</p>
+            <blockquote>
+              <p>Hi,</p>
+<p>I am using the following code to send  a post request to my API which is working fine within the browser (with CORS disabled) and on a native Android build. However the same code built for iOS doesn’t work. The code is below:</p>
+<pre><code class="lang-auto">return new Promise((resolve, reject) =&gt; {
+      this.http.post(this.apiUrl+'/login/', data)
+        .subscribe(res =&gt; {
+          resolve(res);
+        }, (err) =&gt; {
+          reject(err);
+        });
+    });
+</code></pre>
+<p>The output I see within Xcode when running the app is:</p>
+<pre><code class="lang-auto">{"headers":{"normalizedNames":{},"lazyUpdate":null,"headers":{}},"status":0,"statusText":"Unknown Error","url":null,"ok":false,"name":"HttpErrorResponse","message":"Http failure response for (unknown url): 0 Unknown Error","error":{"isTrusted":true}}
+</code></pre>
+<p>If I load my app via phone gap on iOS the API calls work fine, but fail when built via xcode and also when running via ionic view.</p>
+            </blockquote>
+            <p>Posts: 2</p>
+            <p>Participants: 2</p>
+            <p><a href="https://forum.ionicframework.com/t/https-post-not-working-on-ios/107980">Read full topic</a></p>
+          ]]></description>
+          <link>https://forum.ionicframework.com/t/https-post-not-working-on-ios/107980</link>
+          <pubDate>Fri, 06 Oct 2017 20:39:31 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">forum.ionicframework.com-topic-107980</guid>
+          <source url="https://forum.ionicframework.com/t/https-post-not-working-on-ios/107980.rss">Https post not working on iOS</source>
+        </item>
+  </channel>
+</rss>

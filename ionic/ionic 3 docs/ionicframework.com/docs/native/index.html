@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/native/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>Ionic Native - Ionic Native</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  </head>
+  <body id="docs-page-native"
+        class="v2 docs fluid page-native
+               
+               
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    
+      <nav class="navbar navbar-default" id="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <button type="button"
+              class="sidebar-toggle collapsed"
+              id="sidebar-toggle">
+        <span class="sr-only">Toggle sidebar</span>
+        <i class="ion-md-menu"></i>
+        <i class="ion-md-close"></i>
+      </button>
+      <a class="navbar-brand logo" href="https://ionicframework.com/">
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon.png" id="ionic-docs-logo" />
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon-back.png" id="ionic-docs-back" />
+      </a>
+      <a class="navbar-brand" href="https://ionicframework.com/docs">
+        
+        <img src="https://ionicframework.com/img/docs/ionic-docs-type.png" id="ionic-docs-text" />
+        
+      </a>
+      
+      <ul class="version">
+        <li class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="active">
+                Current Framework Docs <i class="ion-ios-checkmark"></i>
+              </a>
+            </li>
+            <li><a href="../v1/index.html">v1 Framework Docs</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      
+      <form class="navbar-form navbar-left"
+            id="header-search"
+            role="search"
+            data-searchpos="header">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control search-input"
+                 placeholder="Search"
+                 data-searchpos="header"
+                 ng-model="searchTerm">
+        </div>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../components/index.html">UI Components</a></li>
+        <li><a href="../api/index.html">API Reference</a></li>
+        <li><a href="index.html">Native Plugins</a></li>
+        <li><a href="../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../pro/index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../pro/view/index.html">View app</a></li>
+        <li><a href="../pro/package/index.html">Package</a></li>
+        <li><a href="../pro/live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../pro/monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../apps.ionic.io/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white">
+          <a href="../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+
+    <div class="docs-container"
+     >
+  <nav class="side-nav" id="side-nav" data-spy="affix" data-offset-top="38">
+    <form class="form-group search" role="search">
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search"
+             data-searchpos="sidebar"
+             ng-model="searchTerm">
+    </form>
+    
+      <ul ng-controller="DocsNavCtrl" class="native-docs">
+  <li class="back-to-main">
+    <a href="../index.html">Back to Main Docs</a>
+  </li>
+  <li class="capitalize ">
+  <a href="index.html">Overview</a>
+</li>
+<li class="capitalize ">
+  <a href="browser.html">Browser Usage</a>
+</li>
+<li class="capitalize ">
+  <a href="3d-touch/index.html">3D Touch</a>
+</li>
+<li class="capitalize ">
+  <a href="action-sheet/index.html">Action Sheet</a>
+</li>
+<li class="capitalize ">
+  <a href="admob-free/index.html">AdMob Free</a>
+</li>
+<li class="capitalize ">
+  <a href="admob-pro/index.html">AdMob Pro <span class="paid">Paid</span></a>
+</li>
+<li class="capitalize ">
+  <a href="alipay/index.html">Alipay</a>
+</li>
+<li class="capitalize ">
+  <a href="android-fingerprint-auth/index.html">Android Fingerprint Auth</a>
+</li>
+<li class="capitalize ">
+  <a href="android-full-screen/index.html">Android Full Screen</a>
+</li>
+<li class="capitalize ">
+  <a href="android-permissions/index.html">Android Permissions</a>
+</li>
+<li class="capitalize ">
+  <a href="app-availability/index.html">App Availability</a>
+</li>
+<li class="capitalize ">
+  <a href="app-minimize/index.html">App Minimize</a>
+</li>
+<li class="capitalize ">
+  <a href="app-preferences/index.html">App Preferences</a>
+</li>
+<li class="capitalize ">
+  <a href="app-rate/index.html">App Rate</a>
+</li>
+<li class="capitalize ">
+  <a href="app-update/index.html">App Update</a>
+</li>
+<li class="capitalize ">
+  <a href="app-version/index.html">App Version</a>
+</li>
+<li class="capitalize ">
+  <a href="appodeal/index.html">Appodeal</a>
+</li>
+<li class="capitalize ">
+  <a href="autostart/index.html">Autostart</a>
+</li>
+<li class="capitalize ">
+  <a href="background-fetch/index.html">Background Fetch</a>
+</li>
+<li class="capitalize ">
+  <a href="background-geolocation/index.html">Background Geolocation</a>
+</li>
+<li class="capitalize ">
+  <a href="background-mode/index.html">Background Mode</a>
+</li>
+<li class="capitalize ">
+  <a href="badge/index.html">Badge</a>
+</li>
+<li class="capitalize ">
+  <a href="barcode-scanner/index.html">Barcode Scanner</a>
+</li>
+<li class="capitalize ">
+  <a href="base64-to-gallery/index.html">Base64 To Gallery</a>
+</li>
+<li class="capitalize ">
+  <a href="battery-status/index.html">Battery Status</a>
+</li>
+<li class="capitalize ">
+  <a href="ble/index.html">BLE</a>
+</li>
+<li class="capitalize ">
+  <a href="bluetooth-serial/index.html">Bluetooth Serial</a>
+</li>
+<li class="capitalize ">
+  <a href="brightness/index.html">Brightness</a>
+</li>
+<li class="capitalize ">
+  <a href="broadcaster/index.html">Broadcaster</a>
+</li>
+<li class="capitalize ">
+  <a href="browser-tab/index.html">Browser Tab</a>
+</li>
+<li class="capitalize ">
+  <a href="calendar/index.html">Calendar</a>
+</li>
+<li class="capitalize ">
+  <a href="call-number/index.html">Call Number</a>
+</li>
+<li class="capitalize ">
+  <a href="camera/index.html">Camera</a>
+</li>
+<li class="capitalize ">
+  <a href="card-io/index.html">Card IO</a>
+</li>
+<li class="capitalize ">
+  <a href="clipboard/index.html">Clipboard</a>
+</li>
+<li class="capitalize ">
+  <a href="code-push/index.html">Code Push</a>
+</li>
+<li class="capitalize ">
+  <a href="contacts/index.html">Contacts</a>
+</li>
+<li class="capitalize ">
+  <a href="couchbase-lite/index.html">Couchbase Lite</a>
+</li>
+<li class="capitalize ">
+  <a href="crop/index.html">Crop</a>
+</li>
+<li class="capitalize ">
+  <a href="date-picker/index.html">Date Picker</a>
+</li>
+<li class="capitalize ">
+  <a href="db-meter/index.html">DB Meter</a>
+</li>
+<li class="capitalize ">
+  <a href="deeplinks/index.html">Deeplinks</a>
+</li>
+<li class="capitalize ">
+  <a href="device/index.html">Device</a>
+</li>
+<li class="capitalize ">
+  <a href="device-accounts/index.html">Device Accounts</a>
+</li>
+<li class="capitalize ">
+  <a href="device-feedback/index.html">Device Feedback</a>
+</li>
+<li class="capitalize ">
+  <a href="device-motion/index.html">Device Motion</a>
+</li>
+<li class="capitalize ">
+  <a href="device-orientation/index.html">Device Orientation</a>
+</li>
+<li class="capitalize ">
+  <a href="diagnostic/index.html">Diagnostic</a>
+</li>
+<li class="capitalize ">
+  <a href="dialogs/index.html">Dialogs</a>
+</li>
+<li class="capitalize ">
+  <a href="document-viewer/index.html">Document Viewer</a>
+</li>
+<li class="capitalize ">
+  <a href="email-composer/index.html">Email Composer</a>
+</li>
+<li class="capitalize ">
+  <a href="estimote-beacons/index.html">Estimote Beacons</a>
+</li>
+<li class="capitalize ">
+  <a href="extended-device-information/index.html">Extended Device Information</a>
+</li>
+<li class="capitalize ">
+  <a href="facebook/index.html">Facebook</a>
+</li>
+<li class="capitalize ">
+  <a href="fcm/index.html">FCM</a>
+</li>
+<li class="capitalize ">
+  <a href="file/index.html">File</a>
+</li>
+<li class="capitalize ">
+  <a href="file-chooser/index.html">File Chooser</a>
+</li>
+<li class="capitalize ">
+  <a href="file-encryption/index.html">File Encryption</a>
+</li>
+<li class="capitalize ">
+  <a href="file-opener/index.html">File Opener</a>
+</li>
+<li class="capitalize ">
+  <a href="file-path/index.html">File Path</a>
+</li>
+<li class="capitalize ">
+  <a href="file-transfer/index.html">File Transfer</a>
+</li>
+<li class="capitalize ">
+  <a href="fingerprint-aio/index.html">Fingerprint AIO</a>
+</li>
+<li class="capitalize ">
+  <a href="flashlight/index.html">Flashlight</a>
+</li>
+<li class="capitalize ">
+  <a href="flurry-analytics/index.html">Flurry Analytics</a>
+</li>
+<li class="capitalize ">
+  <a href="ftp/index.html">FTP</a>
+</li>
+<li class="capitalize ">
+  <a href="geofence/index.html">Geofence</a>
+</li>
+<li class="capitalize ">
+  <a href="geolocation/index.html">Geolocation</a>
+</li>
+<li class="capitalize ">
+  <a href="globalization/index.html">Globalization</a>
+</li>
+<li class="capitalize ">
+  <a href="google-analytics/index.html">Google Analytics</a>
+</li>
+<li class="capitalize ">
+  <a href="google-maps/index.html">Google Maps</a>
+</li>
+<li class="capitalize ">
+  <a href="google-plus/index.html">Google Plus</a>
+</li>
+<li class="capitalize ">
+  <a href="gyroscope/index.html">Gyroscope</a>
+</li>
+<li class="capitalize ">
+  <a href="header-color/index.html">Header Color</a>
+</li>
+<li class="capitalize ">
+  <a href="health/index.html">Health</a>
+</li>
+<li class="capitalize ">
+  <a href="health-kit/index.html">Health Kit</a>
+</li>
+<li class="capitalize ">
+  <a href="http/index.html">HTTP</a>
+</li>
+<li class="capitalize ">
+  <a href="httpd/index.html">Httpd</a>
+</li>
+<li class="capitalize ">
+  <a href="ibeacon/index.html">IBeacon</a>
+</li>
+<li class="capitalize ">
+  <a href="image-picker/index.html">Image Picker</a>
+</li>
+<li class="capitalize ">
+  <a href="image-resizer/index.html">Image Resizer</a>
+</li>
+<li class="capitalize ">
+  <a href="in-app-browser/index.html">In App Browser</a>
+</li>
+<li class="capitalize ">
+  <a href="in-app-purchase/index.html">In App Purchase</a>
+</li>
+<li class="capitalize ">
+  <a href="in-app-purchase-2/index.html">In App Purchase 2</a>
+</li>
+<li class="capitalize ">
+  <a href="index-app-content/index.html">Index App Content</a>
+</li>
+<li class="capitalize ">
+  <a href="insomnia/index.html">Insomnia</a>
+</li>
+<li class="capitalize ">
+  <a href="instagram/index.html">Instagram</a>
+</li>
+<li class="capitalize ">
+  <a href="intel-security/index.html">Intel Security</a>
+</li>
+<li class="capitalize ">
+  <a href="intercom/index.html">Intercom</a>
+</li>
+<li class="capitalize ">
+  <a href="is-debug/index.html">Is Debug</a>
+</li>
+<li class="capitalize ">
+  <a href="jins-meme/index.html">Jins Meme</a>
+</li>
+<li class="capitalize ">
+  <a href="keyboard/index.html">Keyboard</a>
+</li>
+<li class="capitalize ">
+  <a href="keychain/index.html">Keychain</a>
+</li>
+<li class="capitalize ">
+  <a href="keychain-touch-id/index.html">Keychain Touch Id</a>
+</li>
+<li class="capitalize ">
+  <a href="launch-navigator/index.html">Launch Navigator</a>
+</li>
+<li class="capitalize ">
+  <a href="launch-review/index.html">Launch Review</a>
+</li>
+<li class="capitalize ">
+  <a href="linkedin/index.html">LinkedIn</a>
+</li>
+<li class="capitalize ">
+  <a href="local-notifications/index.html">Local Notifications</a>
+</li>
+<li class="capitalize ">
+  <a href="location-accuracy/index.html">Location Accuracy</a>
+</li>
+<li class="capitalize ">
+  <a href="market/index.html">Market</a>
+</li>
+<li class="capitalize ">
+  <a href="media/index.html">Media</a>
+</li>
+<li class="capitalize ">
+  <a href="media-capture/index.html">Media Capture</a>
+</li>
+<li class="capitalize ">
+  <a href="mixpanel/index.html">Mixpanel</a>
+</li>
+<li class="capitalize ">
+  <a href="mobile-accessibility/index.html">Mobile Accessibility</a>
+</li>
+<li class="capitalize ">
+  <a href="ms-adal/index.html">MS ADAL</a>
+</li>
+<li class="capitalize ">
+  <a href="music-controls/index.html">Music Controls</a>
+</li>
+<li class="capitalize ">
+  <a href="native-audio/index.html">Native Audio</a>
+</li>
+<li class="capitalize ">
+  <a href="native-geocoder/index.html">Native Geocoder</a>
+</li>
+<li class="capitalize ">
+  <a href="native-keyboard/index.html">Native Keyboard <span class="paid">Paid</span></a>
+</li>
+<li class="capitalize ">
+  <a href="native-page-transitions/index.html">Native Page Transitions</a>
+</li>
+<li class="capitalize ">
+  <a href="native-storage/index.html">Native Storage</a>
+</li>
+<li class="capitalize ">
+  <a href="network/index.html">Network</a>
+</li>
+<li class="capitalize ">
+  <a href="nfc/index.html">NFC</a>
+</li>
+<li class="capitalize ">
+  <a href="onesignal/index.html">OneSignal</a>
+</li>
+<li class="capitalize ">
+  <a href="open-native-settings/index.html">Open Native Settings</a>
+</li>
+<li class="capitalize ">
+  <a href="paypal/index.html">PayPal</a>
+</li>
+<li class="capitalize ">
+  <a href="pedometer/index.html">Pedometer</a>
+</li>
+<li class="capitalize ">
+  <a href="phonegap-local-notification/index.html">Phonegap Local Notification</a>
+</li>
+<li class="capitalize ">
+  <a href="photo-library/index.html">Photo Library</a>
+</li>
+<li class="capitalize ">
+  <a href="photo-viewer/index.html">Photo Viewer</a>
+</li>
+<li class="capitalize ">
+  <a href="pin-check/index.html">Pin Check</a>
+</li>
+<li class="capitalize ">
+  <a href="pin-dialog/index.html">Pin Dialog</a>
+</li>
+<li class="capitalize ">
+  <a href="power-management/index.html">Power Management</a>
+</li>
+<li class="capitalize ">
+  <a href="printer/index.html">Printer</a>
+</li>
+<li class="capitalize ">
+  <a href="pro/index.html">Pro</a>
+</li>
+<li class="capitalize ">
+  <a href="push/index.html">Push</a>
+</li>
+<li class="capitalize ">
+  <a href="qqsdk/index.html">QQSDK</a>
+</li>
+<li class="capitalize ">
+  <a href="qr-scanner/index.html">QR Scanner</a>
+</li>
+<li class="capitalize ">
+  <a href="safari-view-controller/index.html">Safari View Controller</a>
+</li>
+<li class="capitalize ">
+  <a href="screen-orientation/index.html">Screen Orientation</a>
+</li>
+<li class="capitalize ">
+  <a href="screenshot/index.html">Screenshot</a>
+</li>
+<li class="capitalize ">
+  <a href="secure-storage/index.html">Secure Storage</a>
+</li>
+<li class="capitalize ">
+  <a href="serial/index.html">Serial</a>
+</li>
+<li class="capitalize ">
+  <a href="shake/index.html">Shake</a>
+</li>
+<li class="capitalize ">
+  <a href="sim/index.html">Sim</a>
+</li>
+<li class="capitalize ">
+  <a href="sms/index.html">SMS</a>
+</li>
+<li class="capitalize ">
+  <a href="social-sharing/index.html">Social Sharing</a>
+</li>
+<li class="capitalize ">
+  <a href="speech-recognition/index.html">Speech Recognition</a>
+</li>
+<li class="capitalize ">
+  <a href="spinner-dialog/index.html">Spinner Dialog</a>
+</li>
+<li class="capitalize ">
+  <a href="splash-screen/index.html">Splash Screen</a>
+</li>
+<li class="capitalize ">
+  <a href="sqlite/index.html">SQLite</a>
+</li>
+<li class="capitalize ">
+  <a href="sqlite-porter/index.html">SQLite Porter</a>
+</li>
+<li class="capitalize ">
+  <a href="status-bar/index.html">Status Bar</a>
+</li>
+<li class="capitalize ">
+  <a href="stepcounter/index.html">Stepcounter</a>
+</li>
+<li class="capitalize ">
+  <a href="streaming-media/index.html">Streaming Media</a>
+</li>
+<li class="capitalize ">
+  <a href="stripe/index.html">Stripe</a>
+</li>
+<li class="capitalize ">
+  <a href="taptic-engine/index.html">Taptic Engine</a>
+</li>
+<li class="capitalize ">
+  <a href="text-to-speech/index.html">Text To Speech</a>
+</li>
+<li class="capitalize ">
+  <a href="themeable-browser/index.html">Themeable Browser</a>
+</li>
+<li class="capitalize ">
+  <a href="toast/index.html">Toast</a>
+</li>
+<li class="capitalize ">
+  <a href="touch-id/index.html">Touch ID</a>
+</li>
+<li class="capitalize ">
+  <a href="twitter-connect/index.html">Twitter Connect</a>
+</li>
+<li class="capitalize ">
+  <a href="uid/index.html">Uid</a>
+</li>
+<li class="capitalize ">
+  <a href="unique-device-id/index.html">Unique Device ID</a>
+</li>
+<li class="capitalize ">
+  <a href="user-agent/index.html">User Agent</a>
+</li>
+<li class="capitalize ">
+  <a href="vibration/index.html">Vibration</a>
+</li>
+<li class="capitalize ">
+  <a href="video-editor/index.html">Video Editor</a>
+</li>
+<li class="capitalize ">
+  <a href="video-player/index.html">Video Player</a>
+</li>
+<li class="capitalize ">
+  <a href="youtube-video-player/index.html">Youtube Video Player</a>
+</li>
+<li class="capitalize ">
+  <a href="zbar/index.html">ZBar</a>
+</li>
+<li class="capitalize ">
+  <a href="zeroconf/index.html">Zeroconf</a>
+</li>
+<li class="capitalize ">
+  <a href="zip/index.html">Zip</a>
+</li>
+<li class="capitalize ">
+  <a href="backlight/index.html">Backlight <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="base64/index.html">Base64 <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="camera-preview/index.html">Camera Preview <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="firebase/index.html">Firebase <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="firebase-analytics/index.html">Firebase Analytics <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="firebase-dynamic-links/index.html">Firebase Dynamic Links <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="hotspot/index.html">Hotspot <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="hypertrack/index.html">HyperTrack <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="native-ringtones/index.html">Native Ringtones <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="navigation-bar/index.html">Navigation Bar <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="pinterest/index.html">Pinterest <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="regula-document-reader/index.html">Regula Document Reader <span class="paid">Paid</span> <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="rollbar/index.html">Rollbar <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="video-capture-plus/index.html">Video Capture Plus <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="web-intent/index.html">Web Intent <span class="beta">&beta;</span></a>
+</li>
+<li class="capitalize ">
+  <a href="wheelselector-plugin/index.html">WheelSelector Plugin <span class="beta">&beta;</span></a>
+</li>
+
+</ul>
+
+    
+  </nav>
+  
+  <main>
+    <h1 id="Overview" class="banner">Ionic Native</h1>
+<p>Ionic Native is a TypeScript wrapper for Cordova/PhoneGap plugins that make adding any native functionality you need to your <a href="https://ionicframework.com/">Ionic</a> mobile app easy.</p>
+
+<h3 id="Promises_and_Observables">Promises and Observables</h3>
+<p>Ionic Native wraps plugin callbacks in a Promise or an <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">Observable</a>, providing a common interface for all plugins and ensuring that native events trigger change detection in Angular.</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Geolocation</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@ionic-native/geolocation'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Platform</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'ionic-angular'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">MyComponentOrService</span> <span class="p">{</span>
+
+  <span class="kd">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">platform</span><span class="err">:</span> <span class="nx">Platform</span><span class="p">,</span> <span class="k">private</span> <span class="nx">geolocation</span><span class="err">:</span> <span class="nx">Geolocation</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">platform</span><span class="p">.</span><span class="nx">ready</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+      <span class="c1">// get current position</span>
+      <span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">pos</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'lat: '</span> <span class="o">+</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span> <span class="o">+</span> <span class="s1">', lon: '</span> <span class="o">+</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">);</span>
+      <span class="p">});</span>
+
+      <span class="kd">const</span> <span class="nx">watch</span> <span class="o">=</span> <span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">pos</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'lat: '</span> <span class="o">+</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span> <span class="o">+</span> <span class="s1">', lon: '</span> <span class="o">+</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">);</span>
+      <span class="p">});</span>
+
+      <span class="c1">// to stop watching</span>
+      <span class="nx">watch</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+
+    <span class="p">});</span>
+
+  <span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<h3 id="Runtime_Diagnostics">Runtime Diagnostics</h3>
+<p>Spent way too long diagnosing an issue only to realize a plugin wasn’t firing or installed? Ionic Native lets you know what the issue is and how you can resolve it.</p>
+
+<h3 id="Installation">Installation</h3>
+<p>To add Ionic Native to your app, run following command to install the core package:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install @ionic-native/core --save
+</code></pre>
+</div>
+<p>Note that Ionic Native core package is included by default with every Ionic app.</p>
+
+<h3 id="Usage">Usage</h3>
+
+<h4 id="Install_Plugins_Needed">Install the Needed Plugins</h4>
+<p>Install the Ionic Native package for each plugin you want to add.</p>
+
+<p>For example, if you want to install the Camera plugin, you will need to run the following command:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install @ionic-native/camera --save
+</code></pre>
+</div>
+<p>Then install the plugin using Cordova or Ionic CLI.</p>
+
+<p>For example:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ionic cordova plugin add cordova-plugin-camera
+</code></pre>
+</div>
+
+<p>All package names are documented on the plugin’s documentation. It is recommended to follow the installation instructions on each plugin’s documentation, as some plugins require additional steps to fully install.</p>
+
+<h4 id="Add_Plugins_to_Your_App_Module">Add Plugins to Your App's Module</h4>
+<p>After installing a plugin’s package, add it to your app’s <code class="highlighter-rouge">NgModule</code>.</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Camera</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@ionic-native/camera'</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="p">...</span>
+
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">...</span>
+    <span class="nx">Camera</span>
+    <span class="p">...</span>
+  <span class="p">]</span>
+  <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span class="p">}</span>
+
+</code></pre>
+</div>
+
+  </main>
+  
+</div>
+
+
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/native/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:13 GMT -->
+</html>

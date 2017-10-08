@@ -1,0 +1,7 @@
+Mirror in progress since Sat, 07 Oct 2017 18:22:24 .. please wait!
+winhttrack https://ionicframework.com/docs/ -O ""ionic/ionic 3 docs"" -Y -%v 
+To pause the engine: create an empty file named 'hts-stop.lock'
+PID=3062
+UID=501
+GID=501
+START=1507396944

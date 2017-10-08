@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/api/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:28:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>Javascript - Extend Ionic even further with the power of Angular -  Ionic Framework</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  </head>
+  <body id="docs-page-api"
+        class="v2 docs fluid page-api
+               
+               
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    
+      <nav class="navbar navbar-default" id="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <button type="button"
+              class="sidebar-toggle collapsed"
+              id="sidebar-toggle">
+        <span class="sr-only">Toggle sidebar</span>
+        <i class="ion-md-menu"></i>
+        <i class="ion-md-close"></i>
+      </button>
+      <a class="navbar-brand logo" href="https://ionicframework.com/">
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon.png" id="ionic-docs-logo" />
+        <img src="https://ionicframework.com/img/docs/ionic-docs-icon-back.png" id="ionic-docs-back" />
+      </a>
+      <a class="navbar-brand" href="https://ionicframework.com/docs">
+        
+        <img src="https://ionicframework.com/img/docs/ionic-docs-type.png" id="ionic-docs-text" />
+        
+      </a>
+      
+      <ul class="version">
+        <li class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="active">
+                Current Framework Docs <i class="ion-ios-checkmark"></i>
+              </a>
+            </li>
+            <li><a href="../v1/index.html">v1 Framework Docs</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      
+      <form class="navbar-form navbar-left"
+            id="header-search"
+            role="search"
+            data-searchpos="header">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control search-input"
+                 placeholder="Search"
+                 data-searchpos="header"
+                 ng-model="searchTerm">
+        </div>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../components/index.html">UI Components</a></li>
+        <li><a href="index.html">API Reference</a></li>
+        <li><a href="../native/index.html">Native Plugins</a></li>
+        <li><a href="../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../pro/index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../pro/view/index.html">View app</a></li>
+        <li><a href="../pro/package/index.html">Package</a></li>
+        <li><a href="../pro/live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="../pro/monitoring/index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../apps.ionic.io/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white">
+          <a href="../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+
+    <div class="docs-container"
+     >
+  <nav class="side-nav" id="side-nav" data-spy="affix" data-offset-top="38">
+    <form class="form-group search" role="search">
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search"
+             data-searchpos="sidebar"
+             ng-model="searchTerm">
+    </form>
+    
+      <form class="form-group api-select">
+  <select name="version"
+        id="version-toggle"
+        onchange="window.location.href=this.options[this.selectedIndex].value">
+
+  <option
+   value="/docs/nightly/api/"
+    >
+    nightly 
+  </option>
+
+  <option
+   value="/docs/api/"
+    selected>
+    3.7.1 (latest)
+  </option>
+
+  <option
+   value="/docs/3.7.0/api/"
+    >
+    3.7.0 
+  </option>
+
+  <option
+   value="/docs/3.6.1/api/"
+    >
+    3.6.1 
+  </option>
+
+  <option
+   value="/docs/3.6.0/api/"
+    >
+    3.6.0 
+  </option>
+
+  <option
+   value="/docs/3.5.3/api/"
+    >
+    3.5.3 
+  </option>
+
+  <option
+   value="/docs/3.5.0/api/"
+    >
+    3.5.0 
+  </option>
+
+  <option
+   value="/docs/3.4.2/api/"
+    >
+    3.4.2 
+  </option>
+
+  <option
+   value="/docs/3.4.0/api/"
+    >
+    3.4.0 
+  </option>
+
+  <option
+   value="/docs/3.3.0/api/"
+    >
+    3.3.0 
+  </option>
+
+  <option
+   value="/docs/3.2.0/api/"
+    >
+    3.2.0 
+  </option>
+
+  <option
+   value="/docs/3.1.1/api/"
+    >
+    3.1.1 
+  </option>
+
+  <option
+   value="/docs/3.1.0/api/"
+    >
+    3.1.0 
+  </option>
+
+  <option
+   value="/docs/3.0.1/api/"
+    >
+    3.0.1 
+  </option>
+
+  <option
+   value="/docs/3.0.0/api/"
+    >
+    3.0.0 
+  </option>
+
+  <option
+   value="/docs/2.3.0/api/"
+    >
+    2.3.0 
+  </option>
+
+  <option
+   value="/docs/2.2.0/api/"
+    >
+    2.2.0 
+  </option>
+
+  <option
+   value="/docs/2.1.0/api/"
+    >
+    2.1.0 
+  </option>
+
+  <option
+   value="/docs/2.0.1/api/"
+    >
+    2.0.1 
+  </option>
+
+  <option
+   value="/docs/2.0.0/api/"
+    >
+    2.0.0 
+  </option>
+
+</select>
+
+</form>
+<ul ng-controller="DocsNavCtrl">
+  <li class="back-to-main">
+    <a href="../index.html">Back to Main Docs</a>
+  </li>
+  
+  
+    
+
+  
+<li class="capitalize ">
+  <a href="components/action-sheet/ActionSheetController/index.html">ActionSheetController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/alert/AlertController/index.html">AlertController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/app/App/index.html">App</a>
+</li>
+<li class="capitalize ">
+  <a href="components/avatar/Avatar/index.html">Avatar</a>
+</li>
+<li class="capitalize ">
+  <a href="components/badge/Badge/index.html">Badge</a>
+</li>
+<li class="capitalize ">
+  <a href="components/button/Button/index.html">Button</a>
+</li>
+<li class="capitalize ">
+  <a href="components/checkbox/Checkbox/index.html">Checkbox</a>
+</li>
+<li class="capitalize ">
+  <a href="components/chip/Chip/index.html">Chip</a>
+</li>
+<li class="capitalize ">
+  <a href="components/grid/Col/index.html">Col</a>
+</li>
+<li class="capitalize ">
+  <a href="config/Config/index.html">Config</a>
+</li>
+<li class="capitalize ">
+  <a href="components/content/Content/index.html">Content</a>
+</li>
+<li class="capitalize ">
+  <a href="components/datetime/DateTime/index.html">DateTime</a>
+</li>
+<li class="capitalize ">
+  <a href="util/Events/index.html">Events</a>
+</li>
+<li class="capitalize ">
+  <a href="components/fab/FabButton/index.html">FabButton</a>
+</li>
+<li class="capitalize ">
+  <a href="components/fab/FabContainer/index.html">FabContainer</a>
+</li>
+<li class="capitalize ">
+  <a href="components/fab/FabList/index.html">FabList</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toolbar/Footer/index.html">Footer</a>
+</li>
+<li class="capitalize ">
+  <a href="components/grid/Grid/index.html">Grid</a>
+</li>
+<li class="capitalize ">
+  <a href="tap-click/Haptic/index.html">Haptic</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toolbar/Header/index.html">Header</a>
+</li>
+<li class="capitalize ">
+  <a href="components/show-hide-when/HideWhen/index.html">HideWhen</a>
+</li>
+<li class="capitalize ">
+  <a href="components/icon/Icon/index.html">Icon</a>
+</li>
+<li class="capitalize ">
+  <a href="components/img/Img/index.html">Img</a>
+</li>
+<li class="capitalize ">
+  <a href="components/infinite-scroll/InfiniteScroll/index.html">InfiniteScroll</a>
+</li>
+<li class="capitalize ">
+  <a href="components/input/Input/index.html">Input</a>
+</li>
+<li class="capitalize ">
+  <a href="util/IonicErrorHandler/index.html">IonicErrorHandler</a>
+</li>
+<li class="capitalize ">
+  <a href="IonicModule/index.html">IonicModule</a>
+</li>
+<li class="capitalize ">
+  <a href="navigation/IonicPage/index.html">IonicPage</a>
+</li>
+<li class="capitalize ">
+  <a href="IonicPageModule/index.html">IonicPageModule</a>
+</li>
+<li class="capitalize ">
+  <a href="components/item/Item/index.html">Item</a>
+</li>
+<li class="capitalize ">
+  <a href="components/item/ItemOptions/index.html">ItemOptions</a>
+</li>
+<li class="capitalize ">
+  <a href="components/item/ItemReorder/index.html">ItemReorder</a>
+</li>
+<li class="capitalize ">
+  <a href="components/item/ItemSliding/index.html">ItemSliding</a>
+</li>
+<li class="capitalize ">
+  <a href="platform/Keyboard/index.html">Keyboard</a>
+</li>
+<li class="capitalize ">
+  <a href="components/label/Label/index.html">Label</a>
+</li>
+<li class="capitalize ">
+  <a href="components/list/List/index.html">List</a>
+</li>
+<li class="capitalize ">
+  <a href="components/loading/LoadingController/index.html">LoadingController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/menu/Menu/index.html">Menu</a>
+</li>
+<li class="capitalize ">
+  <a href="components/menu/MenuClose/index.html">MenuClose</a>
+</li>
+<li class="capitalize ">
+  <a href="components/app/MenuController/index.html">MenuController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/menu/MenuToggle/index.html">MenuToggle</a>
+</li>
+<li class="capitalize ">
+  <a href="components/modal/ModalController/index.html">ModalController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/nav/Nav/index.html">Nav</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toolbar/Navbar/index.html">Navbar</a>
+</li>
+<li class="capitalize ">
+  <a href="navigation/NavController/index.html">NavController</a>
+</li>
+<li class="capitalize ">
+  <a href="navigation/NavParams/index.html">NavParams</a>
+</li>
+<li class="capitalize ">
+  <a href="components/nav/NavPop/index.html">NavPop</a>
+</li>
+<li class="capitalize ">
+  <a href="components/nav/NavPush/index.html">NavPush</a>
+</li>
+<li class="capitalize ">
+  <a href="components/note/Note/index.html">Note</a>
+</li>
+<li class="capitalize ">
+  <a href="components/option/Option/index.html">Option</a>
+</li>
+<li class="capitalize ">
+  <a href="platform/Platform/index.html">Platform</a>
+</li>
+<li class="capitalize ">
+  <a href="platform/PlatformConfigToken/index.html">PlatformConfigToken</a>
+</li>
+<li class="capitalize ">
+  <a href="components/popover/PopoverController/index.html">PopoverController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/radio/RadioButton/index.html">RadioButton</a>
+</li>
+<li class="capitalize ">
+  <a href="components/radio/RadioGroup/index.html">RadioGroup</a>
+</li>
+<li class="capitalize ">
+  <a href="components/range/Range/index.html">Range</a>
+</li>
+<li class="capitalize ">
+  <a href="components/refresher/Refresher/index.html">Refresher</a>
+</li>
+<li class="capitalize ">
+  <a href="config/registerModeConfigs/index.html">registerModeConfigs</a>
+</li>
+<li class="capitalize ">
+  <a href="components/grid/Row/index.html">Row</a>
+</li>
+<li class="capitalize ">
+  <a href="components/scroll/Scroll/index.html">Scroll</a>
+</li>
+<li class="capitalize ">
+  <a href="components/searchbar/Searchbar/index.html">Searchbar</a>
+</li>
+<li class="capitalize ">
+  <a href="components/segment/Segment/index.html">Segment</a>
+</li>
+<li class="capitalize ">
+  <a href="components/segment/SegmentButton/index.html">SegmentButton</a>
+</li>
+<li class="capitalize ">
+  <a href="components/select/Select/index.html">Select</a>
+</li>
+<li class="capitalize ">
+  <a href="components/show-hide-when/ShowWhen/index.html">ShowWhen</a>
+</li>
+<li class="capitalize ">
+  <a href="components/slides/Slide/index.html">Slide</a>
+</li>
+<li class="capitalize ">
+  <a href="components/slides/Slides/index.html">Slides</a>
+</li>
+<li class="capitalize ">
+  <a href="components/spinner/Spinner/index.html">Spinner</a>
+</li>
+<li class="capitalize ">
+  <a href="components/split-pane/SplitPane/index.html">SplitPane</a>
+</li>
+<li class="capitalize ">
+  <a href="components/tabs/Tab/index.html">Tab</a>
+</li>
+<li class="capitalize ">
+  <a href="components/tabs/Tabs/index.html">Tabs</a>
+</li>
+<li class="capitalize ">
+  <a href="components/thumbnail/Thumbnail/index.html">Thumbnail</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toolbar/Title/index.html">Title</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toast/ToastController/index.html">ToastController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toggle/Toggle/index.html">Toggle</a>
+</li>
+<li class="capitalize ">
+  <a href="components/toolbar/Toolbar/index.html">Toolbar</a>
+</li>
+<li class="capitalize ">
+  <a href="components/typography/Typography/index.html">Typography</a>
+</li>
+<li class="capitalize ">
+  <a href="navigation/ViewController/index.html">ViewController</a>
+</li>
+<li class="capitalize ">
+  <a href="components/virtual-scroll/VirtualScroll/index.html">VirtualScroll</a>
+</li>
+
+
+
+</ul>
+
+    
+  </nav>
+  
+  <main>
+    <h1 id="ionic-api-docs">Ionic API Docs</h1>
+
+<p><img class="section-header" src="https://ionicframework.com/img/docs/api-intro-header.png" /></p>
+
+<p>In the API docs, you’ll find two kinds of doc pages: Component and Service APIs.</p>
+
+<p>The Component APIs include classes like <code class="highlighter-rouge">Checkbox</code>, <code class="highlighter-rouge">Toggle</code> or <code class="highlighter-rouge">Item</code> and show you how to use them, in addition to listing their selectors, available properties and events.</p>
+
+<p>The Service APIs are classes like <code class="highlighter-rouge">MenuController</code>, <code class="highlighter-rouge">Config</code> or <code class="highlighter-rouge">Platform</code>. These are services provided by Ionic that can be injected into your classes.</p>
+
+  </main>
+  
+</div>
+
+
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/api/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:29:11 GMT -->
+</html>

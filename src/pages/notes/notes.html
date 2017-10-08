@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Dashboard
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="loadProfilePage()">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-avatar-page">
+  <ion-list>
+
+    <ion-list-header>Notas</ion-list-header>
+
+    <ion-item (click)="showNotas()">
+      <ion-avatar item-start>
+        <img src="assets/note.ico">
+      </ion-avatar>
+      <h2>Notas</h2>
+      <p>Última nota: youtube apk mod</p>
+      <ion-note item-end><ion-badge color="primary">27</ion-badge></ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/task.ico">
+      </ion-avatar>
+      <h2>Tarefas</h2>
+      <p>Última tarefa: ir as compras</p>
+      <ion-note item-end><ion-badge color="primary">2/13</ion-badge></ion-note>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header>Lista de compras</ion-list-header>
+
+    <ion-item (click)="showListaUrgentes()">
+      <ion-avatar item-start>
+        <img src="assets/urgent.ico">
+      </ion-avatar>
+      <h2>Urgente</h2>
+      <ion-note item-end><ion-badge color="danger">{{urgent.length}}</ion-badge></ion-note>
+    </ion-item>
+
+    <ion-item (click)="showListaCompras()">
+      <ion-avatar item-start>
+        <img src="assets/shopping.ico">
+      </ion-avatar>
+      <h2>Lista</h2>
+      <ion-note item-end *ngIf="products"><ion-badge color="light">{{products.length}}</ion-badge></ion-note>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header>Banco</ion-list-header>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/bank.ico">
+      </ion-avatar>
+      <h2>Painel</h2>
+      <ion-note item-end><ion-badge color="secondary"><ion-icon name='checkmark-circle'></ion-icon></ion-badge></ion-note>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

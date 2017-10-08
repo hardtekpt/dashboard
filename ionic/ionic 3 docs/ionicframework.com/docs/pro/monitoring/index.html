@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ionicframework.com/docs/pro/monitoring/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:30:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../fonts.googleapis.com/cssbf26.css?family=Poppins" rel="stylesheet">
+<link href="https://ionicframework.com/css/styles.css?v=8e81869fda001067abc4224ea5a0ce05" rel="stylesheet">
+
+
+  <title>Runtime Error Monitoring - Ionic Pro Documentation</title>
+
+
+<meta name="author" content="Drifty">
+<meta name="description" content="Ionic lets developers build beautiful and interactive mobile apps using HTML5 and AngularJS.">
+<meta name="keywords" content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+<link rel="canonical" href="index.html">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ionicframework">
+<meta name="twitter:creator" content="ionicframework">
+<meta name="twitter:title" content="Ionic Framework">
+<meta name="twitter:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta name="twitter:image:src" content="https://ionicframework.com/img/ionic-meta.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="fb:app_id" content="1321836767955949">
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ionic Framework">
+<meta property="og:image" content="https://ionicframework.com/img/ionic-meta.jpg"/>
+<meta property="og:description" content="The easiest way to build amazing mobile and progressive web apps. 100% free and open source.">
+<meta property="og:site_name" content="Ionic Framework">
+<meta property="article:publisher" content="../../../../www.facebook.com/ionicframework.html">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://ionicframework.com/img/meta/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://ionicframework.com/img/meta/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ionicframework.com/img/meta/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://ionicframework.com/img/meta/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ionicframework.com/img/meta/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://ionicframework.com/img/meta/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ionicframework.com/img/meta/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://ionicframework.com/img/meta/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ionicframework.com/img/meta/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://ionicframework.com/img/meta/favicon-192x192.png" sizes="192x192">
+<link rel="manifest" href="https://ionicframework.com/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="https://ionicframework.com/img/meta/ms-icon-144x144.png">
+<meta name="theme-color" content="#4c8fff">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  </head>
+  <body id="docs-page-pro-error-monitoring"
+        class="page-pro-error-monitoring transparent light
+               "
+        data-spy="scroll"
+        data-offset="100"
+        data-target="#components-index"
+        ng-app="IonicSite">
+
+    <nav class="navbar navbar-default transparent light">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              id="collapse-toggle"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ion-md-more"></i>
+      </button>
+      <a class="navbar-brand" href="https://ionicframework.com/">
+        <div id="ionic-io-logo"></div>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="sm-hide">
+          <a href="../../../../dashboard.ionicjs.com/login.html" class="header-btn">Log in</a>
+        </li>
+        <li class="header-btn-white blue">
+          <a href="../../../../dashboard.ionicjs.com/signup.html">Sign up</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-center">
+        <!-- <li class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Open source
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/" class="framework">
+        <strong>Ionic Framework</strong>
+        The popular open source SKD, built for developers.
+      </a>
+    </li>
+    <li>
+      <a href="https://ionicons.com/" class="ionicons">
+        <strong>Ionicons</strong>
+        Our 900+ open source system icon pack.
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://stenciljs.com" class="stencil">
+        <strong>Stencil <span class="tag">New</span></strong>
+        Resuable, web standards component generator.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li><a href="https://ionicframework.com/">Framework</a></li>
+<li>
+  <a href="https://ionicframework.com/products">Products</a></li>
+
+<!-- <li class="dropdown products">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="/products" class="pro">
+        <strong>Ionic Pro</strong>
+        The premier product suite for serious app creators.
+      </a>
+    </li>
+    <li>
+      <a href="/products#prototyping" class="creator">
+        <strong>Creator</strong>
+        Visually drag &amp; drop Ionic app prototyping tool.
+      </a>
+    </li>
+    <li>
+      <a href="/products#view" class="view">
+        <strong>View App</strong>
+        The live preview app for device testing &amp; sharing.
+      </a>
+    </li>
+    <li>
+      <a href="/products#updates" class="deploy">
+        <strong>Deploy</strong>
+        Push hot code updates live to production apps.
+      </a>
+    </li>
+    <li>
+      <a href="/products#build" class="package">
+        <strong>Package</strong>
+        Compile and publish native binaries in the cloud.
+      </a>
+    </li>
+    <li>
+      <a href="/products#reporting" class="monitor">
+        <strong>Monitor</strong>
+        Ionic app error monitoring and log tracking.
+      </a>
+    </li>
+  </ul>
+</li> -->
+
+<li class="sm-hide">
+  <a href="https://ionicframework.com/pricing">Pricing</a></li>
+
+<li class="dropdown developers">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Developers</a>
+  <ul class="dropdown-menu">
+    <li class="split">
+      <ul>
+        <li class="title"><a href="https://ionicframework.com/docs">
+          <i class="ion-md-arrow-forward"></i>Framework Docs</a></li>
+        <li><a href="https://ionicframework.com/getting-started">Setup &amp; Installation</a></li>
+        <li><a href="../../components/index.html">UI Components</a></li>
+        <li><a href="../../api/index.html">API Reference</a></li>
+        <li><a href="../../native/index.html">Native Plugins</a></li>
+        <li><a href="../../developer-resources/index.html">Dev Resources</a></li>
+      </ul>
+      <ul>
+        <li class="title"><a href="../index.html">
+          <i class="ion-md-arrow-forward"></i>Pro Docs</a></li>
+        <li><a href="../view/index.html">View app</a></li>
+        <li><a href="../package/index.html">Package</a></li>
+        <li><a href="../live-deploy/index.html">Live Deploy</a></li>
+        <li><a href="index.html">Monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionicframework.com/developers/" class="forward">
+        <i class="ion-md-arrow-forward"></i>Developer Center
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="dropdown businesses">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Businesses</a>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="/customers" class=""></a></li> -->
+    <li><a href="https://ionicframework.com/resources" class="resources">Resource Center</a></li>
+    <li><a href="https://ionicframework.com/enterprise" class="enterprise">Enterprise</a></li>
+    <!-- <li><a href="/demo" class="demo">Request a demo</a></li> -->
+    <li><a href="https://ionicframework.com/sales" class="sales">Contact Sales</a></li>
+    <li><a href="https://ionicframework.com/about" class="about">About Ionic</a></li>
+  </ul>
+</li>
+
+<li class="dropdown support">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Support</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../forum.ionicframework.com/index.html" class="forum">Community Forum</a></li>
+    <li><a href="https://ionicframework.com/support" class="support">Technical Support</a></li>
+    <li><a href="https://ionicframework.com/trusted-partners" class="trusted-partners">Trusted Partners</a></li>
+    <li><a href="https://ionicframework.com/contact" class="contact">Contact Us</a></li>
+  </ul>
+</li>
+
+<li class="dropdown ecosystem">
+  <a href="#"
+     class="dropdown-toggle"
+     data-toggle="dropdown"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false">Ecosystem</a>
+  <ul class="dropdown-menu">
+    <li><a href="../../../../blog.ionic.io/index.html" class="blog">Ionic Blog</a></li>
+    <!--<li><a href="" class="community">Community Hub</a></li> -->
+    <li><a href="../../../../market.ionic.io/index.html" class="market">Ionic Market</a></li>
+    <li><a href="../../../../jobs.ionic.io/index.html" class="jobs">Job Board</a></li>
+    <li><a href="../../../../shop.ionic.io/index.html" class="shop">Swag Shop</a></li>
+    <li class="divider"></li>
+    <li><a href="../../../../twitter.com/IonicFramework.html" class="twitter">Twitter</a></li>
+    <li><a href="../../../../ionicworldwide.herokuapp.com/index.html" class="slack">Slack</a></li>
+    <li><a href="../../../../github.com/ionic-team/index.html" class="github">GitHub</a></li>
+  </ul>
+</li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <div class="sub-header">
+  <div class="container">
+    <ul class="left breadcrumbs">
+      <li><a href="https://ionicframework.com/developers/">Documentation</a></li>
+      <li>Pro docs</li>
+    </ul>
+    <ul class="right">
+      <li><a href="../index.html" class="active">Documentation</a></li>
+      <li><a href="http://support.ionicjs.com/">Support</a></li>
+      <li><a href="../../../../dashboard.ionicjs.com/index.html">Dashboard</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="pro-docs" class="responsive-docs-container docs-container" ng-controller="ProDocsCtrl as vm">
+  <div class="container">
+    <div class="row">
+      <nav class="side-nav responsive-side-nav col-md-4" data-spy="affix" data-offset="193">
+        <ul id="pro-nav" class="nested-menu">
+  <li class="active">
+    <ul>
+      <li class="" >
+        <a ng-click="toggle('intro')" class="pro-intro-link">Introduction</a>
+        <ul ng-show="sections.intro" ng-cloak >
+          <li>
+            <a href="../basics/welcome/index.html" class="">Welcome</a>
+          </li>
+          <li>
+            <a href="../basics/getting-started/index.html" class="">Installation</a>
+          </li>
+          <li>
+            <a href="../basics/git/index.html" class="">Git Workflow</a>
+            <ul>
+              <li>
+                <a href="../basics/git/index.html#installing-git">Installing Git</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#adding-your-existing-repository">Adding Existing Repositories</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#pushing-new-builds">Pushing Builds</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#working-with-branches">Using Branches</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#working-with-other-team-members">Working w/ Team Members</a>
+              </li>
+              <li>
+                <a href="../basics/git/index.html#ssh-keys">Adding SSH Keys</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="../basics/concepts/index.html" class="">Concepts</a>
+            <ul>
+              <li><a href="../basics/concepts/index.html#channels">Channels</a></li>
+              <li><a href="../basics/concepts/index.html#builds">Builds</a></li>
+              <li><a href="../basics/concepts/customizing-builds.html">Customizing Builds</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../basics/help/index.html" class="">Help and Support</a>
+          </li>
+        </ul>
+      </li>
+      <li class="" >
+        <a ng-click="toggle('view')" class="pro-view-link">View</a>
+        <ul ng-show="sections.view" ng-cloak >
+          <li>
+            <a href="../view/index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="../view/index.html#using-channels-with-ionic-view">Using Channels</a>
+          </li>
+          <li>
+            <a href="../view/index.html#inviting-private-testers">Inviting Testers</a>
+          </li>
+          <li>
+            <a href="../view/index.html#sharing-publicly">Sharing Publicly</a>
+          </li>
+          <li class="">
+            <a href="../view.html">Using the App</a>
+            <ul>
+              <li>
+                <a href="../view.html#testing-apps">Testing Apps</a>
+              </li>
+              <li>
+                <a href="../view.html#submitting-feedback">Submitting Feedback</a>
+              </li>
+              <li>
+                <a href="../view.html#plugin-support">Plugin Support</a>
+                </li>
+              </ul>
+            </li>
+        </ul>
+      </li>
+      <li class="">
+        <a ng-click="toggle('deploy')" class="pro-deploy-link">Deploy</a>
+        <ul ng-show="sections.deploy" ng-cloak >
+          <li>
+            <a href="../deploy/index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="../deploy/setup/index.html#installation">Installation</a>
+          </li>
+          <li>
+            <a href="../deploy/setup/index.html#usage">Deploying</a>
+          </li>
+          <li>
+            <a href="../deploy/plugin-api.html">Plugin API</a>
+          </li>
+        </ul>
+      </li>
+      <li class="" >
+        <a ng-click="toggle('package')" class="pro-package-link">Package</a>
+        <ul ng-show="sections.package" ng-cloak >
+          <li>
+            <a href="../package/index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="../package/profiles.html">Generating Credentials</a>
+          </li>
+          <li>
+            <a href="../package/profiles.html#creating-security-profiles">Adding Credentials</a>
+          </li>
+          <li>
+            <a href="../package/index-2.html#performing-a-build">Performing Builds</a>
+          </li>
+        </ul>
+      </li>
+      <li class="active" >
+        <a ng-click="toggle('monitoring')" class="pro-monitoring-link">Monitoring</a>
+        <ul ng-show="sections.monitoring" ng-cloak ng-init="sections.monitoring = true">
+          <li>
+            <a href="index.html">Introduction</a>
+          </li>
+          <li>
+            <a href="index.html#getting-started">Installation</a>
+          </li>
+          <li>
+            <a href="index.html#manual-capture">Manual Capture</a>
+          </li>
+          <li>
+            <a href="index.html#source-maps">Adding SourceMaps</a>
+          </li>
+        </ul>
+      </li>
+      <li class="" >
+        <a ng-click="toggle('advanced')" class="pro-advanced-link">Advanced</a>
+        <ul ng-show="sections.advanced" ng-cloak >
+          <li>
+            <a href="../migration/index.html">Cloud Migration</a>
+            <ul>
+              <li>
+                <a href="../migration/live-deploy.html">Live updates</a>
+              </li>
+              <li>
+                <a href="../migration/package.html">Package</a>
+              </li>
+              <li>
+                <a href="../migration/view.html">Ionic View Legacy</a>
+              </li>
+              <li>
+                <a href="../migration/push.html">Ionic Push</a>
+              </li>
+              <li>
+                <a href="../migration/auth.html">Ionic Auth</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!--
+      <li class="">
+        <a href="/docs/pro/pwa-hosting.html">Progressive Web App Hosting</a>
+      </li>
+    -->
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+      <main class="col-md-8">
+        <h1 id="error-monitoring">Error Monitoring</h1>
+
+<p>Ionic Pro makes it easy to automatically track runtime errors in your Ionic app, and map it back to your original, non-transpiled source code (TypeScript, ES6, etc.).</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Tracking runtime errors and crashes in your app helps you respond to issues quickly to reduce customer frustration and major issues with production apps.</p>
+
+<p>Combined with Ionic’s Deploy feature, new updates can be rolled out quickly to address problems in real-time.</p>
+
+<p>This lets you:</p>
+
+<div class="condensed">
+  <ul>
+    <li>See exactly where errors happen in your original source code even through layers of transpiled code and minification</li>
+    <li>Detect runtime errors and crashes in real-time with alerts and notifications</li>
+    <li>Fix errors immediately even in live app store apps</li>
+  </ul>
+</div>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="npm-install">NPM Install</h3>
+
+<p>We recommend installing the Ionic Pro client from NPM.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>npm install @ionic/pro
+</code></pre>
+</div>
+
+<p>And then make sure to import and initialize the Pro client (for example, in <code class="highlighter-rouge">app.module.ts</code>):</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Pro</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@ionic/pro'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">IonicPro</span> <span class="o">=</span> <span class="nx">Pro</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">'APP_ID'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">appVersion</span><span class="p">:</span> <span class="s2">"APP_VERSION"</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Where <code class="highlighter-rouge">APP_ID</code> is the Ionic Pro App ID Found on the dashboard for your app. <code class="highlighter-rouge">APP_VERSION</code> is the version of the code
+running for the purposes of tracking code changes. We strongly recommend that this mirrors the version in <code class="highlighter-rouge">package.json</code> or <code class="highlighter-rouge">config.xml</code>.</p>
+
+<h3 id="cdn-install">CDN Install</h3>
+
+<p>The CDN install is for apps that aren’t using a build step (for example, Ionic/Angular 1).</p>
+
+<p>First, in your app’s <code class="highlighter-rouge">index.html</code> file, add the following script include *immediately following your app code. Replace <code class="highlighter-rouge">APP_ID</code> and <code class="highlighter-rouge">APP_VERSION</code> with
+the id of your app on https://app.ionicjs.com/, along with the version of your app as found in your <code class="highlighter-rouge">config.xml</code>.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.ionicframework.com/services/ionic-pro.min.js"</span> <span class="na">data-app-id=</span><span class="s">"APP_ID"</span> <span class="na">data-app-version=</span><span class="s">"APP_VERSION"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<div class="callout danger">
+  <p>It’s important to keep the app version up to date because that is how the Error tracking
+service will know when regressions have happened, as well as mapping your code to any
+Source Maps you’ve provided.</p>
+</div>
+
+<div class="callout info">
+  <p>For Ionic 1/AngularJS apps, including the script tag is all you need to do. For Angular 2, follow instructions below to add the custom error handler.</p>
+</div>
+
+<h2 id="angular-2x-integration">Angular 2.x+ Integration</h2>
+
+<p>For Ionic-Angular apps (Ionic 2.x and Angular 2.x and above), to capture errors automatically from Angular, add this snippet in <code class="highlighter-rouge">app.module.ts</code>:</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Pro</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@ionic/pro'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">IonicPro</span> <span class="o">=</span> <span class="nx">Pro</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">'APP_ID'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">appVersion</span><span class="p">:</span> <span class="s2">"APP_VERSION"</span>
+<span class="p">});</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ErrorHandler</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">MyErrorHandler</span> <span class="k">implements</span> <span class="nx">ErrorHandler</span> <span class="p">{</span>
+  <span class="nx">handleError</span><span class="p">(</span><span class="nx">err</span><span class="err">:</span> <span class="kr">any</span><span class="p">)</span><span class="err">:</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">IonicPro</span><span class="p">.</span><span class="nx">monitoring</span><span class="p">.</span><span class="nx">handleNewError</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Then add this entry to the <code class="highlighter-rouge">providers</code> in <code class="highlighter-rouge">NgModule</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  providers: [
+    // ...,
+    [{ provide: ErrorHandler, useClass: MyErrorHandler }] // This line
+  ]
+</code></pre>
+</div>
+
+<h2 id="manual-capture">Manual capture</h2>
+
+<p>Ionic Pro Monitoring supports manually capturing errors and also sending log messages. Additionally, an <code class="highlighter-rouge">extra</code> field
+takes key/value pairs for adding additional metadata for a call.</p>
+
+<h4 id="progetappmonitoringexceptionerrorobject-extra"><code class="highlighter-rouge">Pro.getApp().monitoring.exception(errorObject, extra)</code></h4>
+
+<p>Manually capture an error. For example</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="nx">Pro</span><span class="p">.</span><span class="nx">getApp</span><span class="p">().</span><span class="nx">monitoring</span><span class="p">.</span><span class="nx">exception</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'error'</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">Pro.getApp().monitoring.log(msg, options, extra)</code></p>
+
+<p>Capture and send a log message. Options takes a <code class="highlighter-rouge">level</code> (such as ‘error’ or ‘info’).</p>
+
+<p>Example:</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="nx">Pro</span><span class="p">.</span><span class="nx">getApp</span><span class="p">().</span><span class="nx">monitoring</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'This happens sometimes'</span><span class="p">,</span> <span class="p">{</span> <span class="na">level</span><span class="p">:</span> <span class="s1">'error'</span> <span class="p">})</span>
+</code></pre>
+</div>
+
+<h4 id="progetappmonitoringcallfn-extra"><code class="highlighter-rouge">Pro.getApp().monitoring.call(fn, extra)</code></h4>
+
+<p>Call a function and automatically capture any resulting errors. Example:</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="nx">Pro</span><span class="p">.</span><span class="nx">getApp</span><span class="p">().</span><span class="nx">monitoring</span><span class="p">.</span><span class="nx">call</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'error'</span><span class="p">);</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<h4 id="progetappmonitoringwrapfn-extra"><code class="highlighter-rouge">Pro.getApp().monitoring.wrap(fn, extra)</code></h4>
+
+<p>Return a function that will automatically track any errors. Example:</p>
+
+<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">newFn</span> <span class="o">=</span> <span class="nx">Pro</span><span class="p">.</span><span class="nx">getApp</span><span class="p">().</span><span class="nx">monitoring</span><span class="p">.</span><span class="nx">wrap</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'error'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="nx">newFn</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<h2 id="source-maps">Source Maps</h2>
+
+<p>Source Maps enable the Error service to provide stacktraces that map back
+to your original TypeScript code, making it easy to pinpoint problems
+in your code, even through highly minified, production code.</p>
+
+<h4 id="automatically-adding-source-maps">Automatically adding Source Maps</h4>
+
+<p>New releases of Ionic CLI (3.9.0 and greater) come with a built-in command for syncing Source Maps with Ionic Pro. This feature requires Ionic 2 or above using <code class="highlighter-rouge">@ionic/app-scripts</code> 2.1.4 or greater.</p>
+
+<p>To sync Source Maps, run</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>ionic monitoring syncmaps
+</code></pre>
+</div>
+
+<p>The command will prompt for the version of your app these Source Maps correspond to, and then ask you if you’d like to perform a new build to ensure the Source Maps are up to date.</p>
+
+<p>See the note about versions below, as keeping your Source Maps in sync with your app version is crucial for accurate stack trace context.</p>
+
+<h4 id="manually-adding-source-maps">Manually adding Source Maps</h4>
+
+<p>To add a Source Map manually, navigate to your app on the <a href="Ionic%20Pro%20Dashboard.html">https://dashboard.ionicjs.com/</a>, click the “Monitoring” tab,
+then click “Source Maps” in the upper right.</p>
+
+<p>You can find your Source Maps after doing a dev or prod build in <code class="highlighter-rouge">YOUR_APP/.sourcemaps/</code>. Upload the <code class="highlighter-rouge">main.js.map</code> sourcemap for Angular/Ionic 2+, and any other sourcemaps that correspond to your code for other Ionic/Angular versions.</p>
+
+<p>See the note about versions below, as keeping your Source Maps in sync with your app version is crucial for accurate stack trace context.</p>
+
+<h4 id="ensuring-version-accuracy">Ensuring Version Accuracy</h4>
+
+<p>Keeping your Source Maps in sync with the version of your code running in your app is crucial for accurate stack trace context.</p>
+
+<p>Version numbers <em>must</em> follow <a href="http://semver.org/">semver</a>, which ensures that the error tracking service can accurately detect regressions by comparing errors that occur in one version of your app with future releases of that app.</p>
+
+<p>Before doing a release, ensure you’ve synced Source Maps and make sure to not send new Source Maps for that version in the future.</p>
+
+<p>Note: we are working on automating the process to make it even easier.</p>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+    
+
+    
+
+    
+
+    <div id="search-results">
+      <div id="results-api">
+        <h3>API</h3>
+        <ul></ul>
+      </div>
+      <div id="results-native">
+        <h3>Native</h3>
+        <ul></ul>
+      </div>
+      <div id="results-other">
+        <h3>General</h3>
+        <ul></ul>
+      </div>
+    </div>
+    <script src="../../../../www.google-analytics.com/cx/f9704.txt?experiment=MRClmJX_QEakg3kJs2jH9g"></script>
+<script async src="../../../../ga.clearbit.com/v1/ga9929.js?authorization=pk_15ddaa2a40791f38734f40e0565526b7"></script>
+<script src="https://ionicframework.com/js/ionic-site.min.js?v=3fc9bf1ff60463e990bde7bfb65b71bf"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from ionicframework.com/docs/pro/monitoring/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:30:04 GMT -->
+</html>

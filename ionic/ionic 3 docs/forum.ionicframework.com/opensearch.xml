@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Ionic Search</ShortName>
+  <Description>Search for posts on Ionic</Description>
+  <Tags>discourse forum</Tags>
+  <Image type="image/png">//s3.amazonaws.com/ionic-forum-static/forumicon.png</Image>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://forum.ionicframework.com/opensearch.xml"/>
+  <Url type="text/html" template="https://forum.ionicframework.com/search?q={searchTerms}"/>
+  <Query role="example" searchTerms="search term"/>
+</OpenSearchDescription>

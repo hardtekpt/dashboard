@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from market.ionic.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:33:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Templates, scripts, add-ons, and resources for your hybrid Ionic app">
+    <meta name="keywords"
+          content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs">
+    <meta name="author"
+          content="Ionic Framework">
+    <meta property="og:image"
+          
+          content="img/market-logo.png"
+           />
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>
+      Home - Ionic Marketplace
+    </title>
+
+    <!-- Open Graph - Facebook -->
+    <meta property="og:site_name" content="Ionic Marketplace"/>
+    <meta property="og:title" content="Home" />
+    <meta property="article:publisher" content="http://ionic.io/" />
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fallback to homescreen for Chrome <39 on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Ionic Marketplace">
+    <link rel="icon"
+          sizes="192x192"
+          href="img/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Ionic Marketplace">
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage"
+          content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#4e8cf5">
+
+    <meta name="theme-color" content="#4e8cf5">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+          rel="stylesheet">
+    <link href="css/angular-chart.min.css" rel="stylesheet">
+    <link href="styles/market.min.css" rel="stylesheet">
+
+    
+    
+  </head>
+  <body  class="not-logged-in" >
+    <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed ion-navicon"
+                  data-toggle="collapse"
+                  data-target="#navbar-collapse">
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="img/market-logoc81e.png?2" style="width: 110px;">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="starters.html">starters</a></li>
+            <li >
+              <a href="plugins.html">plugins</a></li>
+            <li >
+              <a href="themes.html">themes</a></li>
+          </ul>
+         
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../dashboard.ionicjs.com/sso/market8c4e.html">log in</a></li>
+              <li><a href="../dashboard.ionicjs.com/sso/market8c4e.html">
+                sign up
+              </a></li>
+              <li><a href="submit.html" class="btn btn-success">
+                <i class="ion-android-add"></i> SUBMIT
+              </a></li>
+            </ul>
+          
+          
+        </div>
+      </div>
+    </nav>
+    <main class="container page-home"
+           ng-app="Market" >
+      
+<hgroup>
+  <h1>Discover &amp; share ionic <span id="typey"></span> for your app</h1>
+  <h2>
+    Find all the best community-made resources you need to jumpstart your ionic
+    app development.
+  </h2>
+</hgroup>
+<form class="search"
+      role="search"
+      action="https://market.ionic.io/search"
+      method="GET">
+  <span class="glyphicon glyphicon-search"></span>
+  <input type="text"
+         placeholder="Search for starters, ions, and themes..."
+         onfocus="searchActivate(this)"
+         onblur="searchDeactivate(this)"
+         name="q"
+         id="homeSearch">
+  <input type="submit" value="SEARCH" id="search-submit">
+</form>
+<div id="featured">
+  <a href="starters/ion2fullapp---full-ionic-2-app-template-pro-version.html"
+     class="feature"
+     style="background-image:url('https://s3.amazonaws.com/ionic-marketplace/ion2fullapp---full-ionic-2-app-template-pro-version/banner.jpg')">
+    <div class="category starter">Starter</div>
+    <div class="featured">
+      <span class="glyphicon glyphicon-star-empty"></span>featured</div>
+    
+    
+  </a>
+  <a href="plugins/vice-parallax-container.html"
+     class="feature"
+     style="background-image:url('https://s3.amazonaws.com/ionic-marketplace/vice-parallax-container/banner.jpg')">
+    <div class="category plugin">Plugin</div>
+    <div class="featured">
+      <span class="glyphicon glyphicon-star-empty"></span>featured</div>
+    
+    
+  </a>
+  <a href="themes/pinro-vol-2.html"
+     class="feature"
+     style="background-image:url('https://s3.amazonaws.com/ionic-marketplace/pinro-vol-2/banner.jpg')">
+    <div class="category theme">Theme</div>
+    <div class="featured">
+      <span class="glyphicon glyphicon-star-empty"></span>featured</div>
+    
+    
+  </a>
+</div>
+<div  ng-app="Market">
+
+<div class="category-list">
+  <div class="category-header">
+    <h3 class="name starters">
+      Starters
+    </h3>
+    <ul role="tablist">
+      <li class="active" role="presentation" >
+        <a href="#starters-featured" role="tab" data-toggle="tab">Featured</a>
+      </li>
+      <li role="presentation" >
+        <a href="#starters-newest" role="tab" data-toggle="tab">Newest</a>
+      </li>
+      <li><a href="starters.html">View all</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div role="tabpanel" class="pane active" id="starters-featured">
+    <div class="row">
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;58a5ac69e0d0b6d757ebdc50&quot;,&quot;slug&quot;:&quot;ionic2meetsparse&quot;,&quot;name&quot;:&quot;polydOcs - Ionic 3 meets Parse&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic2meetsparse/banner.jpg&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic2meetsparse/icon.jpg&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Ionic 3 Starter with Parse Backend&quot;,&quot;ratings&quot;:[],&quot;price&quot;:19,&quot;ionic&quot;:[&quot;3.x&quot;],&quot;released&quot;:1487252585024,&quot;updated&quot;:1496772238689,&quot;views&quot;:4938}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;56aa4966450576082216d3fd&quot;,&quot;slug&quot;:&quot;social-video-chat-online-full-application&quot;,&quot;name&quot;:&quot;Social Video Chat Online Full Application&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/social-video-chat-online-full-application/banner.png&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/social-video-chat-online-full-application/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Window Macos Ubuntu App Videocall Social&quot;,&quot;ratings&quot;:[],&quot;price&quot;:29,&quot;ionic&quot;:[&quot;1.0 beta 14&quot;],&quot;released&quot;:1454000485108,&quot;updated&quot;:1454176370522,&quot;views&quot;:21552}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;571c8f8b450576082216e0e8&quot;,&quot;slug&quot;:&quot;animated-grid&quot;,&quot;name&quot;:&quot;Animated Grid&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/animated-grid/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Animated Grid Starter App&quot;,&quot;ratings&quot;:[{&quot;comment&quot;:&quot;I&#39;ve just tried the demo and love it. Thanks Aleksandra.&quot;,&quot;stars&quot;:4,&quot;userId&quot;:239178,&quot;timestamp&quot;:&quot;2016-05-02T15:09:39.853Z&quot;},{&quot;comment&quot;:&quot;Beautifull example! :D&quot;,&quot;stars&quot;:0,&quot;userId&quot;:2714,&quot;timestamp&quot;:&quot;2016-09-11T03:48:21.587Z&quot;}],&quot;price&quot;:0,&quot;ionic&quot;:[],&quot;released&quot;:1461489543455,&quot;updated&quot;:1461490098571,&quot;views&quot;:16441,&quot;ratingAverage&quot;:2}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;55ee3f05450576082216c408&quot;,&quot;slug&quot;:&quot;ionic-starter-messenger&quot;,&quot;name&quot;:&quot;Ionic Starter Messenger - Firebase Integrate&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-starter-messenger/banner.jpg&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-starter-messenger/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Building up your social media app quickly and beautifully with abundant templates&quot;,&quot;ratings&quot;:[],&quot;price&quot;:38,&quot;ionic&quot;:[&quot;1.3.x&quot;],&quot;released&quot;:1441677060570,&quot;updated&quot;:1473126560691,&quot;views&quot;:70640}">
+
+    </ion-listing>
+    
+    </div>
+  </div>
+  <div role="tabpanel" class="pane" id="starters-newest" >
+    <div class="row">
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;59d8af8ae37a89305e201e08&quot;,&quot;slug&quot;:&quot;lonic-3-firebase-login&quot;,&quot;name&quot;:&quot;Lonic-3-Firebase  Login&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/lonic-3-firebase-login/banner.png&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/lonic-3-firebase-login/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Ionic 3 User registration and  Login using Firebase 3&quot;,&quot;ratings&quot;:[],&quot;price&quot;:9,&quot;ionic&quot;:[&quot;3.x&quot;],&quot;released&quot;:1507372938040,&quot;updated&quot;:1507375442937,&quot;views&quot;:18}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;59d204b0e37a89305e201d5c&quot;,&quot;slug&quot;:&quot;ionic-barcode-scanner&quot;,&quot;name&quot;:&quot;Ionic Barcode Scanner&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-barcode-scanner/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Just scan your barcode and see the product name !&quot;,&quot;ratings&quot;:[],&quot;price&quot;:1,&quot;ionic&quot;:[&quot;3.x&quot;],&quot;released&quot;:1506935984198,&quot;updated&quot;:1506936225374,&quot;views&quot;:174}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;59d1049ee37a89305e201d45&quot;,&quot;slug&quot;:&quot;fireline&quot;,&quot;name&quot;:&quot;FireLine&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/fireline/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Premium Firebase Ionic 3 Messenger with Contact Requests, Private and Group Messaging, Group Management, and Push Notifications&quot;,&quot;ratings&quot;:[],&quot;price&quot;:55,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1506870429236,&quot;updated&quot;:1506870584119,&quot;views&quot;:316}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="starters"
+                 ion="{&quot;_id&quot;:&quot;59cbcb10e37a89305e201cd9&quot;,&quot;slug&quot;:&quot;ionic-app-deliverya&quot;,&quot;name&quot;:&quot;Ionic App DeliverYa &quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-app-deliverya/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;DeliverYa App Ionic manage routes and costs&quot;,&quot;ratings&quot;:[],&quot;price&quot;:30,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1506528014755,&quot;updated&quot;:1506538234504,&quot;views&quot;:473}">
+
+    </ion-listing>
+
+    
+    </div>
+  </div>
+</div>
+
+
+
+<div class="category-list">
+  <div class="category-header">
+    <h3 class="name plugins">
+      Plugins
+    </h3>
+    <ul role="tablist">
+      <li class="active" role="presentation" >
+        <a href="#plugins-featured" role="tab" data-toggle="tab">Featured</a>
+      </li>
+      <li role="presentation" >
+        <a href="#plugins-newest" role="tab" data-toggle="tab">Newest</a>
+      </li>
+      <li><a href="plugins.html">View all</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div role="tabpanel" class="pane active" id="plugins-featured">
+    <div class="row">
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;586cc23fe0d0b6d757ebd5ae&quot;,&quot;slug&quot;:&quot;vice-cover-item&quot;,&quot;name&quot;:&quot;Cover Item&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/vice-cover-item/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Cover items on list pages in your app&quot;,&quot;ratings&quot;:[],&quot;price&quot;:10,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1483522622863,&quot;updated&quot;:1500794232313,&quot;views&quot;:5773}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;58a07354e0d0b6d757ebdbb1&quot;,&quot;slug&quot;:&quot;ionic-2-digital-keyboard&quot;,&quot;name&quot;:&quot;Ionic 2 Digital Keyboard&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-2-digital-keyboard/banner.png&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-2-digital-keyboard/icon.jpg&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;A digital/numeric keyboard component for your Ionic 2 apps&quot;,&quot;ratings&quot;:[{&quot;comment&quot;:&quot;Finally thank you ! However, I&#39;d like to pu custom html / text in action buttons, please add this feature !&quot;,&quot;stars&quot;:5,&quot;userId&quot;:718184,&quot;timestamp&quot;:&quot;2017-02-13T09:58:17.590Z&quot;},{&quot;comment&quot;:&quot;Amazing keyboard, I started by using the native one for a project but finally sticked to your plugin after trying it :D&quot;,&quot;stars&quot;:5,&quot;userId&quot;:776630,&quot;timestamp&quot;:&quot;2017-04-10T20:36:57.249Z&quot;},{&quot;comment&quot;:&quot;Gratz man you saved my day, free and fastest support ever, thanks !!&quot;,&quot;stars&quot;:5,&quot;userId&quot;:776632,&quot;timestamp&quot;:&quot;2017-04-10T20:41:00.474Z&quot;},{&quot;comment&quot;:&quot;Look very nice, easy to customize and it&#39;s FREE.\nGreat job man.&quot;,&quot;stars&quot;:5,&quot;userId&quot;:617810,&quot;timestamp&quot;:&quot;2017-05-31T06:11:37.422Z&quot;},{&quot;comment&quot;:&quot;Awesome and Free.Great man&quot;,&quot;stars&quot;:5,&quot;userId&quot;:865730,&quot;timestamp&quot;:&quot;2017-07-15T16:04:53.546Z&quot;}],&quot;price&quot;:0,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1486910292049,&quot;updated&quot;:1497555127510,&quot;views&quot;:6002,&quot;ratingAverage&quot;:5}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;571b6f93450576082216e0cf&quot;,&quot;slug&quot;:&quot;ion-digit-keyboard&quot;,&quot;name&quot;:&quot;Ionic Digital Keyboard&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ion-digit-keyboard/icon.jpg&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;A digital/numeric keyboard component for your Ionic apps&quot;,&quot;ratings&quot;:[{&quot;comment&quot;:&quot;Awesome plugin, wasn&#39;t expecting that good ! Customizable, easy to implement, nice design, etc.&quot;,&quot;stars&quot;:5,&quot;userId&quot;:461015,&quot;timestamp&quot;:&quot;2016-04-27T22:49:57.911Z&quot;},{&quot;comment&quot;:&quot;Thank you ! Exactly what I was looking for, and FREE ! :D&quot;,&quot;stars&quot;:5,&quot;userId&quot;:461020,&quot;timestamp&quot;:&quot;2016-04-27T22:55:17.684Z&quot;},{&quot;comment&quot;:&quot;Fine, really like it&quot;,&quot;stars&quot;:5,&quot;userId&quot;:211756,&quot;timestamp&quot;:&quot;2016-05-15T21:29:02.220Z&quot;},{&quot;comment&quot;:&quot;Just perfect !!!&quot;,&quot;stars&quot;:5,&quot;userId&quot;:645471,&quot;timestamp&quot;:&quot;2016-11-19T09:41:56.187Z&quot;}],&quot;price&quot;:0,&quot;ionic&quot;:[&quot;1.0 beta 14&quot;,&quot;1.0.0&quot;,&quot;1.0.1&quot;],&quot;released&quot;:1461415826523,&quot;updated&quot;:1486917178993,&quot;views&quot;:15788,&quot;ratingAverage&quot;:5}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;56690930450576082216ce78&quot;,&quot;slug&quot;:&quot;onymos-media&quot;,&quot;name&quot;:&quot;Onymos Media&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/onymos-media/banner.jpg&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/onymos-media/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Add Photo/Video feature to your Ionic app in minutes&quot;,&quot;ratings&quot;:[],&quot;price&quot;:99,&quot;ionic&quot;:[&quot;1.x&quot;,&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1449724201932,&quot;updated&quot;:1493917078169,&quot;views&quot;:20902}">
+
+    </ion-listing>
+    
+    </div>
+  </div>
+  <div role="tabpanel" class="pane" id="plugins-newest" >
+    <div class="row">
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;59b412f7e37a89305e201a8b&quot;,&quot;slug&quot;:&quot;book-a-table-with-mailgun-send-a-reservation-ionic3&quot;,&quot;name&quot;:&quot;Book a Table via E-Mail Ionic 2/3&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/book-a-table-with-mailgun-send-a-reservation-ionic3/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Book a Table via Email&quot;,&quot;ratings&quot;:[],&quot;price&quot;:8,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1504973559357,&quot;updated&quot;:1504976684897,&quot;views&quot;:277}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;59b01f5ae37a89305e201a2d&quot;,&quot;slug&quot;:&quot;swipeable-tabs-ionic-3-with-ion-slide-on-top&quot;,&quot;name&quot;:&quot;Swipeable Tabs Ionic 3 with ion-slide on top&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/swipeable-tabs-ionic-3-with-ion-slide-on-top/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Swipeable Tabs for Ionic 3&quot;,&quot;ratings&quot;:[],&quot;price&quot;:5,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1504714585122,&quot;updated&quot;:1504801365361,&quot;views&quot;:625}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;59aeb9b5e37a89305e201a0c&quot;,&quot;slug&quot;:&quot;plot-projects&quot;,&quot;name&quot;:&quot;Plot Projects&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/plot-projects/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Location Intelligence and location-based notifications powered by geofencing and beacons&quot;,&quot;ratings&quot;:[],&quot;price&quot;:0,&quot;ionic&quot;:[&quot;3.x&quot;],&quot;released&quot;:1504623028487,&quot;updated&quot;:1506440372555,&quot;views&quot;:353}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="plugins"
+                 ion="{&quot;_id&quot;:&quot;598ec1ace37a89305e20173a&quot;,&quot;slug&quot;:&quot;firebase-barcodescan-facebook-socialsharing&quot;,&quot;name&quot;:&quot;Firebase - BarcodeScan - Facebook - SocialSharing&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/firebase-barcodescan-facebook-socialsharing/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;firebase,barcodescanner,socialsharing,facebook&quot;,&quot;ratings&quot;:[],&quot;price&quot;:15,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1502527916181,&quot;updated&quot;:1502527974961,&quot;views&quot;:503}">
+
+    </ion-listing>
+
+    
+    </div>
+  </div>
+</div>
+
+
+
+<div class="category-list">
+  <div class="category-header">
+    <h3 class="name themes">
+      Themes
+    </h3>
+    <ul role="tablist">
+      <li class="active" role="presentation" >
+        <a href="#themes-featured" role="tab" data-toggle="tab">Featured</a>
+      </li>
+      <li role="presentation" >
+        <a href="#themes-newest" role="tab" data-toggle="tab">Newest</a>
+      </li>
+      <li><a href="themes.html">View all</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div role="tabpanel" class="pane active" id="themes-featured">
+    <div class="row">
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;580d021c1135b32e60147b03&quot;,&quot;slug&quot;:&quot;ionic-twitter-ui&quot;,&quot;name&quot;:&quot;Twitter UI&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-twitter-ui/banner.zip&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-twitter-ui/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Twitter UI clone&quot;,&quot;ratings&quot;:[],&quot;price&quot;:24,&quot;ionic&quot;:[&quot;1.x&quot;],&quot;released&quot;:1477247515864,&quot;updated&quot;:1497698145156,&quot;views&quot;:7820}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;58cabd0de0d0b6d757ebe078&quot;,&quot;slug&quot;:&quot;ionsunset-v2&quot;,&quot;name&quot;:&quot;ionSunset v3&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionsunset-v2/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;A beautiful template for Ionic App v3&quot;,&quot;ratings&quot;:[],&quot;price&quot;:20,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1489681677096,&quot;updated&quot;:1503355575871,&quot;views&quot;:7979}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;574302a7450576082216e552&quot;,&quot;slug&quot;:&quot;grocery-world&quot;,&quot;name&quot;:&quot;Grocery World&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/grocery-world/banner.jpg&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/grocery-world/icon.jpg&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;An advanced sass based ionic template for online shop.&quot;,&quot;ratings&quot;:[],&quot;price&quot;:50,&quot;ionic&quot;:[&quot;1.3.x&quot;],&quot;released&quot;:1464009382304,&quot;updated&quot;:1476183329266,&quot;views&quot;:28844}">
+
+    </ion-listing>
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;56f77221450576082216dc7f&quot;,&quot;slug&quot;:&quot;ionic-tinder-ui&quot;,&quot;name&quot;:&quot;Tinder UI&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-tinder-ui/banner.jpg&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/ionic-tinder-ui/icon.png&quot;,&quot;featured&quot;:true,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Tinder UI for hybrid app&quot;,&quot;ratings&quot;:[],&quot;price&quot;:24,&quot;ionic&quot;:[&quot;1.x&quot;],&quot;released&quot;:1462179983288,&quot;updated&quot;:1497695595274,&quot;views&quot;:57843,&quot;ratingAverage&quot;:null}">
+
+    </ion-listing>
+    
+    </div>
+  </div>
+  <div role="tabpanel" class="pane" id="themes-newest" >
+    <div class="row">
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;59d55571e37a89305e201db5&quot;,&quot;slug&quot;:&quot;clinc-v2&quot;,&quot;name&quot;:&quot;Clinc v2&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/clinc-v2/banner.png&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/clinc-v2/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;ionic3 Theme for our hit Online integrated medical service for an ionic3 app , With Clinc you won&#39;t waste any time looking for doctors , lab, blood ...etc  this app is completely designed to meet you need.&quot;,&quot;ratings&quot;:[],&quot;price&quot;:35,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1507153265637,&quot;updated&quot;:1507153852393,&quot;views&quot;:123}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;59ceafeae37a89305e201d2a&quot;,&quot;slug&quot;:&quot;welearning&quot;,&quot;name&quot;:&quot;WeLearning&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/welearning/banner.png&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/welearning/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Complete Theme for Elearning and online courses based on ionic 3&quot;,&quot;ratings&quot;:[],&quot;price&quot;:40,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1506717674138,&quot;updated&quot;:1506717674774,&quot;views&quot;:308}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;59cc1fe4e37a89305e201ce1&quot;,&quot;slug&quot;:&quot;cabify-ui&quot;,&quot;name&quot;:&quot;CABIFY UI - ionic V3 free themplate&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:null,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/cabify-ui/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;cabify user interface clone template FREE&quot;,&quot;ratings&quot;:[],&quot;price&quot;:0,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1506549731709,&quot;updated&quot;:1506616850257,&quot;views&quot;:806}">
+
+    </ion-listing>
+
+    
+    <ion-listing class="col-sm-3 list-item"
+                 category="themes"
+                 ion="{&quot;_id&quot;:&quot;59caa915e37a89305e201cc2&quot;,&quot;slug&quot;:&quot;hyber&quot;,&quot;name&quot;:&quot;Hyber&quot;,&quot;enabled&quot;:true,&quot;banner&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/hyber/banner.png&quot;,&quot;icon&quot;:&quot;https://s3.amazonaws.com/ionic-marketplace/hyber/icon.png&quot;,&quot;featured&quot;:false,&quot;topFeatured&quot;:false,&quot;tagline&quot;:&quot;Great ionic  Theme for Shopping app based on Ionic 3 framework &quot;,&quot;ratings&quot;:[],&quot;price&quot;:35,&quot;ionic&quot;:[&quot;2.x&quot;,&quot;3.x&quot;],&quot;released&quot;:1506453781745,&quot;updated&quot;:1506454275073,&quot;views&quot;:367}">
+
+    </ion-listing>
+
+    
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+    </main>
+    <footer class="container">
+      <nav>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="starters.html">Starters</a></li>
+          <li><a href="plugins.html">Plugins</a></li>
+          <li><a href="themes.html">Themes</a></li>
+          <li><a href="../blog.ionic.io/index.html" target="_blank">Blog</a></li>
+          <li><a href="http://ionicframework.com/subscribe/" target="_blank">Newsletter</a></li>
+          <li><a href="http://ionicframework.com/" target="_blank">Ionic</a></li>
+          <li><a href="legal.html">Legal</a></li>
+          <li><a href="http://ionic.io/privacy" target="_blank">Privacy</a></li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="../twitter.com/Ionicframework-2.html" target="_blank">
+              <img src="img/ico-twitter.png" alt="Twitter">
+            </a>
+          </li>
+          <li>
+            <a href="../www.facebook.com/ionicframework.html" target="_blank">
+              <img src="img/ico-facebook.png" alt="Facebook">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/driftyco/ionic" target="_blank">
+              <img src="img/ico-github.png" alt="Github">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>Copyright &copy; 2016 Ionic</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
+    <script src="js/ui-bootstrap-custom-tpls-0.13.0.js"></script>
+    <script src="js/mentio.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="js/angular-chart.min.js"></script>
+    <script src='js/market30f4.js?v=3'></script>
+    <script>
+    $(function() {
+      $('#user').popover({
+        trigger: 'click',
+        placement: 'bottom',
+        html: true,
+        content: function() {
+          return [
+            '<ul>',
+              '<li><a href="/purchased">purchased</a></li>',
+              '<li><a href="https://dashboard.ionicjs.com/settings/account" target="_blank">',
+                'account</a></li>',
+              '<li><a href="user/index.html">profile</a></li>',
+              '<li><a href="/logout">logout</a></li>',
+              '<li><a href="/submit">submit</a></li>',
+              
+            '</ul>'
+          ].join('');
+        }
+      });
+    });
+    </script>
+    
+<script src="js/typed.js"></script>
+<script>
+$(function(){
+  typey = $("#typey").typed({
+    strings: ["starters", "plugins", "themes"],
+    typeSpeed: 150,
+    backSpeed:15,
+    backDelay:1000,
+    loop:true
+  });
+  // stop typed when it's scrolled out of view
+  var typing = true;
+  $(window).scroll(function(){
+    if(typing && this.scrollY > 180){
+      typey.typed('stopper');
+      typing = false;
+    }else if(!typing && this.scrollY < 180){
+      typey.typed('start');
+      typing = true;
+    }
+  })
+  $('#homeSearch').on({
+    keyup: function(){
+      if($(this).val().length > 0){
+        $('#search-submit').show();
+        $('#search-submit').addClass('active');
+      }else{
+        $('#search-submit').removeClass('active');
+      }
+
+    },
+    mouseleave: function(){
+
+    }
+});
+});
+</script>
+
+
+
+  </body>
+
+<!-- Mirrored from market.ionic.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Oct 2017 17:33:39 GMT -->
+</html>

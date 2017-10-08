@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Official Ionic Blog</title>
+	<atom:link href="https://blog.ionic.io/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.ionic.io</link>
+	<description>Build amazing native and progressive web apps with HTML5</description>
+	<lastBuildDate>Wed, 04 Oct 2017 20:02:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+
+<image>
+	<url>https://blog.ionic.io/wp-content/uploads/2015/05/cropped-logo-32x32.png</url>
+	<title>The Official Ionic Blog</title>
+	<link>https://blog.ionic.io</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">88512978</site>	<item>
+		<title>WKWebView for All: A new webview for Ionic</title>
+		<link>https://blog.ionic.io/wkwebview-for-all-a-new-webview-for-ionic/</link>
+		<comments>https://blog.ionic.io/wkwebview-for-all-a-new-webview-for-ionic/#comments</comments>
+		<pubDate>Wed, 04 Oct 2017 15:55:29 +0000</pubDate>
+		<dc:creator><![CDATA[Mike Hartington]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Cordova]]></category>
+		<category><![CDATA[Framework]]></category>
+		<category><![CDATA[Ionic CLI]]></category>
+		<category><![CDATA[Ionic Native]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1978</guid>
+		<description><![CDATA[Hi folks! So today I&#8217;m really super excited to share something we&#8217;ve been testing heavily for a long time now. As of now&#8230; new Ionic apps will run on WKWebView&#8230;BY DEFAULT 🎉! Ok, so let&#8217;s have a brief history lesson on why this is really important and also beneficial to you as a developer. It&#8217;s [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Hi folks! So today I&#8217;m really super excited to share something we&#8217;ve been testing heavily for a long time now. As of now&#8230; <strong>new</strong> Ionic apps will run on WKWebView&#8230;BY DEFAULT <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f389.png" alt="🎉" class="wp-smiley" style="height: 1em; max-height: 1em;" />!</p>
+<p>Ok, so let&#8217;s have a brief history lesson on why this is really important and also beneficial to <em>you</em> as a developer. It&#8217;s no secret that WKWebView has been out for some time now, but in that time, it&#8217;s had some issues, especially in hybrid app land. Many people have attempted to work around these issues, but it&#8217;s not until recently that we&#8217;ve gotten to a place where WKWebView can be reliably used in people&#8217;s apps, without broken functionality. This means we get incredible performance gains on iOS, reduced memory footprint, scroll events, and so much more by just using the new webview!</p>
+<p><span id="more-1978"></span></p>
+<h3>Adding WKWebView to your app</h3>
+<p>In order to add WKWebView, we need to add the plugin from the Ionic repository.</p>
+<pre><code class="bash">ionic cordova plugin add cordova-plugin-ionic-webview --save
+</code></pre>
+<p>If you already had the plugin installed, or were using a different version/fork, you&#8217;ll need to uninstall what you have first.</p>
+<pre><code>ionic cordova plugin rm cordova-plugin-WKWebView-engine
+</code></pre>
+<p>And that&#8217;s it! Once the plugin install is done, your next native build will include a faster, lighter, and more modern webview!</p>
+<h3>Important concerns</h3>
+<p>Since this is an entirely different webview than UIWebview, there are a few things to be aware of before making the change.</p>
+<h4>Data in localstorage/IndexDB will not be transferred to the new webview</h4>
+<p>This makes sense when you think about how this is essentially a new browser. If your data is stored using the SQLite plugin, by itself or in combination with <code>@ionic/storage</code>, this can be dealt with. Before pushing a new update with the webview, it might be worth taking the time to migrate that data over from web storage, to a native storage solution.</p>
+<h4>WKWebView enforces CORS</h4>
+<p>UIWebview, or the older webview in iOS, never actually enforced CORS, but WKWebView does and does not provide a way to disable it. To address this, you need to implement CORS correctly and add the following entry:</p>
+<pre><code>Origin: http://localhost:8080
+</code></pre>
+<p>IF this is not possible (you do not own the API), a workaround can be to use the native <code>HTTP</code> plugin, <a href="http://ionicframework.com/docs/native/http/">@ionic-native/http</a>.</p>
+<h4>Native files not loading correctly</h4>
+<p>If you&#8217;re using the Camera plugin, or reading/writing from the devices file system, you might get a file path that looks something like</p>
+<pre><code>file:///some/really/long/path.png
+</code></pre>
+<p>The <code>file://</code> portion of the URL must be removed in order for the resource to load correctly. You can do this manually, but as of <code>ionic-angular@3.2.0</code>, we provide a quick function that will handle this automatically.</p>
+<pre><code class="ts">import { normalizeURL } from 'ionic-angular';
+
+let path = cordova.file.dataDirectory;
+console.log('Original: ' + path);
+
+path = normalizeURL(path);
+console.log('Fixed: ' + path);
+</code></pre>
+<p>Cordova plugins also allow you to reference a file via the <code>cdvfile://</code> protocol. This path is something that gets resolved in native code, so it cannot be used with <code>normalizeURL</code>.</p>
+<h4>Authentication services need to whitelist localhost</h4>
+<p>Since WKWebView uses a server under the hood, it will create a url for your app, <code>localhost:8080</code>, instead of serving things through <code>file://</code>. In doing this, authentication providers, like Firebase and Auth0, need to be told to allow this URL when it hits their API.  There should be a section called “Allowed Origins” or “Authorized Domains”. This will make sure your app can authenticate correctly.</p>
+<p>That&#8217;s it! We&#8217;ve put all of the notes here in our <a href="http://ionicframework.com/docs/wkwebview/">WKWebView docs</a>, if you ever need to reference them again. We&#8217;re very excited about shipping WKWebView as default, and we hope to see many of you adopt it into your apps. I&#8217;d also like to thank so many of you for all your feedback, testing, and issue reporting during the early versions and releases of the plugin. Your feedback has only made the plugin even better! Thanks <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f37b.png" alt="🍻" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/wkwebview-for-all-a-new-webview-for-ionic/feed/</wfw:commentRss>
+		<slash:comments>24</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1978</post-id>	</item>
+		<item>
+		<title>It’s Time to Change the Way We Define a Great User Experience</title>
+		<link>https://blog.ionic.io/its-time-to-change-the-way-we-define-a-great-user-experience/</link>
+		<comments>https://blog.ionic.io/its-time-to-change-the-way-we-define-a-great-user-experience/#comments</comments>
+		<pubDate>Tue, 03 Oct 2017 15:34:04 +0000</pubDate>
+		<dc:creator><![CDATA[Andrew Haire]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Progressive Web Apps]]></category>
+		<category><![CDATA[UX]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1992</guid>
+		<description><![CDATA[There’s a fundamental flaw in the way we define a good mobile experience today. The talk is almost always about performance. Faster load times! Smooth scrolling! Sure, all that’s great and it does make for a nice mobile app experience. But the definition is too narrow. It’s all about what happens inside the mobile app. [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>There’s a fundamental flaw in the way we define a good mobile experience today.</p>
+<p>The talk is almost always about performance. Faster load times! Smooth scrolling! Sure, all that’s great and it does make for a nice mobile app experience. But <strong> the definition is too narrow.</strong> It’s all about what happens inside the mobile app.</p>
+<p>What’s equally important is the experience <em>before</em> and <em>after</em> your users interact with your app.</p>
+<p><span id="more-1992"></span></p>
+<p><img src="http://blog.ionic.io/wp-content/uploads/2017/09/reddit-interstitial.jpg" alt="" class="overflow-left" width="240px" style="margin-right: 32px; margin-bottom: 32px; margin-top: 0px;" /></p>
+<h3>It&#8217;s [not always] better in the app</h3>
+<p>Here’s an example on the left. You open a link on your phone and it takes you to a site plastered with banners that say “Download the app!”. (Sorry, reddit)</p>
+<p>And so you click a link to download the app, which takes you away from the browser and into your app store or marketplace. And then you have to download the app, which takes time and eats up space on your phone. Finally you sign into the app, only to find that the mobile app offers a tenth of the functionality of the desktop web app you’re used to using.</p>
+<blockquote><p>At that point, does it matter how performant the app is? Not really. What you get is a disjointed, jarring, sub-par experience either way. </p></blockquote>
+<h3>UX is more than just performance</h3>
+<p>A truly great experience would allow you to interact with the app wherever you are, with smooth transitions between modes of interaction. For example, clicking the link on your mobile browser takes you right to the app, like this example from Starbucks. No app store. Nothing to download and install. Right to the app. And there you’ll find the exact same feature set that you have come to expect from your desktop experience, right on your phone or tablet.</p>
+<p><img src="http://blog.ionic.io/wp-content/uploads/2017/09/pwa-starbucks.jpg" alt="" class="overflow-right" width="280px" style="margin-left: 32px;" /></p>
+<h3>The promise of PWAs</h3>
+<p>All this is possible today, thanks to progressive web apps, or PWAs.</p>
+<p>Max and Justin have already written about <a href="http://blog.ionic.io/what-progressive-web-apps-can-do-for-you/" rel="noopener" target="_blank">the value of PWAs</a> and <a href="http://blog.ionic.io/what-is-a-progressive-web-app/" rel="noopener" target="_blank">what makes it all possible</a>. In short, web tech is now at point where you can give you a native app experience without having to install anything on your device. That includes offline access and great performance.</p>
+<p>For app builders, there are tons of benefits to this model. With PWAs and web technology you can address almost any platform or device with a single codebase, and no app stores to worry about.</p>
+<h3>Redefining a great UX</h3>
+<p>Going back to the performance debate, building an app that users will love isn’t just about load times. The experience should span across devices and modes of interaction, whether users are engaging with a natively-installed app, a mobile browser, or a desktop device. It’s time we broadened our thinking about what makes a great app &#8211; and a happy user.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/its-time-to-change-the-way-we-define-a-great-user-experience/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1992</post-id>	</item>
+		<item>
+		<title>Updates for all: Ionic-angular 3.7 and more!</title>
+		<link>https://blog.ionic.io/updates-for-all-ionic-angular-3-7-and-more/</link>
+		<comments>https://blog.ionic.io/updates-for-all-ionic-angular-3-7-and-more/#comments</comments>
+		<pubDate>Thu, 28 Sep 2017 15:17:57 +0000</pubDate>
+		<dc:creator><![CDATA[Dan Bucholtz]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Angular]]></category>
+		<category><![CDATA[Framework]]></category>
+		<category><![CDATA[Ionic]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=2004</guid>
+		<description><![CDATA[Happy Thursday Ionites! We’re hope you’re enjoying all that Autumn 🍂 &#8211; the best season &#8211; has to offer. Today we’re releasing ionic-angular 3.7.0 and @ionic/app-scripts 3.0.0. These releases have a lot to offer, so let’s dive into each of them. Ionic Updates ionic-angular 3.7.0 is a minor release that adds support for the latest [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Happy Thursday Ionites! We’re hope you’re enjoying all that Autumn <img src="https://s.w.org/images/core/emoji/2.3/72x72/1f342.png" alt="🍂" class="wp-smiley" style="height: 1em; max-height: 1em;" />  &#8211; the best season &#8211; has to offer. Today we’re releasing <code>ionic-angular</code> 3.7.0 and <code>@ionic/app-scripts</code> 3.0.0. These releases have a lot to offer, so let’s dive into each of them.</p>
+<p><span id="more-2004"></span></p>
+<h3>Ionic Updates</h3>
+<p><code>ionic-angular</code> 3.7.0 is a minor release that adds support for the latest version of Angular, version 4.4.3. This includes a lot of bug fixes, improvements, as well as the new Angular HTTPClient!  We’ve also started the process of adjusting our CSS to add support for the upcoming iPhone X. This includes taking advantage of some great new CSS features in iOS11, which you can read about <a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/">here</a> . <code>3.7.0</code> includes a few important changes, with more coming in the next release of Ionic. We’ll also update Ionic 1.x with the necessary changes needed to support the iPhone X. Expect to hear more about this soon.</p>
+<p>In addition to the CSS changes and updates to dependencies, there are several important bug fixes in the release. Check out the <a href="https://github.com/ionic-team/ionic/blob/master/CHANGELOG.md#370-2017-09-28">changelog</a> for more info. <code>ionic-angular</code> 3.7.0 is a drop-in replacement for version 3.6.1, so you’re just an <code>npm install</code> away from being up and running with the latest.</p>
+<h3>Build Process Updates</h3>
+<p><code>@ionic/app-scripts</code> 3.0.0 is a major release with several new features. We’ve added support for <code>ngo</code>, the build optimizer tool created by the Angular team. Using <code>ngo</code> should result in apps that are smaller and boot faster. For the sake of build time, <code>ngo</code> is only used when the <code>--prod</code> or <code>--optimizejs</code> flags are passed. In addition to <code>ngo</code>, we squashed some pesky bugs in an app’s source maps to improve the debugging experience. Finally, we’ve cleaned up a lot of the code base, deprecated some unused tools, and refactored the code to be agnostic to the angular version. Overall, <code>@ionic/app-scripts</code> 3.0.0 is a large internal change, but should be a drop-in replacement.</p>
+<p>If you are using a custom <code>webpack</code> configuration, there is a breaking change to the config. Please review the <a href="https://github.com/ionic-team/ionic-app-scripts/releases/tag/v3.0.0">changelog</a> and <a href="https://github.com/ionic-team/ionic-app-scripts/issues">let us know</a> if you experience any issues.</p>
+<h3>Upgrade Instructions</h3>
+<p>To upgrade an existing project with these new versions, simply run the following commands:</p>
+<pre><code>npm install -g ionic@latest
+npm install ionic-angular@3.7.0 --save
+npm install @ionic/app-scripts@3.0.0 --save-dev
+npm install @angular/core@4.4.3 --save
+npm install @angular/common@4.4.3 --save
+npm install @angular/compiler@4.4.3 --save
+npm install @angular/compiler-cli@4.4.3 --save
+npm install @angular/forms@4.4.3 --save
+npm install @angular/http@4.4.3 --save
+npm install @angular/platform-browser@4.4.3 --save
+npm install @angular/platform-browser-dynamic@4.4.3 --save
+npm install rxjs@5.4.3 --save
+npm install zone.js@0.8.17 --save
+</code></pre>
+<h3>What’s Next</h3>
+<p>In addition to improving <code>ionic-angular</code> 3.x, we’re busy marching towards the next major release, <code>ionic-angular</code> 4.0.0.</p>
+<p>With version <code>4.0.0</code>, we are refactoring <strong>our</strong> internal code base to move towards web components, via Stencil. Ultimately, this refactor will make Ionic framework agnostic.</p>
+<p>What does this mean for you, a developer with an existing Ionic app? Well, the answer is probably not much. Your app will work the same way it does today. There will be a few updates that will need to be made to your codebase, but we’re aiming to keep these to a minimum!</p>
+<p>This internal refactor is not something that developer’s building <em>with</em> Ionic really need to be concerned with. Our goal is to keep APIs as close to what they are today as possible. In our testing, we’ve seen apps boot significantly faster, and improved runtime performance. Needless to say, we’re extremely excited about that!</p>
+<h3>Stencil Preview</h3>
+<p>A few weeks back at the Polymer Conf, we announced <a href="https://stenciljs.com">Stencil</a>, a new open-source tool for creating standard web components. We’re super excited about Stencil and the impact that it can have on the web ecosystem! See the introduction video here.</p>
+<div class="video-container">
+                <iframe
+		src="https://www.youtube.com/embed/UfD-k7aHkQE"
+		frameborder="0" allowfullscreen>
+                </iframe>
+               </div>
+<h3>Closing Thoughts</h3>
+<p>We’re pretty pumped up about the improvements and bug fixes in <code>ionic-angular</code> 3.7.0 and <code>@ionic/app-scripts</code> 3.0.0. Every time we put out a new release, our goal is for it to improve your app’s capabilities or performance, or to improve the developer experience. We think today’s updates check all of the boxes.</p>
+<p>Please check out the new <a href="https://github.com/ionic-team/ionic/blob/master/CHANGELOG.md#370-2017-09-28">releases</a> and <a href="https://github.com/ionic-team/ionic/issues">let us know</a> if you experience any issues. Have a great end of the week and happy hacking</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/updates-for-all-ionic-angular-3-7-and-more/feed/</wfw:commentRss>
+		<slash:comments>24</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">2004</post-id>	</item>
+		<item>
+		<title>Built with Ionic: Microsoft Flow app</title>
+		<link>https://blog.ionic.io/built-with-ionic-microsoft-flow-app/</link>
+		<comments>https://blog.ionic.io/built-with-ionic-microsoft-flow-app/#comments</comments>
+		<pubDate>Wed, 27 Sep 2017 18:03:11 +0000</pubDate>
+		<dc:creator><![CDATA[Yoav Yassour]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Built with Ionic]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1985</guid>
+		<description><![CDATA[This is a guest post from community member, Yoav Yassour, Group Manager on the Microsoft Flow mobile team at Microsoft. Microsoft Flow is a workflow automation engine that simplifies your work-life by connecting frequently used cloud apps and automating everyday tasks. The Flow mobile app &#8211; built with Ionic &#8211; brings this powerful experience to [&#8230;]]]></description>
+				<content:encoded><![CDATA[<blockquote><p>This is a guest post from community member, Yoav Yassour, Group Manager on the Microsoft Flow mobile team at Microsoft.</p></blockquote>
+<p><a href="https://flow.microsoft.com/en-us/" rel="noopener" target="_blank">Microsoft Flow</a> is a workflow automation engine that simplifies your work-life by connecting frequently used cloud apps and automating everyday tasks. The Flow mobile app &#8211; built with Ionic &#8211; brings this powerful experience to your mobile phone. Our experience with Ionic has been super positive and enabled us to quickly build a feature rich, high quality app with a relatively small team. Here’s our story.</p>
+<p><span id="more-1985"></span></p>
+<h3>Automating everyday connections with Flow</h3>
+<p>Flow allows you to automate common tasks and connect your favorite cloud apps to save you time. For example, with the Flow app you can automatically create leads in your CRM system from specific emails, automatically sync a OneDrive folder with a DropBox folder, or monitor social and RSS feeds and even respond to them automatically. Beyond being available as a standalone service Flow also integrates with Microsoft PowerApps, PowerBI, and the Common Data Service, making it possible for users and organizations to build powerful applications to digitize and streamline their business activities.</p>
+<blockquote><p>Flow was made generally available on November 2016 and has been growing rapidly and gaining popularity since it was launched. Flow was built as a highly scalable Azure service that&#8217;s available globally in more than 40 languages and serves hundreds of thousands of users all around the world, every month. </p></blockquote>
+<p>The Flow Mobile app for iOS, Android, and Windows Phone makes it possible for users to create, edit, and monitor workflows on the go. Flow Mobile users can use buttons to trigger their workflows, receive push notifications, trigger flows using their location, upload images, and much more. Flow Mobile also supports widgets on iOS and Android, universal links that deep link directly into the app, Azure Active Directory authentication, and more.</p>
+<h3>The decision to go hybrid</h3>
+<p>When we started the Microsoft Flow project in early 2016, we knew that we would have to share major chunks of code with the Flow web service and that we would have to deliver a consistent user experience for iOS, Android, and Windows Phone.</p>
+<blockquote><p>The need to share code with the web client was the main reason we decided to look at hybrid development. </p></blockquote>
+<p><img src="http://blog.ionic.io/wp-content/uploads/2017/09/flow-left-app-preview.jpg" alt="App Preview" class="overflow-left" width="240px" style="margin-right: 40px;margin-bottom: 40px;margin-top: 38px" /></p>
+<h3>Choosing Ionic</h3>
+<p>After prototyping and assessing various alternatives, we came to the conclusion that Ionic 2 (which was in Beta 3 at the time) could work really well with an Azure backend and AAD authentication and could also support the extensive capabilities we were looking to bake into the app.</p>
+<p>Equally important was the enterprise-grade experience and snappy performance with Ionic 2. The decision has paid off big time. We were able to execute quickly on three platforms (iOS, Android, Windows Mobile) and deliver a high-quality product. All the while, the Ionic framework kept evolving and growing, helping us to take the Flow app quality and performance even further.</p>
+<h3>1 codebase x 3 platforms</h3>
+<p>With Ionic, the development of the Flow app was truly a &#8220;write once run everywhere&#8221; experience, simplifying the process of building the backbone of the app, which consists of a rich UI working against the Flow Azure service for managing and monitoring workflows.</p>
+<p>For push notifications, utilizing Azure Notification Hub and the push notifications plugin (phonegap-plugin-push), we were able to have a single component that works seamlessly and reliably on all platforms. Similarly, for Microsoft account authentication, the publicly available AAD plugin allowed us to have a single component that worked across iOS, Android, and Windows Mobile.</p>
+<h3>Tapping into native functionality</h3>
+<p>Common native capabilities, such as geolocation and sharing, were addressed using plugins from Ionic Native, a ready-made library of the most commonly used Cordova plugins. For some of our more advanced and custom capabilities, we implemented native plugins ourselves, allowing us to ensure that platform-specific code is kept to a minimum and confined to the specific plugin implementation.</p>
+<p><img src="http://blog.ionic.io/wp-content/uploads/2017/09/flow-right-preview.jpg" alt="right app preview" class="overflow-right" width="280px" style="margin-left: 40px" /></p>
+<h3>Enterprise grade dev environment</h3>
+<p>Another big plus of the work with Ionic 2 is the superb development environment that it allows when combined with Visual Studio Team System, git, and HockeyApp. With the combination of these technologies, and by relying solely on existing extensions, we were able to create a fully automated development environment that includes daily localized build drops, automated testing of a rolling build, automated pre-release distribution through HockeyApp, automated build signing, and much more.</p>
+<p>With “ionic serve” and the rest of the Ionic toolset as baseline, with VSCode as our IDE of choice, and with the codebase written almost entirely in TypeScript, the day to day development experience started off very positively. With the rest of the fast and fully automated development environment, we&#8217;re able to develop the Flow app efficiently, release new features every two weeks, and experience true development joy while doing it.</p>
+<blockquote><p>Our journey with Ionic continues, of course, and as we keep updating each new version, we’re able to enjoy the benefits of the performance and stability improvements they provide.  </p></blockquote>
+<h3>Try the app!</h3>
+<p>Monitor and manage your flow from anywhere with Microsoft Flow mobile app, available for <a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825?mt=8" rel="noopener" target="_blank">iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.microsoft.flow&amp;hl=en&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" rel="noopener" target="_blank">Android</a>, and <a href="https://www.microsoft.com/en-us/store/p/microsoft-flow/9nkn0p5l9n84?rtc=1" rel="noopener" target="_blank">Windows</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/built-with-ionic-microsoft-flow-app/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1985</post-id>	</item>
+		<item>
+		<title>iOS 11 Checklist</title>
+		<link>https://blog.ionic.io/ios-11-checklist/</link>
+		<comments>https://blog.ionic.io/ios-11-checklist/#comments</comments>
+		<pubDate>Thu, 21 Sep 2017 16:42:22 +0000</pubDate>
+		<dc:creator><![CDATA[Max Lynch]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1970</guid>
+		<description><![CDATA[Getting your Ionic apps updated for iOS 11 is easy. There are a few things you need to do and some steps are different depending on whether you&#8217;re using UIWebView or WKWebView. Note: if you don&#8217;t push a new build then your apps will work the same as they always have. These changes are required [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Getting your Ionic apps updated for iOS 11 is easy. There are a few things you need to do and some steps are different depending on whether you&#8217;re using UIWebView or WKWebView.</p>
+<p><em>Note:</em> if you don&#8217;t push a new build then your apps will work the same as they always have. These changes are required for apps doing updates for iOS 11 using Xcode 9.</p>
+<h3>ionic-angular</h3>
+<p>The latest stable release of ionic-angular introduces compatibility for the iPhone X to make sure that your app looks great on this new device. To update to the latest release follow the instructions mentioned <a href="http://blog.ionic.io/updates-for-all-ionic-angular-3-7-and-more/">here</a>. We are working on even more fixes for the next release to improve our compatibility for the iPhone X even further.</p>
+<h3>Viewport Fit</h3>
+<p>The first change is to make sure you update your viewport meta tag in your <code>index.html</code> to add the <code>viewport-fit=cover</code> field. This ensures the webview takes up the full size of the screen. The new default is to stick the webview in the new safe regions which is not what you want for Ionic/Cordova apps:</p>
+<pre><code class="html">&lt;meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+</code></pre>
+<p>This change has been made to the base starter project for Ionic 1.x and 2.x and above, so new projects are covered.</p>
+<p>Learn more about <a href="http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/">new safe regions</a> in iOS 11.</p>
+<p><span id="more-1970"></span></p>
+<h3>WKWebView</h3>
+<p>WKWebView will soon be the default for all Ionic apps running on iOS, before the release of the iPhone X. However, many are using it today.</p>
+<p>This week we pushed a number of fixes to WKWebView fix padding issues, an issue with videos, and some smaller feature requests. Please update your plugin to the new version to try it.</p>
+<p>If you aren&#8217;t using WKWebView yet, we suggest trying it today. We will be moving to make it the default given iPhone X and better support for safe regions. For installation instructions check out the <a href="https://github.com/ionic-team/cordova-plugin-ionic-webview#installation-instructions">readme here</a>.</p>
+<h3>New Icon and Splash</h3>
+<p>Xcode needs a 1024&#215;1024 sized icon for submission. <code>ionic cordova resources</code> doesn&#8217;t yet generate this file, but you&#8217;ll need it for submission. We are working on adding this to the resources generator.</p>
+<p>Additionally, to support iPhone X fullscreen, a new splashscreen image needs to be provided. For an existing project you will need to run <code>npm install -g ionic</code> to get the latest version of the cli, and then run <code>ionic cordova resources</code>. This will generate the correct splashscreen image and reference it in your <code>config.xml</code> automatically for you. For new projects, you dont need to do anything, the correct setup is already built in.</p>
+<h3><code>cordova-plugin-statusbar</code></h3>
+<p>There is currently a <a href="https://github.com/apache/cordova-plugin-statusbar/pull/87">PR open to update the cordova statusbar plugin</a> but it has not been merged yet. We are expecting this to be merged very soon, but in the meantime you can install the plugin with that PR automatically by running the following commands:</p>
+<pre><code>ionic cordova plugin rm cordova-plugin-statusbar
+ionic cordova plugin add https://github.com/apache/cordova-plugin-statusbar.git
+</code></pre>
+<p>If you follow the above instructions and are having problems deploying to a simulator or device, open the <code>platforms/ios/myapp.xcodeproject</code> and hit the play button in the top left corner Xcode.</p>
+<h3>Report an issue</h3>
+<p>Notice anything weird or out of place? Please file an issue and reference iOS 11 and this blog post: <a href="https://github.com/ionic-team/ionic/issues/new">https://github.com/ionic-team/ionic/issues/new</a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/ios-11-checklist/feed/</wfw:commentRss>
+		<slash:comments>31</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1970</post-id>	</item>
+		<item>
+		<title>The end of Framework Churn</title>
+		<link>https://blog.ionic.io/the-end-of-framework-churn/</link>
+		<comments>https://blog.ionic.io/the-end-of-framework-churn/#comments</comments>
+		<pubDate>Mon, 18 Sep 2017 15:28:39 +0000</pubDate>
+		<dc:creator><![CDATA[Max Lynch]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1971</guid>
+		<description><![CDATA[Framework Churn: that breakneck pace of creation and abandonment that plagues the JavaScript community. Here one day, out the next. Hot today, obsolete in a year. Number one loved on the Hacker News frontpage, now number one hated on the Hacker News comments. Framework Churn is something every one of us deals with in the [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Framework Churn: that breakneck pace of creation and abandonment that plagues the JavaScript community. Here one day, out the next. Hot today, obsolete in a year. Number one loved on the Hacker News frontpage, now number one hated on the Hacker News comments.</p>
+<p>Framework Churn is something every one of us deals with in the JavaScript community. How do we know that big investment we&#8217;re making in Tool/Framework X is going to be relevant in a year, five years, <em>twenty years</em>? It&#8217;s at the point now that many are afraid to pick anything for fear it&#8217;ll be irrelevant long before the life of the product built with it.</p>
+<p>At Ionic, we&#8217;ve seen churn first-hand. At first, Angular 1 seemed to be the end-all in JavaScript land, and we focused all of our energy on it. That period of relative simplicity didn&#8217;t last long, though, and soon there was a proliferation of new frameworks and tools that came and went. Suddenly, choosing Ionic meant betting on a frontend framework in a world that couldn&#8217;t stick with one for more than a year.</p>
+<p>It was exhausting, and like many, we knew we had to break out of the cycle.</p>
+<p><span id="more-1971"></span></p>
+<h3>What causes Framework Churn?</h3>
+<p>To finally solve Framework Churn, we need to understand what a modern frontend framework <em>is</em> and why it causes lock-in and subsequent violent churn as it fades from the developer toolbox.</p>
+<p>At the core, a frontend framework provides a <em>component model</em> that specifies how custom elements work and how they interact with each other, along with tools for <em>templating</em>, <em>component loading</em>, and more. Some frameworks are more &#8220;batteries-included&#8221; and come with utilities such as routers and animations, and while these utilities make it harder to leave a framework, their potential for lock-in is emergent from the component model.</p>
+<p>The component model becomes the <em>language</em> of the framework. It&#8217;s the way components expect to be initialized, created, updated, rendered, destroyed, and how they communicate with each other. Generally, components built in one framework will not work in another framework due to the systems the framework provides to make the components <em>run</em>.</p>
+<p>Thus, Framework Churn is due to incompatible component models that create interfaces that can&#8217;t be interchanged, and exacerbated by the rapid pace of innovation and powerful marketing forces in the JavaScript ecosystem.</p>
+<h3>Ending Framework Churn</h3>
+<p>To end Framework Churn once and for all, we need a way to create components that speak a language every developer and framework can understand. A component language that can be standardized but is also compatible with existing framework component languages.</p>
+<p>Thankfully, there&#8217;s an answer: <a href="https://www.webcomponents.org/">Web Components</a>. Web Components are a modern web API spec with native browser support already in Chrome and Safari (and iOS!), with native support behind a flag for Firefox. For browsers without native support, a very solid and small (12kb) polyfill makes it seamless to use components.</p>
+<p>At the core of the Web Components spec is something called Custom Elements. A Custom Element is just what it sounds like: a custom HTML tag that runs JavaScript that <em>you</em> specify. No more need for Angular Directives, or React Components, etc. Custom Elements are the holy grail of custom components: natively supported custom JavaScript browser elements that work like any other HTML tag.</p>
+<p>It just so happens that these Custom Elements are the key to ending Framework Churn.</p>
+<h3>What about Framework X?</h3>
+<p>The best part about Web Components is they work just like any other HTML tag. This means that they are compatible with all major frameworks (*).</p>
+<p>For example, once Ionic 4 is ready, the new Ionic Web Components will work in Angular just as well as they will in Vue and React (*). One major benefit, is that they will also work <a href="https://twitter.com/Ionicframework/status/908798943257079808">without any framework at all</a>, making it possible to use the components directly for rapid development and even for integration into existing jQuery codebases!</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">Using <a href="https://twitter.com/Ionicframework">@Ionicframework</a> components with 0 setup. Just a script tag. The power of <a href="https://twitter.com/stenciljs">@stenciljs</a> and web components. <a href="https://t.co/nEjEykNAZ2">pic.twitter.com/nEjEykNAZ2</a></p>
+<p>&mdash; Justin willis (@Justinwillis96) <a href="https://twitter.com/Justinwillis96/status/908796199494471681">September 15, 2017</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>This means Ionic will continue to support Angular but will also be able to support any other framework, making Ionic future-proof and ending framework churn for the project.</p>
+<ul>
+<li><em>Right now React core has some issues with web components that can be worked around. However, Preact fixes them and we hope this is a short-lived issue</em></li>
+</ul>
+<h3>Using Web Components Today</h3>
+<p>Web Components are ready to be used <em>today</em>, and require nothing more than some JavaScript and a browser. You can write <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements">Custom Elements today</a> using APIs provided natively in the browser (and supported with a polyfill).</p>
+<p>Chances are, though, you&#8217;re going to want features you&#8217;ve gotten to know and love from Frameworks, like templating, efficient DOM updates, reactive databinding, and more. Tools like <a href="https://www.polymer-project.org/">Polymer</a>, <a href="http://skatejs.github.io/">SkateJS</a>, <a href="https://svelte.technology/">Svelte</a>, and <a href="https://stenciljs.com/">Stencil</a> bring those features to Web Components but without the need for a heavy, prescriptive framework.</p>
+<h3>Shameless Plug: Stencil</h3>
+<p>That last project, <a href="http://stenciljs.com/">Stencil</a>, is a project we&#8217;ve created at Ionic that will be the foundation of Ionic 4 and beyond as we port all of the Ionic components to standards-compliant Web Components.</p>
+<p>Stencil is a compiler that generates plain web components for you, but with many features and a syntax you expect out of traditional frameworks. Things like using TypeScript, Virtual DOM for fast rendering, optimized async rendering similar to React Fiber, JSX for easy templating/UI, reactive data binding, and more.</p>
+<p>Stencil creates Web Components with framework features as if you wrote them in yourself, but in a way that adds minimal abstractions that feel more like &#8220;TypeScript with WebComponents&#8221; than a full-fledged framework.</p>
+<p>Stencil is new; we only recently announced the project at the Polymer Summit (<a href="https://www.youtube.com/watch?v=UfD-k7aHkQE">watch the talk here</a>). However, as Stencil will be a big part of Ionic 4, we are dog fooding the project heavily and development is progressing rapidly.</p>
+<p>We don&#8217;t really see Stencil as another framework nor is adoption of it a major goal. It&#8217;s a tool that can help some used to framework syntax get into web components but we&#8217;re more excited about what it outputs: custom elements.</p>
+<h3>Conclusion</h3>
+<p>We believe 2017 is the year that web developers finally start to use Web Components in larger numbers. It&#8217;s going to take some time to reach mainstream usage, but the benefits are real and native support is improving rapidly. In fact, we&#8217;re <a href="http://stenciljs.com/">betting everything</a> on it.</p>
+<p>For businesses, Web Components provide much needed API stability that traditional frameworks have failed to provide. A component built with web-standard Web Components will work without modification for decades. Not only will it run, but developers will know how to maintain it because it&#8217;s the web standard. Such stability is unheard of in JavaScript land today.</p>
+<p>For Ionic, Web Components mean that picking Ionic isn&#8217;t making a bet on Angular. Rather, it&#8217;s making a bet on <em>the web</em> and the shared language of Web Components. We want Ionic to be the &#8220;UI layer for the web&#8221; and the only way for us to achieve that is to move to standards that will work everywhere and be stable for decades.</p>
+<p>The era of Framework churn is coming to an end, and now we can all go back to working on what makes our apps unique instead of spending precious time, energy, and money jumping to something new every year.</p>
+<p>I&#8217;m sure that&#8217;s welcome news to many that are exhausted with JavaScript churn and ready to get back to work.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/the-end-of-framework-churn/feed/</wfw:commentRss>
+		<slash:comments>47</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1971</post-id>	</item>
+		<item>
+		<title>Sunsetting Ionic Cloud Push and Auth</title>
+		<link>https://blog.ionic.io/sunsetting-ionic-cloud-push-and-auth/</link>
+		<comments>https://blog.ionic.io/sunsetting-ionic-cloud-push-and-auth/#comments</comments>
+		<pubDate>Wed, 30 Aug 2017 16:33:10 +0000</pubDate>
+		<dc:creator><![CDATA[Max Lynch]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1966</guid>
+		<description><![CDATA[Earlier in the summer I shared an update on Ionic Cloud and explained that we’re going to be deprecating the Cloud solution and replacing it a powerful suite of tools &#38; services called Ionic Pro, focused more on development and testing rather than mBaaS style services. At that time, there was some uncertainty around the [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Earlier in the summer I shared an <a href="http://blog.ionic.io/where-were-going-with-cloud/">update on Ionic Cloud</a> and explained that we’re going to be deprecating the Cloud solution and replacing it a powerful suite of tools &amp; services called <a href="http://ionicframework.com/products">Ionic Pro</a>, focused more on development and testing rather than mBaaS style services.  At that time, there was some uncertainty around the future of two Cloud services &#8211; Push and Auth. I wanted to update the community on where we landed with these services, explain our reasoning, and provide some helpful information to anyone using Push and Auth.</p>
+<p><span id="more-1966"></span></p>
+<h3>What’s happening with Auth and Push</h3>
+<p>Let me get to the most important stuff first: As of February 1, 2018, we will no longer provide Push and Auth services.  Anyone with an existing Cloud account can continue using Push and Auth through January 2018. After that, you’ll need to find an alternative provider.</p>
+<p>The Ionic community is already using a number of leading push and auth providers today.</p>
+<p>For Push notifications, we recommend <a href="https://aws.amazon.com/pinpoint/">AWS Pinpoint</a>, <a href="https://onesignal.com/">OneSignal</a>, and <a href="http://firebase.com/">Firebase</a>, based on their overall popularity and the number of helpful tutorials and docs that should make it easy for you to get set up. Additionally, OneSignal has created a landing page <a href="https://onesignal.com/ionic">specifically for Ionic Push developers</a>.</p>
+<p>For Auth, <a href="https://aws.amazon.com/cognito/">AWS Cognito</a>, <a href="http://auth0.com">Auth0</a>, and <a href="http://firebase.com/">Firebase</a> area all great options. The AWS Cognito team has put together this great <a href="https://aws.amazon.com/blogs/mobile/user-sign-in-and-sign-up-for-ionic-mobile-apps-with-amazon-cognito/">guide on using Amazon Cognito with Ionic</a>. Auth0 has a great <a href="https://auth0.com/blog/ionic-framework-how-to-get-started/">Getting Started with Ionic and Auth0</a> blog they recently put together as well.</p>
+<p>Finally, the <a href="http://ionicframework.com/survey/2017">2017 Ionic Dev Survey</a> is a great resource to see which backend service providers are most popular among Ionic devs.</p>
+<h3>Why we’ve made this decision</h3>
+<p>First, we know this sucks &#8211; and for that we’re sorry. Changes like this are never easy. Because of that, the decision to make this change is not something we’ve taken lightly.</p>
+<p>With that said, we think this is the best decision in the long run for the success of Ionic as a long-term business, and for the value we think we can provide to our users.  While Push and Auth have been popular services, there are a lot of other providers out there that did it a lot better than we did.  As such, it would be difficult for Ionic to really stand out and deliver something unique that solved a problem someone else wasn’t. At the same time, we felt like there were areas that no one was doing at all, that would help make Ionic the most efficient developer experience in the industry.</p>
+<p>So, instead of providing a sub-par mBaaS, we’re choosing to focus on areas of the dev lifecycle where Ionic can make the most impact in the lives of our developers, while letting them choose from a range of highly capable backend service providers for basics like auth and push services. By allowing vendors like AWS, Firebase, Auth0, and OneSignal to focus on the backend, Ionic can better focus on tools &amp; services that make it easy to design, build, test, deploy, and monitor Ionic apps in a way that only Ionic could.</p>
+<h3>Next steps for Auth and Push users</h3>
+<p>If you’re an existing Auth or Push user, look for an email follow up with more details on transitioning to other platforms. If you are using Cloud today and have questions about how this could impact your apps, send us a note at help@ionic.io.</p>
+<h3>Is this it?!?!</h3>
+<p>Lastly, I wanted to address a perfectly valid question that a number of people have asked lately: is this it? I understand that with so many changes, there’s concern that other services may be next. Let me assure you that this is indeed it.  While you may expect some minor changes to how we package up Ionic Pro, we’re really happy with the direction Pro is taking and the early traction its getting from the Ionic community, and don’t plan to make any more changes.  It’s extremely painful for us and our users to announce an end of service like this, but we feel it’s best to get it out there and move on &#8211; and provide you enough time to plan accordingly and recommend some great alternatives.  At this point, I wouldn’t expect any other big changes to Cloud or Ionic Pro.</p>
+<p>With that, let me say thanks to the entire community for your support through this difficult, exciting, hopeful chapter in the Book of Ion.  We’re thrilled and humbled to have your support.  We know this is difficult, but we also know that it’s paving the way to a better world for Ionic and all of its passionate users.  Thanks for being an amazing community!</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/sunsetting-ionic-cloud-push-and-auth/feed/</wfw:commentRss>
+		<slash:comments>12</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1966</post-id>	</item>
+		<item>
+		<title>What Progressive Web Apps can do for you</title>
+		<link>https://blog.ionic.io/what-progressive-web-apps-can-do-for-you/</link>
+		<comments>https://blog.ionic.io/what-progressive-web-apps-can-do-for-you/#comments</comments>
+		<pubDate>Mon, 21 Aug 2017 20:10:05 +0000</pubDate>
+		<dc:creator><![CDATA[Justin Willis]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Progressive Web Apps]]></category>
+		<category><![CDATA[PWAs]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1956</guid>
+		<description><![CDATA[In the last year, Progressive Web Apps have become an incredibly popular way to build next generation apps. PWAs bring many advantages to the table, and in today&#8217;s post I&#8217;d like to share why we think you should care. Why should I care about PWAs? PWAs bring unique advantages to the table for developers building [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In the last year, <a href="https://blog.ionic.io/what-is-a-progressive-web-app/">Progressive Web Apps</a> have become an incredibly popular way to build next generation apps. PWAs bring many advantages to the table, and in today&#8217;s post I&#8217;d like to share why we think you should care.</p>
+<h3>Why should I care about PWAs?</h3>
+<p>PWAs bring unique advantages to the table for developers building consumer facing apps. They allow developers to <em>completely skip</em> the app stores and instead simply deploy to a web server. This allows you to get your app out faster and to more people than you would be able to with deploying to the App Store and Google Play. Also, because you are not tied to the app store, this means that updates can be immediately available to everyone using your app, by simply pushing your new code to your web server. And because PWAs run in the browser, your single PWA can then be reached from just a click on a URL, greatly reducing the barrier to entry to your app!<br />
+<span id="more-1956"></span></p>
+<p>PWAs also bring a ton of new advantages to the table for businesses and enterprises. Because of the fact that with a PWA you don&#8217;t have to package your app for any specific native platform, or submit that app to any native app store, your time to market can be much faster. Just push to a web server and your PWA is available to everyone.</p>
+<p>For users of your app, PWAs offer a consistent experience no matter what device they are using, or how slow or flaky their network connection is. There&#8217;s no need to sit and wait while your app they are wanting to use is downloading and installing. Need something in a hurry? There is nothing much faster than tapping a URL. Also, because PWAs tend to be much smaller than the average native app, your app will not be taking up much of the precious storage on a user&#8217;s device.</p>
+<h3>How to get started today</h3>
+<p>The first concern I normally hear from devs interested in building a PWA is that Safari, the preinstalled browser on Apple devices, does not have support for PWAs. To be frank, this actually doesn&#8217;t matter because of <a href="https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/">progressive enhancement</a>. With a few extra lines of code you can assure that users on browsers that do support those API’s get the full experience, and users on safari still get a great,fast experience. Also, Webkit, the browser engine behind Safari, <a href="https://www.theregister.co.uk/2017/08/04/service_workers_land_in_webkit_heralding_apple_acceptance/">recently announced they were implementing service workers</a>, a key api for PWAs, so these API’s are going to be coming to Safari soon anyway.</p>
+<p>Ionic fully supports PWAs out of the box. Our starters provide the minimum things needed for a PWA, service workers and a web manifest, with no config needed from the developer.</p>
+<p>And to help make PWAs even more of a first class citizen in the Ionic world, we are working on some exciting integrations with the Ionic CLI to make building PWAs with Ionic even easier, including our upcoming Ionic PWA hosting service through <a href="http://ionicframework.com/products/">Ionic Pro</a>, allowing you to deploy your PWAs live, right from the Ionic CLI. Keep an eye out for this service coming soon!</p>
+<p>Of course, we get that PWAs are not the answer to all the world’s problems.  Natively-installed apps still have their place. One of the great things about Ionic is that we support PWAs as well as natively installed apps, all from a single code base. Here’s a great example of <a href="http://blog.ionic.io/built-with-ionic-million-eyez-mobile-and-progressive-web-app/" target="_blank">how a company is using PWAs</a> alongside natively installed iOS and Android apps, creating a consistent user experience in whatever way their users prefer &#8211; all from the same codebase.</p>
+<h3>A sneak peek&#8230;</h3>
+<p>We have a very exciting new project coming down the line called, Stencil. Stencil is a new project we built that allowed our team to port all of the Ionic components that you know and love to standard <a href="https://www.webcomponents.org/introduction">web components</a>. Our Ionic components built with Stencil enables us to lazy load only the code needed for components on a page of an app, commonly known as code splitting, with no setup needed from the developer. Because web components are built into the browser and work anywhere the DOM works, you can use our awesome, pre-designed and pre-built components in any framework of your choice, or no framework at all!</p>
+<p>All these benefits will also be shipping with the next release of Ionic-Angular, v4.0.0, with only minimal breaking changes. With the built-in code splitting and smaller bundles that comes with web components built with Stencil, we greatly improve the load time performance, a crucial performance measurement for PWAs built with Ionic.</p>
+<p>We are releasing Stencil on the second day of <a href="https://summit.polymer-project.org/">2017 Polymer Summit</a>, August 23rd. To make sure you don&#8217;t miss the release, watch the livestream <a href="https://www.youtube.com/watch?v=yTASiOaXlck">here</a>!</p>
+<h3>Summing it up</h3>
+<p>We are working very hard at Ionic to make building fast, high quality PWAs very easy. Because of all the advantages that PWAs provide, we believe that PWAs are a crucial part of the web landscape. Stay tuned for more info on PWA’s, Ionic and Stencil in the near future. And like i said above, make sure you dont miss the <a href="https://www.youtube.com/watch?v=yTASiOaXlck">Stencil release</a>!</p>
+<p><strong>Want to learn more?</strong> Listen to Justin on <a href="http://thewebplatformpodcast.com/133-ionic-web-components" target="_blank">The Web Platform Podcast</a> discussing web components, PWAs, and the future of hybrid development.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/what-progressive-web-apps-can-do-for-you/feed/</wfw:commentRss>
+		<slash:comments>45</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1956</post-id>	</item>
+		<item>
+		<title>Ionic Dev Survey says… There’s no better time to be a web developer</title>
+		<link>https://blog.ionic.io/ionic-dev-survey-says-theres-no-better-time-to-be-a-web-developer/</link>
+		<comments>https://blog.ionic.io/ionic-dev-survey-says-theres-no-better-time-to-be-a-web-developer/#comments</comments>
+		<pubDate>Tue, 25 Jul 2017 12:33:05 +0000</pubDate>
+		<dc:creator><![CDATA[Max Lynch]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Ionic]]></category>
+		<category><![CDATA[Top Posts]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1951</guid>
+		<description><![CDATA[This morning we released the results of the first-ever Ionic Developer Survey, with input from more than 13,000 community members who shared with us the tools and technology they use, and what types of apps they&#8217;re building. The full data set is available on our site, along with our own insights and analysis. First and [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><a href="http://ionicframework.com/survey/2017" target="_blank"><img src="http://blog.ionic.io/wp-content/uploads/2017/07/web-graphic-1024x585.png" alt="" style="border-radius: 20px; box-shadow: 0px 8px 20px rgba(0,0,0,0.1); margin-bottom:56px;" class="alignnone size-large wp-image-1952" srcset="https://blog.ionic.io/wp-content/uploads/2017/07/web-graphic-1024x585.png 1024w, https://blog.ionic.io/wp-content/uploads/2017/07/web-graphic-300x171.png 300w, https://blog.ionic.io/wp-content/uploads/2017/07/web-graphic-768x439.png 768w, https://blog.ionic.io/wp-content/uploads/2017/07/web-graphic.png 1400w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>This morning we released the results of the first-ever Ionic Developer Survey, <strong>with input from more than 13,000 community members</strong> who shared with us the tools and technology they use, and what types of apps they&#8217;re building.</p>
+<p>The full data set is <a href="http://ionicframework.com/survey/2017" target="_blank">available on our site</a>, along with our own insights and analysis.</p>
+<p>First and foremost, let me say thank you to the community for your amazing support.  We think the results of the survey will be really valuable for developers, and for the vendors featured in the results.  <strong>We couldn’t have done it without your support, so thank you!</strong></p>
+<p>I also wanted to offer my perspective on what the results mean for the Ionic community and mobile development as a whole.  While there’s lots of interesting data in the survey results, the dominant theme is simple: <strong>right now is a great time to be a web developer.</strong></p>
+<p><span id="more-1951"></span></p>
+<h3>First, a little backstory.</h3>
+<p>When we first started building the Ionic Framework back in 2013, we had a very specific audience in mind: web developers new to mobile.  We knew that there were millions of web developers that were eager to participate in the growing mobile app economy, but weren’t familiar with native development.  We thought that if we could develop a way for web developers to build amazing apps using the skills they already had (HTML, JavaScript, CSS), they would embrace the opportunity.</p>
+<p>Fast forward to the 2017 Ionic Dev Survey.  <strong>Nearly 80% of developers building mobile apps identify as web developers. </strong> Now, one might think there’s a little bit of selection bias here &#8211; after all, we already cater to developers with a web skillset &#8211; but we think it’s a little more than that.  In fact, <a href="https://insights.stackoverflow.com/survey/2017" target="_blank">if you check out the 2017 Stack Overflow Survey</a>, you’ll see a similar distribution of web developers to native mobile developers.  What it adds up to is that our original idea that web developers were eager to participate, and drive, mobile app development is now a reality. In fact, I think web developers will prove themselves unequivocally the most versatile and valuable of developers in coming years.</p>
+<h3>The rise of Hybrid development</h3>
+<p>And that leads me to the next major insight from the survey: hybrid is overtaking native development.  The survey results show that the number of developers using exclusively native tool sets is down nearly 7x over the last two years.  On top of that, <strong>nearly one-third of developers we surveyed plan to abandon native development all together</strong>   over the next two years, in favor of hybrid.</p>
+<p>What’s driving the trend towards hybrid development?  Well for one thing, web developers are coming to mobile largely for the first time, and we see a larger share of mobile developers who only know cross platform.  There are now simply more web developers than native developers (as I just shared), and web developers tend to prefer hybrid.</p>
+<p>I also think both independent developers and businesses are starting to see the benefits of the cross-platform approach. A common toolset (HTML, CSS, JavaScript) time-tested and understood by millions of developers all over the world.  Faster development, and ultimately, a better user experience (after all, short dev cycles means more time to add features, fix bugs, and iterate on design).  Plus, <a href="http://blog.ionic.io/the-amazing-evolution-of-the-web-on-mobile/" target="_blank">as the web continues to evolve</a>, things are only looking brighter.</p>
+<p>Now on to the last major point about the impact of the web and the adoption of hybrid toolsets. Hybrid is paving the way for a completely new approach: Progressive Web Apps (PWAs). Among the devs we surveyed, nearly <strong>one-third (31.5 percent) are targeting progressive web apps.</strong> If you <a href="http://blog.ionic.io/what-is-a-progressive-web-app/" target="_blank">strip away some of the marketing-hype</a>, PWAs are just a better way to deliver native security and performance with an app that doesn’t need to be downloaded or installed, and runs on any platform or device, across mobile and desktop.  Will PWAs reverse climate change, bring world peace, and end hunger?  Alas, no.  But they just make sense, and they’re only possible through the power of the open web.</p>
+<h3>Tools of the trade</h3>
+<p>Of course, the original impetus for the survey was not to prove anything about the web. In fact, our primary interest was simply to learn more about the tools and technology people are using to build apps &#8211; and on that front the results of the survey have provided some great insights.</p>
+<p><strong>One of the clear winners is Google Firebase.  </strong>Their backend services are by far the most widely adopted among devs we surveyed. Significantly more developers (41 percent) reported using Firebase for push notifications over AWS (8 percent), and developers seem to prefer Firebase Auth over second-place Auth0. Firebase also topped the list of hosted backend databases, with 32 percent of developers using it versus 29 percent using the runner-up, MongoDB.</p>
+<p>AWS and Azure have been stepping up their efforts to win over developers lately, so it will be interesting to see how this changes over time.  In the meantime, it looks to us like the Firebase strategy of focusing on ease of use, and adding services on top of their free DB, appears to be working.</p>
+<h3>Tell us what you see</h3>
+<p>There’s a lot more where that came from. I hope you’ll check out the <a href="http://ionicframework.com/survey/2017" target="_blank">full survey results</a>. There is a ton of other great info on the survey that I didn’t cover (expect a few more perspectives on the results in future blog posts).</p>
+<p>Thanks again to all of you who made it possible! We’re excited to see what you make of the results.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/ionic-dev-survey-says-theres-no-better-time-to-be-a-web-developer/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1951</post-id>	</item>
+		<item>
+		<title>Built with Ionic: B2E apps for gamers</title>
+		<link>https://blog.ionic.io/built-with-ionic-b2e-apps-for-gamers/</link>
+		<comments>https://blog.ionic.io/built-with-ionic-b2e-apps-for-gamers/#comments</comments>
+		<pubDate>Fri, 21 Jul 2017 00:41:46 +0000</pubDate>
+		<dc:creator><![CDATA[Andrew Haire]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Built With]]></category>
+		<category><![CDATA[Ionic Enterprise]]></category>
+
+		<guid isPermaLink="false">http://blog.ionic.io/?p=1931</guid>
+		<description><![CDATA[Bill B. is Director of Engineering at a multi-billion dollar interactive gaming company. A few years ago he took over a new mobile initiative focused on making the firm’s 8,500+ employees (many of them passionate gamers) happier and more productive. Bill recently spoke to us about the employee-focused (B2E) apps he’s building with Ionic, and [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><a href="http://blog.ionic.io/wp-content/uploads/2017/07/john-sting-112628.jpg"><img src="http://blog.ionic.io/wp-content/uploads/2017/07/john-sting-112628-1024x683.jpg" alt="" class="alignnone size-large wp-image-1932" srcset="https://blog.ionic.io/wp-content/uploads/2017/07/john-sting-112628-1024x683.jpg 1024w, https://blog.ionic.io/wp-content/uploads/2017/07/john-sting-112628-300x200.jpg 300w, https://blog.ionic.io/wp-content/uploads/2017/07/john-sting-112628-768x512.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>Bill B. is Director of Engineering at a multi-billion dollar interactive gaming company. A few years ago he took over a new mobile initiative focused on making the firm’s 8,500+ employees (many of them passionate gamers) happier and more productive.  Bill recently spoke to us about the employee-focused (B2E) apps he’s building with Ionic, and what it’s meant for him, his team of skilled web developers, and the company as a whole.  Here’s his story (at their request I&#8217;ll keep the company and individuals anonymous).</p>
+<p>You can also check out the full case study on our new <a href="http://ionicframework.com/resource-center" target="_blank">Resource Center</a>.</p>
+<p><span id="more-1931"></span></p>
+<h3>App sprawl &amp; inconsistency holding back employees</h3>
+<p>Bill faced significant challenges getting started.  App sprawl and design inconsistencies meant that employees had to juggle up to 18 different apps, all with varying user experiences and workflows. On top of that, many of the apps were outsourced, so his team had very little control over how they were designed and built.</p>
+<p><strong>His first order of business was to bring the outsourced apps back in-house</strong>, starting with an internal app that offered pre-release games to employees to test and try out.</p>
+<h3>Turning web developers into mobile developers</h3>
+<p>The first challenge was finding a platform that matched the team’s skillset.</p>
+<blockquote><p>“It wasn’t like we had a bunch of Android and iOS developers sitting around.”</p></blockquote>
+<p>Instead, they had lots of skilled web developers that knew JavaScript, HTML, and CSS, and had recently standardized on Angular and TypeScript.</p>
+<p>After evaluating Sencha, a tool that had previously been used for mobile development, they decided to try something else.  One of the developers on the team had worked with Ionic before and recommended it. “It didn’t take long for everyone on the team to come to the conclusion that Ionic was the way to go.”, said Bill.</p>
+<p>The team successfully rewrote the testing and evaluation app with Ionic. <strong>After that initial success they were asked to take on a number of new projects charted by the firm’s newly promoted Chief People Officer.</strong> She had laid out a bold vision for using mobile technology to elevate and transform the employee experience.</p>
+<h3>Keeping technical debt low with developer-friendly tools</h3>
+<p>The team has gained a reputation for solving hard problems.</p>
+<blockquote><p>“Because of the work we’ve done within the last two years, there’s more support and investment for what we’re doing. When you tackle a difficult problem, your reward is more problems people haven’t been able to solve. The only way to handle that with limited resources is to not allow any tech sprawl to happen. You have to keep technical debt as low as possible.” </p></blockquote>
+<p>To do that they’ve standardized on developer-friendly tools like AngularJS for desktop, Ionic for mobile, Node for backend services, and AWS for most infrastructure.</p>
+<h3>The importance of cross-platform</h3>
+<p>Another key enabler for the team’s success is the ability to work cross-platform.</p>
+<blockquote><p>“Working cross-platform is so important.  We don’t even think about it.  We’ve been hybrid from the beginning.  It’s settled.  We have it.  My stress points would be significantly higher if we had to code everything over again for each platform.”</p></blockquote>
+<h3>Openness and integration</h3>
+<p>Finally, the openness of the Ionic platform was a major benefit.  The company chose Salesforce Lightning to drive consistency in front-end experiences, and Ionic’s ability to support their choice of tools means employees get a consistent look &amp; feel across desktop and mobile experiences.</p>
+<p>Summarizing his views on Ionic, Bill explains:</p>
+<blockquote><p>“Of the numerous things I have to worry about, Ionic and our choice of the platform is not one of them. Totally solid.”</p></blockquote>
+<p>Interested in more customer stories?  Check out the rest of the <a href="http://blog.ionic.io/tag/built-with/" target="_blank">Built with Ionic blog</a> series or visit our <a href="http://ionicframework.com/resource-center" target="_blank">Resource Center</a> for other published case studies.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://blog.ionic.io/built-with-ionic-b2e-apps-for-gamers/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1931</post-id>	</item>
+	</channel>
+</rss>
